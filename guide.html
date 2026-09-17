@@ -6,6 +6,52 @@
     <title>Инструкция</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <style>
+        .guide-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .guide-tab {
+            background: #e8edf3;
+            border: 1px solid #b3c3d4;
+            color: #0d2f5e;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: Tahoma, sans-serif;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+        .guide-tab:hover {
+            background: #dce5f0;
+        }
+        .guide-tab.active {
+            background: #0d2f5e;
+            color: #ffcc00;
+            border-color: #0d2f5e;
+        }
+        .guide-content {
+            display: none;
+        }
+        .guide-content.active {
+            display: block;
+        }
+        body.dark-theme .guide-tab {
+            background: #161b22;
+            border-color: #30363d;
+            color: #58a6ff;
+        }
+        body.dark-theme .guide-tab:hover {
+            background: #1c2128;
+        }
+        body.dark-theme .guide-tab.active {
+            background: #58a6ff;
+            color: #0d1117;
+            border-color: #58a6ff;
+        }
+    </style>
 </head>
 <body>
 
@@ -44,14 +90,41 @@
         <section class="guide-page">
             <div class="container">
                 <h1 data-i18n="guide-title">📖 Инструкция по установке</h1>
-                <ol>
-                    <li data-i18n="guide-step1"><strong>Зарегистрируйся на Escargot</strong> — перейди по ссылке <a href="https://account.escargot.chat/register/" target="_blank">https://account.escargot.chat/register/</a>, выбери UIN и запомни его.</li>
-                    <li data-i18n="guide-step2"><strong>Скачай QIP</strong> — перейди в раздел «Скачать» и загрузи репак для Windows.</li>
-                    <li data-i18n="guide-step3"><strong>Установи программу</strong> — запусти установщик и следуй инструкциям.</li>
-                    <li data-i18n="guide-step4"><strong>Настрой сервер</strong> — в QIP открой «Сервер/Прокси» и введи <code>login.oscar.nina.chat</code>.</li>
-                    <li data-i18n="guide-step5"><strong>Войди в аккаунт</strong> — используй UIN и пароль, созданные на Escargot.</li>
-                    <li data-i18n="guide-step6"><strong>Готово!</strong> Ты снова в QIP.</li>
-                </ol>
+                <p class="subtitle" data-i18n="guide-subtitle">Выбери свою платформу</p>
+
+                <div class="guide-tabs">
+                    <button class="guide-tab active" data-tab="windows" data-i18n="guide-tab-windows">🪟 Windows</button>
+                    <button class="guide-tab" data-tab="android" data-i18n="guide-tab-android">📱 Android</button>
+                </div>
+
+                <!-- WINDOWS -->
+                <div class="guide-content active" id="guide-windows">
+                    <ol>
+                        <li data-i18n="guide-win-step1"><strong>Зарегистрируйся через Telegram-бота</strong> — перейди в <a href="https://t.me/KICQbot" target="_blank">@KICQbot</a>, напиши /start и получи ссылку на сайт регистрации.</li>
+                        <li data-i18n="guide-win-step2"><strong>Заполни форму регистрации</strong> — укажи почту, никнейм (по желанию) и пароль. Придумай любой UIN (номер) и запомни его!</li>
+                        <li data-i18n="guide-win-step3"><strong>Скачай QIP</strong> — перейди в раздел «Скачать» и загрузи репак для Windows.</li>
+                        <li data-i18n="guide-win-step4"><strong>Установи программу</strong> — запусти установщик и следуй инструкциям.</li>
+                        <li data-i18n="guide-win-step5"><strong>Настрой сервер</strong> — в QIP открой «Сервер/Прокси» и введи <code>kicq.ru</code> вместо <code>login.icq.com</code>.</li>
+                        <li data-i18n="guide-win-step6"><strong>Войди в аккаунт</strong> — используй свой UIN и пароль.</li>
+                        <li data-i18n="guide-win-step7"><strong>Готово!</strong> Ты снова в QIP. Если не подключается — попробуй несколько раз сменить статус. 😊</li>
+                    </ol>
+                </div>
+
+                <!-- ANDROID -->
+                <div class="guide-content" id="guide-android">
+                    <ol>
+                        <li data-i18n="guide-and-step1"><strong>Скачай J2ME Loader</strong> — установи из Google Play: <a href="https://play.google.com/store/apps/details?id=ru.playsoftware.j2meloader" target="_blank">J2ME Loader</a>.</li>
+                        <li data-i18n="guide-and-step2"><strong>Скачай jimm.jar</strong> — файл лежит в разделе «Скачать» (Android) или в Discord в канале <code>#client</code>.</li>
+                        <li data-i18n="guide-and-step3"><strong>Запусти через J2ME Loader</strong> — открой J2ME Loader → выбери скачанный <code>jimm.jar</code> → нажми START.</li>
+                        <li data-i18n="guide-and-step4"><strong>Настрой разрешение экрана</strong> — перед запуском выставь:<br />Ширина: <code>480</code><br />Высота: <code>600</code></li>
+                        <li data-i18n="guide-and-step5"><strong>Настрой подключение в Jimm</strong> — зайди в Настройки → Подключение, введи сервер <code>kicq.ru</code> и убери галочку «Безопасный вход».</li>
+                        <li data-i18n="guide-and-step6"><strong>Зарегистрируйся через Telegram-бота</strong> — перейди в <a href="https://t.me/KICQbot" target="_blank">@KICQbot</a>, напиши /start и получи ссылку на сайт регистрации.</li>
+                        <li data-i18n="guide-and-step7"><strong>Заполни форму регистрации</strong> — укажи почту, никнейм (по желанию) и пароль. Придумай любой UIN (номер) и запомни его!</li>
+                        <li data-i18n="guide-and-step8"><strong>Войди в Jimm</strong> — открой Jimm → «Учётная запись» → введи UIN и пароль → «Подключиться».</li>
+                        <li data-i18n="guide-and-step9"><strong>Готово!</strong> QIP работает на твоём Android! 🚀</li>
+                    </ol>
+                </div>
+
                 <p data-i18n="guide-help">Если что-то пошло не так — пиши в <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>, поможем.</p>
             </div>
         </section>
@@ -80,28 +153,70 @@
                 document.getElementById('main-site').style.display = 'block';
             }
 
+            document.querySelectorAll('.guide-tab').forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const target = this.getAttribute('data-tab');
+                    document.querySelectorAll('.guide-tab').forEach(t => t.classList.remove('active'));
+                    document.querySelectorAll('.guide-content').forEach(c => c.classList.remove('active'));
+                    this.classList.add('active');
+                    document.getElementById('guide-' + target).classList.add('active');
+                });
+            });
+
             const translations = {
                 ru: {
                     'nav-home': 'Главная', 'nav-download': 'Скачать', 'nav-about': 'О нас', 'nav-team': 'Команда', 'nav-guide': 'Инструкция', 'nav-news': 'Новости', 'nav-guestbook': 'Гостевая', 'nav-faq': 'FAQ', 'nav-blog': 'Блог', 'nav-links': 'Ссылки', 'nav-privacy': 'Конфиденциальность', 'nav-discord': 'Discord',
                     'guide-title': '📖 Инструкция по установке',
-                    'guide-step1': '<strong>Зарегистрируйся на Escargot</strong> — перейди по ссылке <a href="https://account.escargot.chat/register/" target="_blank">https://account.escargot.chat/register/</a>, выбери UIN и запомни его.',
-                    'guide-step2': '<strong>Скачай QIP</strong> — перейди в раздел «Скачать» и загрузи репак для Windows.',
-                    'guide-step3': '<strong>Установи программу</strong> — запусти установщик и следуй инструкциям.',
-                    'guide-step4': '<strong>Настрой сервер</strong> — в QIP открой «Сервер/Прокси» и введи <code>login.oscar.nina.chat</code>.',
-                    'guide-step5': '<strong>Войди в аккаунт</strong> — используй UIN и пароль, созданные на Escargot.',
-                    'guide-step6': '<strong>Готово!</strong> Ты снова в QIP.',
+                    'guide-subtitle': 'Выбери свою платформу',
+                    'guide-tab-windows': '🪟 Windows',
+                    'guide-tab-android': '📱 Android',
+
+                    'guide-win-step1': '<strong>Зарегистрируйся через Telegram-бота</strong> — перейди в <a href="https://t.me/KICQbot" target="_blank">@KICQbot</a>, напиши /start и получи ссылку на сайт регистрации.',
+                    'guide-win-step2': '<strong>Заполни форму регистрации</strong> — укажи почту, никнейм (по желанию) и пароль. Придумай любой UIN (номер) и запомни его!',
+                    'guide-win-step3': '<strong>Скачай QIP</strong> — перейди в раздел «Скачать» и загрузи репак для Windows.',
+                    'guide-win-step4': '<strong>Установи программу</strong> — запусти установщик и следуй инструкциям.',
+                    'guide-win-step5': '<strong>Настрой сервер</strong> — в QIP открой «Сервер/Прокси» и введи <code>kicq.ru</code> вместо <code>login.icq.com</code>.',
+                    'guide-win-step6': '<strong>Войди в аккаунт</strong> — используй свой UIN и пароль.',
+                    'guide-win-step7': '<strong>Готово!</strong> Ты снова в QIP. Если не подключается — попробуй несколько раз сменить статус. 😊',
+
+                    'guide-and-step1': '<strong>Скачай J2ME Loader</strong> — установи из Google Play: <a href="https://play.google.com/store/apps/details?id=ru.playsoftware.j2meloader" target="_blank">J2ME Loader</a>.',
+                    'guide-and-step2': '<strong>Скачай jimm.jar</strong> — файл лежит в разделе «Скачать» (Android) или в Discord в канале <code>#client</code>.',
+                    'guide-and-step3': '<strong>Запусти через J2ME Loader</strong> — открой J2ME Loader → выбери скачанный <code>jimm.jar</code> → нажми START.',
+                    'guide-and-step4': '<strong>Настрой разрешение экрана</strong> — перед запуском выставь:<br />Ширина: <code>480</code><br />Высота: <code>600</code>',
+                    'guide-and-step5': '<strong>Настрой подключение в Jimm</strong> — зайди в Настройки → Подключение, введи сервер <code>kicq.ru</code> и убери галочку «Безопасный вход».',
+                    'guide-and-step6': '<strong>Зарегистрируйся через Telegram-бота</strong> — перейди в <a href="https://t.me/KICQbot" target="_blank">@KICQbot</a>, напиши /start и получи ссылку на сайт регистрации.',
+                    'guide-and-step7': '<strong>Заполни форму регистрации</strong> — укажи почту, никнейм (по желанию) и пароль. Придумай любой UIN (номер) и запомни его!',
+                    'guide-and-step8': '<strong>Войди в Jimm</strong> — открой Jimm → «Учётная запись» → введи UIN и пароль → «Подключиться».',
+                    'guide-and-step9': '<strong>Готово!</strong> QIP работает на твоём Android! 🚀',
+
                     'guide-help': 'Если что-то пошло не так — пиши в <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>, поможем.',
                     'footer-text': 'QIP Community © 2026 — неофициальный фанатский проект.'
                 },
                 en: {
                     'nav-home': 'Home', 'nav-download': 'Download', 'nav-about': 'About', 'nav-team': 'Team', 'nav-guide': 'Guide', 'nav-news': 'News', 'nav-guestbook': 'Guestbook', 'nav-faq': 'FAQ', 'nav-blog': 'Blog', 'nav-links': 'Links', 'nav-privacy': 'Privacy', 'nav-discord': 'Discord',
                     'guide-title': '📖 Installation Guide',
-                    'guide-step1': '<strong>Register on Escargot</strong> — go to <a href="https://account.escargot.chat/register/" target="_blank">https://account.escargot.chat/register/</a>, choose a UIN and remember it.',
-                    'guide-step2': '<strong>Download QIP</strong> — go to the "Download" section and get the Windows repack.',
-                    'guide-step3': '<strong>Install the program</strong> — run the installer and follow the instructions.',
-                    'guide-step4': '<strong>Configure the server</strong> — in QIP, open "Server/Proxy" and enter <code>login.oscar.nina.chat</code>.',
-                    'guide-step5': '<strong>Log in</strong> — use the UIN and password you created on Escargot.',
-                    'guide-step6': '<strong>Done!</strong> You\'re back in QIP.',
+                    'guide-subtitle': 'Choose your platform',
+                    'guide-tab-windows': '🪟 Windows',
+                    'guide-tab-android': '📱 Android',
+
+                    'guide-win-step1': '<strong>Register via Telegram bot</strong> — go to <a href="https://t.me/KICQbot" target="_blank">@KICQbot</a>, send /start and get a link to the registration site.',
+                    'guide-win-step2': '<strong>Fill the registration form</strong> — enter your email, nickname (optional) and password. Choose any UIN (number) and remember it!',
+                    'guide-win-step3': '<strong>Download QIP</strong> — go to the "Download" section and get the Windows repack.',
+                    'guide-win-step4': '<strong>Install the program</strong> — run the installer and follow the instructions.',
+                    'guide-win-step5': '<strong>Configure the server</strong> — in QIP, open "Server/Proxy" and enter <code>kicq.ru</code> instead of <code>login.icq.com</code>.',
+                    'guide-win-step6': '<strong>Log in</strong> — use your UIN and password.',
+                    'guide-win-step7': '<strong>Done!</strong> You\'re back in QIP. If it doesn\'t connect — try changing your status a few times. 😊',
+
+                    'guide-and-step1': '<strong>Download J2ME Loader</strong> — install from Google Play: <a href="https://play.google.com/store/apps/details?id=ru.playsoftware.j2meloader" target="_blank">J2ME Loader</a>.',
+                    'guide-and-step2': '<strong>Download jimm.jar</strong> — the file is in the "Download" section (Android) or in Discord in the <code>#client</code> channel.',
+                    'guide-and-step3': '<strong>Launch via J2ME Loader</strong> — open J2ME Loader → select the downloaded <code>jimm.jar</code> → press START.',
+                    'guide-and-step4': '<strong>Set screen resolution</strong> — before launching, set:<br />Width: <code>480</code><br />Height: <code>600</code>',
+                    'guide-and-step5': '<strong>Configure connection in Jimm</strong> — go to Settings → Connection, enter the server <code>kicq.ru</code> and uncheck "Secure login".',
+                    'guide-and-step6': '<strong>Register via Telegram bot</strong> — go to <a href="https://t.me/KICQbot" target="_blank">@KICQbot</a>, send /start and get a link to the registration site.',
+                    'guide-and-step7': '<strong>Fill the registration form</strong> — enter your email, nickname (optional) and password. Choose any UIN (number) and remember it!',
+                    'guide-and-step8': '<strong>Log in to Jimm</strong> — open Jimm → «Account» → enter your UIN and password → «Connect».',
+                    'guide-and-step9': '<strong>Done!</strong> QIP is now working on your Android! 🚀',
+
                     'guide-help': 'If something went wrong — write in <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>, we\'ll help.',
                     'footer-text': 'QIP Community © 2026 — unofficial fan project.'
                 }
