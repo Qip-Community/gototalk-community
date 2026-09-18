@@ -9,97 +9,77 @@
 </head>
 <body>
 
-    <div id="maintenance-mode" style="display: none; height: 100vh; display: flex; justify-content: center; align-items: center; background: #dce5f0; font-family: Tahoma, sans-serif; text-align: center; position: fixed; top: 0; left: 0; width: 100%; z-index: 9999;">
-        <div style="background: #ffffff; padding: 50px 40px; border-radius: 12px; border: 1px solid #b3c3d4; max-width: 500px;">
-            <div style="font-size: 60px;">🔧</div>
-            <h1 style="font-size: 48px; color: #0d2f5e;">Технические работы</h1>
-            <p style="font-size: 18px; color: #333; margin-top: 10px;">Сайт временно недоступен.<br />Мы проводим плановое обслуживание.</p>
-            <p style="font-size:14px; color:#888; margin-top:20px;">Скоро всё заработает!</p>
+    <header>
+        <div class="container header-flex">
+            <div class="logo">📡 GoToTalk <span>Community</span></div>
+            <nav>
+                <a href="index.html" class="active" data-i18n="nav-home">Главная</a>
+                <a href="download.html" data-i18n="nav-download">Скачать</a>
+                <a href="about.html" data-i18n="nav-about">О нас</a>
+                <a href="team.html" data-i18n="nav-team">Команда</a>
+                <a href="guide.html" data-i18n="nav-guide">Инструкция</a>
+                <a href="news.html" data-i18n="nav-news">Новости</a>
+                <a href="reviews.html" data-i18n="nav-guestbook">Гостевая</a>
+                <a href="faq.html" data-i18n="nav-faq">FAQ</a>
+                <a href="blog.html" data-i18n="nav-blog">Блог</a>
+                <a href="links.html" data-i18n="nav-links">Ссылки</a>
+                <a href="privacy.html" data-i18n="nav-privacy">Конфиденциальность</a>
+                <a href="https://discord.gg/VSJpGajNmP" target="_blank" data-i18n="nav-discord">Discord</a>
+                <button id="lang-toggle" class="lang-toggle">RU / EN</button>
+                <button id="theme-toggle" class="theme-toggle">🌙 Тема</button>
+            </nav>
         </div>
-    </div>
+    </header>
 
-    <div id="main-site">
-        <header>
-            <div class="container header-flex">
-                <div class="logo">📡 GoToTalk <span>Community</span></div>
-                <nav>
-                    <a href="index.html" class="active" data-i18n="nav-home">Главная</a>
-                    <a href="download.html" data-i18n="nav-download">Скачать</a>
-                    <a href="about.html" data-i18n="nav-about">О нас</a>
-                    <a href="team.html" data-i18n="nav-team">Команда</a>
-                    <a href="guide.html" data-i18n="nav-guide">Инструкция</a>
-                    <a href="news.html" data-i18n="nav-news">Новости</a>
-                    <a href="reviews.html" data-i18n="nav-guestbook">Гостевая</a>
-                    <a href="faq.html" data-i18n="nav-faq">FAQ</a>
-                    <a href="blog.html" data-i18n="nav-blog">Блог</a>
-                    <a href="links.html" data-i18n="nav-links">Ссылки</a>
-                    <a href="privacy.html" data-i18n="nav-privacy">Конфиденциальность</a>
-                    <a href="https://discord.gg/VSJpGajNmP" target="_blank" data-i18n="nav-discord">Discord</a>
-                    <button id="lang-toggle" class="lang-toggle">RU / EN</button>
-                    <button id="theme-toggle" class="theme-toggle">🌙 Тема</button>
-                </nav>
+    <section class="launcher">
+        <div class="container">
+            <h1 data-i18n="launcher-title">Куда вы хотели зайти?</h1>
+            <p class="subtitle" data-i18n="launcher-subtitle">Выберите мессенджер</p>
+
+            <div class="launcher-grid">
+
+                <a href="qip.html" class="launcher-card">
+                    <div class="launcher-icon">💬</div>
+                    <h2>QIP</h2>
+                    <p data-i18n="launcher-qip">Легендарный QIP 2005</p>
+                </a>
+
+                <a href="msn.html" class="launcher-card">
+                    <div class="launcher-icon">🦋</div>
+                    <h2>MSN</h2>
+                    <p data-i18n="launcher-msn">Windows Live Messenger</p>
+                </a>
+
+                <a href="aol.html" class="launcher-card">
+                    <div class="launcher-icon">👤</div>
+                    <h2>AOL</h2>
+                    <p data-i18n="launcher-aol">AOL Instant Messenger</p>
+                </a>
+
+                <a href="mailagent.html" class="launcher-card">
+                    <div class="launcher-icon">📧</div>
+                    <h2>Mail Agent</h2>
+                    <p data-i18n="launcher-mailagent">Mail.Ru Агент</p>
+                </a>
+
             </div>
-        </header>
+        </div>
+    </section>
 
-        <section class="launcher">
-            <div class="container">
-                <h1 data-i18n="launcher-title">Куда вы хотели зайти?</h1>
-                <p class="subtitle" data-i18n="launcher-subtitle">Выберите мессенджер</p>
-
-                <div class="launcher-grid">
-
-                    <a href="qip.html" class="launcher-card">
-                        <div class="launcher-icon">💬</div>
-                        <h2>QIP</h2>
-                        <p data-i18n="launcher-qip">Легендарный QIP 2005</p>
-                    </a>
-
-                    <a href="msn.html" class="launcher-card">
-                        <div class="launcher-icon">🦋</div>
-                        <h2>MSN</h2>
-                        <p data-i18n="launcher-msn">Windows Live Messenger</p>
-                    </a>
-
-                    <a href="aol.html" class="launcher-card">
-                        <div class="launcher-icon">👤</div>
-                        <h2>AOL</h2>
-                        <p data-i18n="launcher-aol">AOL Instant Messenger</p>
-                    </a>
-
-                    <a href="mailagent.html" class="launcher-card">
-                        <div class="launcher-icon">📧</div>
-                        <h2>Mail Agent</h2>
-                        <p data-i18n="launcher-mailagent">Mail.Ru Агент</p>
-                    </a>
-
-                </div>
+    <footer>
+        <div class="container">
+            <p data-i18n="footer-text">GoToTalk Community © 2026 — неофициальный фанатский проект.</p>
+            <div class="socials">
+                <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>
+                <a href="#">YouTube</a>
+                <a href="#">TikTok</a>
             </div>
-        </section>
-
-        <footer>
-            <div class="container">
-                <p data-i18n="footer-text">GoToTalk Community © 2026 — неофициальный фанатский проект.</p>
-                <div class="socials">
-                    <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>
-                    <a href="#">YouTube</a>
-                    <a href="#">TikTok</a>
-                </div>
-                <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "310462293df347eaaf0c101f050bdbcf"}'></script>
-            </div>
-        </footer>
-    </div>
+            <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "310462293df347eaaf0c101f050bdbcf"}'></script>
+        </div>
+    </footer>
 
     <script>
         (function() {
-            const MAINTENANCE_MODE = false;
-            if (MAINTENANCE_MODE) {
-                document.getElementById('maintenance-mode').style.display = 'flex';
-                document.getElementById('main-site').style.display = 'none';
-            } else {
-                document.getElementById('maintenance-mode').style.display = 'none';
-                document.getElementById('main-site').style.display = 'block';
-            }
-
             const translations = {
                 ru: {
                     'nav-home': 'Главная', 'nav-download': 'Скачать', 'nav-about': 'О нас', 'nav-team': 'Команда', 'nav-guide': 'Инструкция', 'nav-news': 'Новости', 'nav-guestbook': 'Гостевая', 'nav-faq': 'FAQ', 'nav-blog': 'Блог', 'nav-links': 'Ссылки', 'nav-privacy': 'Конфиденциальность', 'nav-discord': 'Discord',
@@ -164,7 +144,6 @@
                     langBtn.addEventListener('click', toggleLang);
                 }
             });
-
         })();
     </script>
 

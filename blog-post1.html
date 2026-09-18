@@ -9,89 +9,61 @@
 </head>
 <body>
 
-    <div id="maintenance-mode" style="display: none; height: 100vh; display: flex; justify-content: center; align-items: center; background: #dce5f0; font-family: Tahoma, sans-serif; text-align: center; position: fixed; top: 0; left: 0; width: 100%; z-index: 9999;">
-        <div style="background: #ffffff; padding: 50px 40px; border-radius: 12px; border: 1px solid #b3c3d4; max-width: 500px;">
-            <div style="font-size: 60px;">🔧</div>
-            <h1 style="font-size: 48px; color: #0d2f5e;">Технические работы</h1>
-            <p style="font-size: 18px; color: #333; margin-top: 10px;">Сайт временно недоступен.<br />Мы проводим плановое обслуживание.</p>
-            <p style="font-size:14px; color:#888; margin-top:20px;">Скоро всё заработает!</p>
+    <header>
+        <div class="container header-flex">
+            <div class="logo">📡 QIP <span>Community</span></div>
+            <nav>
+                <a href="index.html" data-i18n="nav-home">Главная</a>
+                <a href="download.html" data-i18n="nav-download">Скачать</a>
+                <a href="about.html" data-i18n="nav-about">О нас</a>
+                <a href="team.html" data-i18n="nav-team">Команда</a>
+                <a href="guide.html" data-i18n="nav-guide">Инструкция</a>
+                <a href="news.html" data-i18n="nav-news">Новости</a>
+                <a href="reviews.html" data-i18n="nav-guestbook">Гостевая</a>
+                <a href="faq.html" data-i18n="nav-faq">FAQ</a>
+                <a href="blog.html" data-i18n="nav-blog">Блог</a>
+                <a href="links.html" data-i18n="nav-links">Ссылки</a>
+                <a href="privacy.html" data-i18n="nav-privacy">Конфиденциальность</a>
+                <a href="https://discord.gg/VSJpGajNmP" target="_blank" data-i18n="nav-discord">Discord</a>
+                <button id="lang-toggle" class="lang-toggle">RU / EN</button>
+                <button id="theme-toggle" class="theme-toggle">🌙 Тема</button>
+            </nav>
         </div>
-    </div>
+    </header>
 
-    <div id="main-site">
-        <header>
-            <div class="container header-flex">
-                <div class="logo">📡 QIP <span>Community</span></div>
-                <nav>
-                    <a href="index.html" data-i18n="nav-home">Главная</a>
-                    <a href="download.html" data-i18n="nav-download">Скачать</a>
-                    <a href="about.html" data-i18n="nav-about">О нас</a>
-                    <a href="team.html" data-i18n="nav-team">Команда</a>
-                    <a href="guide.html" data-i18n="nav-guide">Инструкция</a>
-                    <a href="news.html" data-i18n="nav-news">Новости</a>
-                    <a href="reviews.html" data-i18n="nav-guestbook">Гостевая</a>
-                    <a href="faq.html" data-i18n="nav-faq">FAQ</a>
-                    <a href="blog.html" data-i18n="nav-blog">Блог</a>
-                    <a href="links.html" data-i18n="nav-links">Ссылки</a>
-                    <a href="privacy.html" data-i18n="nav-privacy">Конфиденциальность</a>
-                    <a href="https://discord.gg/VSJpGajNmP" target="_blank" data-i18n="nav-discord">Discord</a>
-                    <button id="lang-toggle" class="lang-toggle">RU / EN</button>
-                    <button id="theme-toggle" class="theme-toggle">🌙 Тема</button>
-                </nav>
+    <section class="blog-post">
+        <div class="container">
+            <h1 data-i18n="post1-title">История QIP: от создания до расцвета</h1>
+            <p class="post-date" data-i18n="post1-date">27 августа 2026</p>
+
+            <div class="post-content">
+                <p data-i18n="post1-p1"><strong>QIP (Quiet Internet Pager)</strong> — это легендарный ICQ-клиент, который появился в 2005 году и стал настоящим символом эпохи. Его создатель — Ильгам Зюлькорнеев — хотел сделать удобную альтернативу официальному ICQ, которая была бы легче, быстрее и без рекламы.</p>
+                <p data-i18n="post1-p2">Первая версия QIP 2005 была встречена пользователями с восторгом. В отличие от громоздкого ICQ, QIP занимал всего несколько мегабайт, не требовал установки и работал без лишних тормозов. Главная фишка — вкладки для чатов, которых не было в оригинальном клиенте. Это позволяло общаться с несколькими людьми в одном окне, не открывая десятки отдельных окон.</p>
+                <p data-i18n="post1-p3">К 2008 году QIP стал самым популярным ICQ-клиентом в России. По разным оценкам, он собирал до <strong>80% всего ICQ-трафика</strong> в стране. У него было около <strong>10 миллионов уникальных пользователей</strong> — это треть всего рынка мессенджеров России!</p>
+                <p data-i18n="post1-p4">В 2008 году проект был куплен медиа-группой РБК. Это дало новые ресурсы, но и изменило дух проекта. Началась эпоха монетизации, появилась реклама, а сам QIP постепенно утрачивал свою "народную" простоту.</p>
+                <p data-i18n="post1-p5">В 2011 году произошла громкая утечка: база данных QIP была взломана, и в открытый доступ попали <strong>33 миллиона аккаунтов</strong> с паролями. Это сильно подорвало доверие пользователей. Самый популярный пароль, как ни странно, был «123456».</p>
+                <p data-i18n="post1-p6">После этого QIP начал терять популярность. Появились новые мессенджеры — WhatsApp, Telegram, Viber. Они были современнее, удобнее и работали на телефонах. QIP остался в прошлом, но его помнят миллионы людей как символ старого доброго интернета.</p>
+                <p data-i18n="post1-p7">В 2026 году мы решили оживить QIP. Не как коммерческий продукт, а как ностальгический проект. Мы нашли старый клиент, настроили его для работы через Escargot и запустили QIP Community. И знаете что? Он снова работает. И люди снова в него заходят.</p>
+                <p data-i18n="post1-p8"><strong>QIP не умер. Он просто ждал своего часа.</strong></p>
+                <a href="blog.html" class="btn" data-i18n="blog-back">← Назад к статьям</a>
             </div>
-        </header>
+        </div>
+    </section>
 
-        <section class="blog-post">
-            <div class="container">
-                <h1 data-i18n="post1-title">История QIP: от создания до расцвета</h1>
-                <p class="post-date" data-i18n="post1-date">27 августа 2026</p>
-
-                <div class="post-content">
-                    <p data-i18n="post1-p1"><strong>QIP (Quiet Internet Pager)</strong> — это легендарный ICQ-клиент, который появился в 2005 году и стал настоящим символом эпохи. Его создатель — Ильгам Зюлькорнеев — хотел сделать удобную альтернативу официальному ICQ, которая была бы легче, быстрее и без рекламы.</p>
-
-                    <p data-i18n="post1-p2">Первая версия QIP 2005 была встречена пользователями с восторгом. В отличие от громоздкого ICQ, QIP занимал всего несколько мегабайт, не требовал установки и работал без лишних тормозов. Главная фишка — вкладки для чатов, которых не было в оригинальном клиенте. Это позволяло общаться с несколькими людьми в одном окне, не открывая десятки отдельных окон.</p>
-
-                    <p data-i18n="post1-p3">К 2008 году QIP стал самым популярным ICQ-клиентом в России. По разным оценкам, он собирал до <strong>80% всего ICQ-трафика</strong> в стране. У него было около <strong>10 миллионов уникальных пользователей</strong> — это треть всего рынка мессенджеров России!</p>
-
-                    <p data-i18n="post1-p4">В 2008 году проект был куплен медиа-группой РБК. Это дало новые ресурсы, но и изменило дух проекта. Началась эпоха монетизации, появилась реклама, а сам QIP постепенно утрачивал свою "народную" простоту.</p>
-
-                    <p data-i18n="post1-p5">В 2011 году произошла громкая утечка: база данных QIP была взломана, и в открытый доступ попали <strong>33 миллиона аккаунтов</strong> с паролями. Это сильно подорвало доверие пользователей. Самый популярный пароль, как ни странно, был «123456».</p>
-
-                    <p data-i18n="post1-p6">После этого QIP начал терять популярность. Появились новые мессенджеры — WhatsApp, Telegram, Viber. Они были современнее, удобнее и работали на телефонах. QIP остался в прошлом, но его помнят миллионы людей как символ старого доброго интернета.</p>
-
-                    <p data-i18n="post1-p7">В 2026 году мы решили оживить QIP. Не как коммерческий продукт, а как ностальгический проект. Мы нашли старый клиент, настроили его для работы через Escargot и запустили QIP Community. И знаете что? Он снова работает. И люди снова в него заходят.</p>
-
-                    <p data-i18n="post1-p8"><strong>QIP не умер. Он просто ждал своего часа.</strong></p>
-
-                    <a href="blog.html" class="btn" data-i18n="blog-back">← Назад к статьям</a>
-                </div>
+    <footer>
+        <div class="container">
+            <p data-i18n="footer-text">QIP Community © 2026 — неофициальный фанатский проект.</p>
+            <div class="socials">
+                <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>
+                <a href="#">YouTube</a>
+                <a href="#">TikTok</a>
             </div>
-        </section>
-
-        <footer>
-            <div class="container">
-                <p data-i18n="footer-text">QIP Community © 2026 — неофициальный фанатский проект.</p>
-                <div class="socials">
-                    <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>
-                    <a href="#">YouTube</a>
-                    <a href="#">TikTok</a>
-                </div>
-                <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "310462293df347eaaf0c101f050bdbcf"}'></script>
-            </div>
-        </footer>
-    </div>
+            <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "310462293df347eaaf0c101f050bdbcf"}'></script>
+        </div>
+    </footer>
 
     <script>
         (function() {
-            const MAINTENANCE_MODE = false;
-            if (MAINTENANCE_MODE) {
-                document.getElementById('maintenance-mode').style.display = 'flex';
-                document.getElementById('main-site').style.display = 'none';
-            } else {
-                document.getElementById('maintenance-mode').style.display = 'none';
-                document.getElementById('main-site').style.display = 'block';
-            }
-
             const translations = {
                 ru: {
                     'nav-home': 'Главная', 'nav-download': 'Скачать', 'nav-about': 'О нас', 'nav-team': 'Команда', 'nav-guide': 'Инструкция', 'nav-news': 'Новости', 'nav-guestbook': 'Гостевая', 'nav-faq': 'FAQ', 'nav-blog': 'Блог', 'nav-links': 'Ссылки', 'nav-privacy': 'Конфиденциальность', 'nav-discord': 'Discord',
@@ -166,7 +138,6 @@
                     langBtn.addEventListener('click', toggleLang);
                 }
             });
-
         })();
     </script>
 

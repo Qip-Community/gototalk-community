@@ -9,99 +9,79 @@
 </head>
 <body>
 
-    <div id="maintenance-mode" style="display: none; height: 100vh; display: flex; justify-content: center; align-items: center; background: #dce5f0; font-family: Tahoma, sans-serif; text-align: center; position: fixed; top: 0; left: 0; width: 100%; z-index: 9999;">
-        <div style="background: #ffffff; padding: 50px 40px; border-radius: 12px; border: 1px solid #b3c3d4; max-width: 500px;">
-            <div style="font-size: 60px;">🔧</div>
-            <h1 style="font-size: 48px; color: #0d2f5e;">Технические работы</h1>
-            <p style="font-size: 18px; color: #333; margin-top: 10px;">Сайт временно недоступен.<br />Мы проводим плановое обслуживание.</p>
-            <p style="font-size:14px; color:#888; margin-top:20px;">Скоро всё заработает!</p>
+    <header>
+        <div class="container header-flex">
+            <div class="logo">🦋 MSN <span>Community</span></div>
+            <nav>
+                <a href="index.html" data-i18n="nav-home">Главная</a>
+                <a href="download.html" data-i18n="nav-download">Скачать</a>
+                <a href="about.html" data-i18n="nav-about">О нас</a>
+                <a href="team.html" data-i18n="nav-team">Команда</a>
+                <a href="guide.html" data-i18n="nav-guide">Инструкция</a>
+                <a href="news.html" data-i18n="nav-news">Новости</a>
+                <a href="reviews.html" data-i18n="nav-guestbook">Гостевая</a>
+                <a href="faq.html" data-i18n="nav-faq">FAQ</a>
+                <a href="blog.html" data-i18n="nav-blog">Блог</a>
+                <a href="links.html" data-i18n="nav-links">Ссылки</a>
+                <a href="privacy.html" data-i18n="nav-privacy">Конфиденциальность</a>
+                <a href="https://discord.gg/VSJpGajNmP" target="_blank" data-i18n="nav-discord">Discord</a>
+                <button id="lang-toggle" class="lang-toggle">RU / EN</button>
+                <button id="theme-toggle" class="theme-toggle">🌙 Тема</button>
+            </nav>
         </div>
-    </div>
+    </header>
 
-    <div id="main-site">
-        <header>
-            <div class="container header-flex">
-                <div class="logo">🦋 MSN <span>Community</span></div>
-                <nav>
-                    <a href="index.html" data-i18n="nav-home">Главная</a>
-                    <a href="download.html" data-i18n="nav-download">Скачать</a>
-                    <a href="about.html" data-i18n="nav-about">О нас</a>
-                    <a href="team.html" data-i18n="nav-team">Команда</a>
-                    <a href="guide.html" data-i18n="nav-guide">Инструкция</a>
-                    <a href="news.html" data-i18n="nav-news">Новости</a>
-                    <a href="reviews.html" data-i18n="nav-guestbook">Гостевая</a>
-                    <a href="faq.html" data-i18n="nav-faq">FAQ</a>
-                    <a href="blog.html" data-i18n="nav-blog">Блог</a>
-                    <a href="links.html" data-i18n="nav-links">Ссылки</a>
-                    <a href="privacy.html" data-i18n="nav-privacy">Конфиденциальность</a>
-                    <a href="https://discord.gg/VSJpGajNmP" target="_blank" data-i18n="nav-discord">Discord</a>
-                    <button id="lang-toggle" class="lang-toggle">RU / EN</button>
-                    <button id="theme-toggle" class="theme-toggle">🌙 Тема</button>
-                </nav>
+    <section class="guide-page">
+        <div class="container">
+            <h1 data-i18n="msn-title">🦋 MSN Messenger 6.2</h1>
+            <p class="subtitle" data-i18n="msn-subtitle">Инструкция по установке и настройке</p>
+
+            <div class="platform-card">
+                <h2 data-i18n="msn-step1-title">📝 Шаг 1: Регистрация</h2>
+                <p data-i18n="msn-step1-desc">Зарегистрируйтесь на сайте Escargot с типом аккаунта <strong>«Screenname»</strong> (не UIN!).</p>
+                <a href="https://account.escargot.chat/register/" target="_blank" class="btn">Перейти на Escargot →</a>
             </div>
-        </header>
 
-        <section class="guide-page">
-            <div class="container">
-                <h1 data-i18n="msn-title">🦋 MSN Messenger 6.2</h1>
-                <p class="subtitle" data-i18n="msn-subtitle">Инструкция по установке и настройке</p>
-
-                <div class="platform-card">
-                    <h2 data-i18n="msn-step1-title">📝 Шаг 1: Регистрация</h2>
-                    <p data-i18n="msn-step1-desc">Зарегистрируйтесь на сайте Escargot с типом аккаунта <strong>«Screenname»</strong> (не UIN!).</p>
-                    <a href="https://account.escargot.chat/register/" target="_blank" class="btn">Перейти на Escargot →</a>
-                </div>
-
-                <div class="platform-card">
-                    <h2 data-i18n="msn-step2-title">📥 Шаг 2: Скачивание MSN</h2>
-                    <p data-i18n="msn-step2-desc">Скачайте MSN 6.2 на русском языке по ссылке ниже.</p>
-                    <a href="https://drive.google.com/drive/folders/1tkOsJdTkLJQLEhnm-ATEOfky2h92SCMx?usp=sharing" target="_blank" class="btn">Скачать MSN 6.2 →</a>
-                </div>
-
-                <div class="platform-card">
-                    <h2 data-i18n="msn-step3-title">🔧 Шаг 3: Установка</h2>
-                    <p data-i18n="msn-step3-desc">Установите MSN из архива. После установки откройте файл <code>RUN_AFTER_INSTALL</code> и нажмите <strong>Patch All</strong>.</p>
-                </div>
-
-                <div class="platform-card">
-                    <h2 data-i18n="msn-step4-title">🔑 Шаг 4: Вход</h2>
-                    <p data-i18n="msn-step4-desc">Введите свои данные (Screenname и пароль), которые вы указали при регистрации на Escargot.</p>
-                </div>
-
-                <div class="platform-card help-card">
-                    <h2 data-i18n="msn-help-title">❓ Нужна помощь?</h2>
-                    <p data-i18n="msn-help-desc">Если что-то пошло не так — пиши в наш Discord, поможем!</p>
-                    <a href="https://discord.gg/VSJpGajNmP" target="_blank" class="btn">Перейти в Discord →</a>
-                </div>
-
-                <a href="index.html" class="btn btn-secondary" data-i18n="msn-back">← Назад к выбору</a>
+            <div class="platform-card">
+                <h2 data-i18n="msn-step2-title">📥 Шаг 2: Скачивание MSN</h2>
+                <p data-i18n="msn-step2-desc">Скачайте MSN 6.2 на русском языке по ссылке ниже.</p>
+                <a href="https://drive.google.com/drive/folders/1tkOsJdTkLJQLEhnm-ATEOfky2h92SCMx?usp=sharing" target="_blank" class="btn">Скачать MSN 6.2 →</a>
             </div>
-        </section>
 
-        <footer>
-            <div class="container">
-                <p data-i18n="footer-text">GoToTalk Community © 2026 — неофициальный фанатский проект.</p>
-                <div class="socials">
-                    <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>
-                    <a href="#">YouTube</a>
-                    <a href="#">TikTok</a>
-                </div>
-                <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "310462293df347eaaf0c101f050bdbcf"}'></script>
+            <div class="platform-card">
+                <h2 data-i18n="msn-step3-title">🔧 Шаг 3: Установка</h2>
+                <p data-i18n="msn-step3-desc">Установите MSN из архива. После установки откройте файл <code>RUN_AFTER_INSTALL</code> и нажмите <strong>Patch All</strong>.</p>
             </div>
-        </footer>
-    </div>
+
+            <div class="platform-card">
+                <h2 data-i18n="msn-step4-title">🔑 Шаг 4: Вход</h2>
+                <p data-i18n="msn-step4-desc">Введите свои данные (Screenname и пароль), которые вы указали при регистрации на Escargot.</p>
+            </div>
+
+            <div class="platform-card help-card">
+                <h2 data-i18n="msn-help-title">❓ Нужна помощь?</h2>
+                <p data-i18n="msn-help-desc">Если что-то пошло не так — пиши в наш Discord, поможем!</p>
+                <a href="https://discord.gg/VSJpGajNmP" target="_blank" class="btn">Перейти в Discord →</a>
+            </div>
+
+            <a href="index.html" class="btn btn-secondary" data-i18n="msn-back">← Назад к выбору</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p data-i18n="footer-text">GoToTalk Community © 2026 — неофициальный фанатский проект.</p>
+            <div class="socials">
+                <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>
+                <a href="#">YouTube</a>
+                <a href="#">TikTok</a>
+            </div>
+            <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "310462293df347eaaf0c101f050bdbcf"}'></script>
+        </div>
+    </footer>
 
     <script>
         (function() {
-            const MAINTENANCE_MODE = false;
-            if (MAINTENANCE_MODE) {
-                document.getElementById('maintenance-mode').style.display = 'flex';
-                document.getElementById('main-site').style.display = 'none';
-            } else {
-                document.getElementById('maintenance-mode').style.display = 'none';
-                document.getElementById('main-site').style.display = 'block';
-            }
-
             const translations = {
                 ru: {
                     'nav-home': 'Главная', 'nav-download': 'Скачать', 'nav-about': 'О нас', 'nav-team': 'Команда', 'nav-guide': 'Инструкция', 'nav-news': 'Новости', 'nav-guestbook': 'Гостевая', 'nav-faq': 'FAQ', 'nav-blog': 'Блог', 'nav-links': 'Ссылки', 'nav-privacy': 'Конфиденциальность', 'nav-discord': 'Discord',
@@ -180,7 +160,6 @@
                     langBtn.addEventListener('click', toggleLang);
                 }
             });
-
         })();
     </script>
 

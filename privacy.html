@@ -9,142 +9,122 @@
 </head>
 <body>
 
-    <div id="maintenance-mode" style="display: none; height: 100vh; display: flex; justify-content: center; align-items: center; background: #dce5f0; font-family: Tahoma, sans-serif; text-align: center; position: fixed; top: 0; left: 0; width: 100%; z-index: 9999;">
-        <div style="background: #ffffff; padding: 50px 40px; border-radius: 12px; border: 1px solid #b3c3d4; max-width: 500px;">
-            <div style="font-size: 60px;">🔧</div>
-            <h1 style="font-size: 48px; color: #0d2f5e;">Технические работы</h1>
-            <p style="font-size: 18px; color: #333; margin-top: 10px;">Сайт временно недоступен.<br />Мы проводим плановое обслуживание.</p>
-            <p style="font-size:14px; color:#888; margin-top:20px;">Скоро всё заработает!</p>
+    <header>
+        <div class="container header-flex">
+            <div class="logo">📡 QIP <span>Community</span></div>
+            <nav>
+                <a href="index.html" data-i18n="nav-home">Главная</a>
+                <a href="download.html" data-i18n="nav-download">Скачать</a>
+                <a href="about.html" data-i18n="nav-about">О нас</a>
+                <a href="team.html" data-i18n="nav-team">Команда</a>
+                <a href="guide.html" data-i18n="nav-guide">Инструкция</a>
+                <a href="news.html" data-i18n="nav-news">Новости</a>
+                <a href="reviews.html" data-i18n="nav-guestbook">Гостевая</a>
+                <a href="faq.html" data-i18n="nav-faq">FAQ</a>
+                <a href="blog.html" data-i18n="nav-blog">Блог</a>
+                <a href="links.html" data-i18n="nav-links">Ссылки</a>
+                <a href="privacy.html" class="active" data-i18n="nav-privacy">Конфиденциальность</a>
+                <a href="https://discord.gg/VSJpGajNmP" target="_blank" data-i18n="nav-discord">Discord</a>
+                <button id="lang-toggle" class="lang-toggle">RU / EN</button>
+                <button id="theme-toggle" class="theme-toggle">🌙 Тема</button>
+            </nav>
         </div>
-    </div>
+    </header>
 
-    <div id="main-site">
-        <header>
-            <div class="container header-flex">
-                <div class="logo">📡 QIP <span>Community</span></div>
-                <nav>
-                    <a href="index.html" data-i18n="nav-home">Главная</a>
-                    <a href="download.html" data-i18n="nav-download">Скачать</a>
-                    <a href="about.html" data-i18n="nav-about">О нас</a>
-                    <a href="team.html" data-i18n="nav-team">Команда</a>
-                    <a href="guide.html" data-i18n="nav-guide">Инструкция</a>
-                    <a href="news.html" data-i18n="nav-news">Новости</a>
-                    <a href="reviews.html" data-i18n="nav-guestbook">Гостевая</a>
-                    <a href="faq.html" data-i18n="nav-faq">FAQ</a>
-                    <a href="blog.html" data-i18n="nav-blog">Блог</a>
-                    <a href="links.html" data-i18n="nav-links">Ссылки</a>
-                    <a href="privacy.html" class="active" data-i18n="nav-privacy">Конфиденциальность</a>
-                    <a href="https://discord.gg/VSJpGajNmP" target="_blank" data-i18n="nav-discord">Discord</a>
-                    <button id="lang-toggle" class="lang-toggle">RU / EN</button>
-                    <button id="theme-toggle" class="theme-toggle">🌙 Тема</button>
-                </nav>
+    <section class="privacy-page">
+        <div class="container">
+            <h1 data-i18n="privacy-title">🔒 Политика конфиденциальности</h1>
+            <p class="subtitle" data-i18n="privacy-subtitle">Последнее обновление: 26 августа 2026 года</p>
+
+            <div class="privacy-block">
+                <h2 data-i18n="privacy-1-title">1. Общие положения</h2>
+                <p data-i18n="privacy-1-desc">Данная Политика конфиденциальности описывает, как QIP Community (далее — «мы», «наш», «нас») собирает, использует и защищает информацию, которую вы предоставляете при использовании нашего сайта <a href="https://qip-community.github.io/qip-community/">https://qip-community.github.io/qip-community/</a>.</p>
+                <p data-i18n="privacy-1-desc2">Используя наш сайт, вы соглашаетесь с условиями данной Политики конфиденциальности. Если вы не согласны с этими условиями, пожалуйста, не используйте наш сайт.</p>
             </div>
-        </header>
 
-        <section class="privacy-page">
-            <div class="container">
-                <h1 data-i18n="privacy-title">🔒 Политика конфиденциальности</h1>
-                <p class="subtitle" data-i18n="privacy-subtitle">Последнее обновление: 26 августа 2026 года</p>
-
-                <div class="privacy-block">
-                    <h2 data-i18n="privacy-1-title">1. Общие положения</h2>
-                    <p data-i18n="privacy-1-desc">Данная Политика конфиденциальности описывает, как QIP Community (далее — «мы», «наш», «нас») собирает, использует и защищает информацию, которую вы предоставляете при использовании нашего сайта <a href="https://qip-community.github.io/qip-community/">https://qip-community.github.io/qip-community/</a>.</p>
-                    <p data-i18n="privacy-1-desc2">Используя наш сайт, вы соглашаетесь с условиями данной Политики конфиденциальности. Если вы не согласны с этими условиями, пожалуйста, не используйте наш сайт.</p>
-                </div>
-
-                <div class="privacy-block">
-                    <h2 data-i18n="privacy-2-title">2. Какие данные мы собираем</h2>
-                    <p data-i18n="privacy-2-desc">Мы собираем минимальный объём данных, необходимый для работы сайта и улучшения пользовательского опыта:</p>
-                    <ul>
-                        <li data-i18n="privacy-2-item1"><strong>Анонимные данные посещений</strong> — с помощью Cloudflare Web Analytics мы собираем обезличенную информацию о количестве посетителей, просмотренных страницах, времени пребывания на сайте и типе устройства. Эти данные не содержат личной информации и не позволяют идентифицировать вас.</li>
-                        <li data-i18n="privacy-2-item2"><strong>Данные, которые вы предоставляете добровольно</strong> — если вы оставляете сообщение в гостевой книге, мы сохраняем ваше имя и текст сообщения в Google Таблице. Эти данные видны другим посетителям сайта.</li>
-                        <li data-i18n="privacy-2-item3"><strong>Технические данные</strong> — ваш IP-адрес, тип браузера, операционная система и язык могут автоматически передаваться серверу для корректного отображения сайта.</li>
-                    </ul>
-                </div>
-
-                <div class="privacy-block">
-                    <h2 data-i18n="privacy-3-title">3. Как мы используем ваши данные</h2>
-                    <ul>
-                        <li data-i18n="privacy-3-item1">Для анализа посещаемости и улучшения сайта (Cloudflare Web Analytics).</li>
-                        <li data-i18n="privacy-3-item2">Для отображения сообщений в гостевой книге (если вы их оставляете).</li>
-                        <li data-i18n="privacy-3-item3">Для обеспечения безопасности и предотвращения злоупотреблений.</li>
-                    </ul>
-                </div>
-
-                <div class="privacy-block">
-                    <h2 data-i18n="privacy-4-title">4. Использование cookies</h2>
-                    <p data-i18n="privacy-4-desc">Наш сайт не использует cookies для отслеживания пользователей. Мы не собираем и не храним персональные данные в вашем браузере.</p>
-                    <p data-i18n="privacy-4-desc2">Cloudflare Web Analytics, который мы используем, не использует cookies и не нарушает GDPR.</p>
-                </div>
-
-                <div class="privacy-block">
-                    <h2 data-i18n="privacy-5-title">5. Передача данных третьим лицам</h2>
-                    <p data-i18n="privacy-5-desc">Мы не передаём ваши данные третьим лицам, за исключением случаев, когда это требуется по закону или для обеспечения работы сайта:</p>
-                    <ul>
-                        <li data-i18n="privacy-5-item1">Cloudflare (Web Analytics) — анонимная статистика посещений.</li>
-                        <li data-i18n="privacy-5-item2">Google (Search Console) — индексация и анализ видимости сайта.</li>
-                        <li data-i18n="privacy-5-item3">Google Таблицы — хранение сообщений из гостевой книги.</li>
-                    </ul>
-                    <p data-i18n="privacy-5-desc2">Все эти сервисы используют обезличенные данные и не позволяют идентифицировать отдельных пользователей.</p>
-                </div>
-
-                <div class="privacy-block">
-                    <h2 data-i18n="privacy-6-title">6. Гостевая книга</h2>
-                    <p data-i18n="privacy-6-desc">Сообщения, оставленные в гостевой книге, сохраняются в Google Таблице и отображаются на сайте. Любой посетитель может увидеть ваше имя и текст сообщения. Мы не рекомендуем оставлять личную информацию (номер телефона, адрес, пароли) в гостевой книге.</p>
-                    <p data-i18n="privacy-6-desc2">Если вы хотите удалить своё сообщение, пожалуйста, свяжитесь с нами через Discord или по почте.</p>
-                </div>
-
-                <div class="privacy-block">
-                    <h2 data-i18n="privacy-7-title">7. Ссылки на сторонние сайты</h2>
-                    <p data-i18n="privacy-7-desc">Наш сайт может содержать ссылки на сторонние сайты (Discord, Google Drive, Escargot, YouTube, TikTok). Мы не несём ответственности за политику конфиденциальности этих сайтов. Рекомендуем ознакомиться с их политиками конфиденциальности перед использованием.</p>
-                </div>
-
-                <div class="privacy-block">
-                    <h2 data-i18n="privacy-8-title">8. Безопасность</h2>
-                    <p data-i18n="privacy-8-desc">Мы принимаем разумные меры для защиты ваших данных от несанкционированного доступа, изменения, раскрытия или уничтожения. Однако ни один метод передачи данных через интернет не является на 100% безопасным, поэтому мы не можем гарантировать абсолютную безопасность.</p>
-                </div>
-
-                <div class="privacy-block">
-                    <h2 data-i18n="privacy-9-title">9. Изменения в политике</h2>
-                    <p data-i18n="privacy-9-desc">Мы оставляем за собой право обновлять данную Политику конфиденциальности. Все изменения будут публиковаться на этой странице с указанием даты последнего обновления. Рекомендуем периодически проверять эту страницу.</p>
-                </div>
-
-                <div class="privacy-block">
-                    <h2 data-i18n="privacy-10-title">10. Контакты</h2>
-                    <p data-i18n="privacy-10-desc">Если у вас есть вопросы по данной Политике конфиденциальности, вы можете связаться с нами:</p>
-                    <ul>
-                        <li><strong>Discord:</strong> <a href="https://discord.gg/VSJpGajNmP" target="_blank">https://discord.gg/VSJpGajNmP</a></li>
-                        <li><strong>Email:</strong> <a href="mailto:qipcommunity@outlook.com">qipcommunity@outlook.com</a></li>
-                    </ul>
-                </div>
-
+            <div class="privacy-block">
+                <h2 data-i18n="privacy-2-title">2. Какие данные мы собираем</h2>
+                <p data-i18n="privacy-2-desc">Мы собираем минимальный объём данных, необходимый для работы сайта и улучшения пользовательского опыта:</p>
+                <ul>
+                    <li data-i18n="privacy-2-item1"><strong>Анонимные данные посещений</strong> — с помощью Cloudflare Web Analytics мы собираем обезличенную информацию о количестве посетителей, просмотренных страницах, времени пребывания на сайте и типе устройства. Эти данные не содержат личной информации и не позволяют идентифицировать вас.</li>
+                    <li data-i18n="privacy-2-item2"><strong>Данные, которые вы предоставляете добровольно</strong> — если вы оставляете сообщение в гостевой книге, мы сохраняем ваше имя и текст сообщения в Google Таблице. Эти данные видны другим посетителям сайта.</li>
+                    <li data-i18n="privacy-2-item3"><strong>Технические данные</strong> — ваш IP-адрес, тип браузера, операционная система и язык могут автоматически передаваться серверу для корректного отображения сайта.</li>
+                </ul>
             </div>
-        </section>
 
-        <footer>
-            <div class="container">
-                <p data-i18n="footer-text">QIP Community © 2026 — неофициальный фанатский проект.</p>
-                <div class="socials">
-                    <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>
-                    <a href="#">YouTube</a>
-                    <a href="#">TikTok</a>
-                </div>
-                <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "310462293df347eaaf0c101f050bdbcf"}'></script>
+            <div class="privacy-block">
+                <h2 data-i18n="privacy-3-title">3. Как мы используем ваши данные</h2>
+                <ul>
+                    <li data-i18n="privacy-3-item1">Для анализа посещаемости и улучшения сайта (Cloudflare Web Analytics).</li>
+                    <li data-i18n="privacy-3-item2">Для отображения сообщений в гостевой книге (если вы их оставляете).</li>
+                    <li data-i18n="privacy-3-item3">Для обеспечения безопасности и предотвращения злоупотреблений.</li>
+                </ul>
             </div>
-        </footer>
-    </div>
+
+            <div class="privacy-block">
+                <h2 data-i18n="privacy-4-title">4. Использование cookies</h2>
+                <p data-i18n="privacy-4-desc">Наш сайт не использует cookies для отслеживания пользователей. Мы не собираем и не храним персональные данные в вашем браузере.</p>
+                <p data-i18n="privacy-4-desc2">Cloudflare Web Analytics, который мы используем, не использует cookies и не нарушает GDPR.</p>
+            </div>
+
+            <div class="privacy-block">
+                <h2 data-i18n="privacy-5-title">5. Передача данных третьим лицам</h2>
+                <p data-i18n="privacy-5-desc">Мы не передаём ваши данные третьим лицам, за исключением случаев, когда это требуется по закону или для обеспечения работы сайта:</p>
+                <ul>
+                    <li data-i18n="privacy-5-item1">Cloudflare (Web Analytics) — анонимная статистика посещений.</li>
+                    <li data-i18n="privacy-5-item2">Google (Search Console) — индексация и анализ видимости сайта.</li>
+                    <li data-i18n="privacy-5-item3">Google Таблицы — хранение сообщений из гостевой книги.</li>
+                </ul>
+                <p data-i18n="privacy-5-desc2">Все эти сервисы используют обезличенные данные и не позволяют идентифицировать отдельных пользователей.</p>
+            </div>
+
+            <div class="privacy-block">
+                <h2 data-i18n="privacy-6-title">6. Гостевая книга</h2>
+                <p data-i18n="privacy-6-desc">Сообщения, оставленные в гостевой книге, сохраняются в Google Таблице и отображаются на сайте. Любой посетитель может увидеть ваше имя и текст сообщения. Мы не рекомендуем оставлять личную информацию (номер телефона, адрес, пароли) в гостевой книге.</p>
+                <p data-i18n="privacy-6-desc2">Если вы хотите удалить своё сообщение, пожалуйста, свяжитесь с нами через Discord или по почте.</p>
+            </div>
+
+            <div class="privacy-block">
+                <h2 data-i18n="privacy-7-title">7. Ссылки на сторонние сайты</h2>
+                <p data-i18n="privacy-7-desc">Наш сайт может содержать ссылки на сторонние сайты (Discord, Google Drive, Escargot, YouTube, TikTok). Мы не несём ответственности за политику конфиденциальности этих сайтов. Рекомендуем ознакомиться с их политиками конфиденциальности перед использованием.</p>
+            </div>
+
+            <div class="privacy-block">
+                <h2 data-i18n="privacy-8-title">8. Безопасность</h2>
+                <p data-i18n="privacy-8-desc">Мы принимаем разумные меры для защиты ваших данных от несанкционированного доступа, изменения, раскрытия или уничтожения. Однако ни один метод передачи данных через интернет не является на 100% безопасным, поэтому мы не можем гарантировать абсолютную безопасность.</p>
+            </div>
+
+            <div class="privacy-block">
+                <h2 data-i18n="privacy-9-title">9. Изменения в политике</h2>
+                <p data-i18n="privacy-9-desc">Мы оставляем за собой право обновлять данную Политику конфиденциальности. Все изменения будут публиковаться на этой странице с указанием даты последнего обновления. Рекомендуем периодически проверять эту страницу.</p>
+            </div>
+
+            <div class="privacy-block">
+                <h2 data-i18n="privacy-10-title">10. Контакты</h2>
+                <p data-i18n="privacy-10-desc">Если у вас есть вопросы по данной Политике конфиденциальности, вы можете связаться с нами:</p>
+                <ul>
+                    <li><strong>Discord:</strong> <a href="https://discord.gg/VSJpGajNmP" target="_blank">https://discord.gg/VSJpGajNmP</a></li>
+                    <li><strong>Email:</strong> <a href="mailto:qipcommunity@outlook.com">qipcommunity@outlook.com</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p data-i18n="footer-text">QIP Community © 2026 — неофициальный фанатский проект.</p>
+            <div class="socials">
+                <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>
+                <a href="#">YouTube</a>
+                <a href="#">TikTok</a>
+            </div>
+            <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "310462293df347eaaf0c101f050bdbcf"}'></script>
+        </div>
+    </footer>
 
     <script>
         (function() {
-            const MAINTENANCE_MODE = false;
-            if (MAINTENANCE_MODE) {
-                document.getElementById('maintenance-mode').style.display = 'flex';
-                document.getElementById('main-site').style.display = 'none';
-            } else {
-                document.getElementById('maintenance-mode').style.display = 'none';
-                document.getElementById('main-site').style.display = 'block';
-            }
-
             const translations = {
                 ru: {
                     'nav-home': 'Главная', 'nav-download': 'Скачать', 'nav-about': 'О нас', 'nav-team': 'Команда', 'nav-guide': 'Инструкция', 'nav-news': 'Новости', 'nav-guestbook': 'Гостевая', 'nav-faq': 'FAQ', 'nav-blog': 'Блог', 'nav-links': 'Ссылки', 'nav-privacy': 'Конфиденциальность', 'nav-discord': 'Discord',
@@ -265,7 +245,6 @@
                     langBtn.addEventListener('click', toggleLang);
                 }
             });
-
         })();
     </script>
 
