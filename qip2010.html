@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QIP 2010</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+</head>
+<body>
+
+    <header>
+        <div class="container header-flex">
+            <div class="logo">📡 QIP <span>Community</span></div>
+            <nav>
+                <a href="index.html" data-i18n="nav-home">Главная</a>
+                <a href="download.html" data-i18n="nav-download">Скачать</a>
+                <a href="about.html" data-i18n="nav-about">О нас</a>
+                <a href="team.html" data-i18n="nav-team">Команда</a>
+                <a href="guide.html" data-i18n="nav-guide">Инструкция</a>
+                <a href="news.html" data-i18n="nav-news">Новости</a>
+                <a href="reviews.html" data-i18n="nav-guestbook">Гостевая</a>
+                <a href="faq.html" data-i18n="nav-faq">FAQ</a>
+                <a href="blog.html" data-i18n="nav-blog">Блог</a>
+                <a href="links.html" data-i18n="nav-links">Ссылки</a>
+                <a href="privacy.html" data-i18n="nav-privacy">Конфиденциальность</a>
+                <a href="https://discord.gg/VSJpGajNmP" target="_blank" data-i18n="nav-discord">Discord</a>
+                <button id="lang-toggle" class="lang-toggle">RU / EN</button>
+                <button id="theme-toggle" class="theme-toggle">🌙 Тема</button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="guide-page">
+        <div class="container">
+            <h1 data-i18n="qip2010-title">🌀 QIP 2010</h1>
+            <p class="subtitle" data-i18n="qip2010-subtitle">Инструкция по установке и настройке</p>
+
+            <div class="platform-card" style="text-align: center;">
+                <h2 data-i18n="qip2010-download-title">📥 Скачать QIP 2010</h2>
+                <p data-i18n="qip2010-download-desc">Готовый установщик QIP 2010 для Windows.</p>
+                <a href="https://drive.google.com/drive/folders/1A8bJIMyGd57pTgyFeyxoNuJntUTFApN8?usp=sharing" target="_blank" class="btn" data-i18n="qip2010-download-btn">Скачать QIP 2010 →</a>
+            </div>
+
+            <div class="platform-card help-card">
+                <h2 data-i18n="qip2010-about-title">ℹ️ О сервисе PLQIP</h2>
+                <p data-i18n="qip2010-about-desc">QIP 2010 работает через <strong>PLQIP</strong> — простой jabber-сервер с локальным доменом qip.ru. Он создан для возрождения оригинального QIP Infium / 2010 / 2012. Сервер фанатский, некоммерческий и работает на энтузиазме.</p>
+                <p data-i18n="qip2010-about-desc2">Сайт сервиса: <a href="http://plqip.pirogprod.ru" target="_blank">plqip.pirogprod.ru</a></p>
+            </div>
+
+            <div class="platform-card">
+                <h2 data-i18n="qip2010-step1-title">📥 Шаг 1: Установка</h2>
+                <p data-i18n="qip2010-step1-desc">Запусти установщик от имени администратора. Прими лицензию и установи QIP 2010.</p>
+            </div>
+
+            <div class="platform-card">
+                <h2 data-i18n="qip2010-step2-title">⚙️ Шаг 2: Настройка hosts</h2>
+                <p data-i18n="qip2010-step2-desc">Открой Блокнот от имени администратора и открой файл <code>C:\Windows\System32\drivers\etc\hosts</code>. В самый низ добавь строки:</p>
+                <p><code>45.142.36.40 qip.ru</code><br /><code>45.142.36.40 webim.qip.ru</code></p>
+                <p data-i18n="qip2010-step2-desc2">Сохрани файл. Или используй специальную утилиту для настройки (ссылка на сайте PLQIP).</p>
+            </div>
+
+            <div class="platform-card">
+                <h2 data-i18n="qip2010-step3-title">📝 Шаг 3: Регистрация</h2>
+                <p data-i18n="qip2010-step3-desc">Регистрация проходит через клиент (рекомендуется <strong>Infium 9028 / 9030 / 9034</strong>). Также можно зарегистрироваться с помощью специальной утилиты — ссылка на сайте PLQIP.</p>
+                <p data-i18n="qip2010-step3-desc2">После регистрации запомни логин и пароль.</p>
+            </div>
+
+            <div class="platform-card">
+                <h2 data-i18n="qip2010-step4-title">🔑 Шаг 4: Вход</h2>
+                <p data-i18n="qip2010-step4-desc">Запусти QIP 2010 и войди через данные аккаунта, зарегистрированного на PLQIP. После входа можешь добавить асю (KICQ) и другие аккаунты.</p>
+            </div>
+
+            <div class="platform-card">
+                <h2 data-i18n="qip2010-step5-title">💬 Шаг 5: Добавление KICQ (аси)</h2>
+                <p data-i18n="qip2010-step5-desc">Настройки → Учётные записи → Добавить → ICQ.</p>
+                <p data-i18n="qip2010-step5-desc2">Сервер: <code>kicq.ru</code><br />Порт: <code>5190</code></p>
+                <p data-i18n="qip2010-step5-desc3">Введи свой UIN и пароль (регистрация на kicq.ru).</p>
+            </div>
+
+            <div class="platform-card">
+                <h2 data-i18n="qip2010-step6-title">⚠️ Не работает</h2>
+                <p data-i18n="qip2010-step6-desc">Звонки и видео — не работают.</p>
+            </div>
+
+            <div class="platform-card help-card">
+                <h2 data-i18n="qip2010-problems-title">❓ Проблемы</h2>
+                <p data-i18n="qip2010-problems-desc">• Проверь hosts — строки должны быть внизу файла<br />• Порт: <code>5190</code><br />• Добавь QIP в исключения антивируса<br />• С некоторыми ранними версиями QIP могут быть проблемы</p>
+                <a href="https://discord.gg/VSJpGajNmP" target="_blank" class="btn" data-i18n="help-btn">Перейти в Discord →</a>
+            </div>
+
+            <div class="platform-card" style="border-color: #ffcc00; background: #fffcf0; text-align: center;">
+                <h2 data-i18n="qip2010-thanks-title">🙏 Спасибо PirogProd Services</h2>
+                <p data-i18n="qip2010-thanks-desc">Работа QIP 2010 возможна благодаря сервису PLQIP от PirogProd Services.</p>
+                <a href="http://services.pirogprod.ru/" target="_blank" class="btn" data-i18n="qip2010-thanks-btn">Перейти на сайт →</a>
+            </div>
+
+            <a href="index.html" class="btn btn-secondary" data-i18n="qip2010-back">← Назад к выбору</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p data-i18n="footer-text">GoToTalk Community © 2026 — неофициальный фанатский проект.</p>
+            <div class="socials">
+                <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>
+                <a href="#">YouTube</a>
+                <a href="#">TikTok</a>
+            </div>
+            <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "310462293df347eaaf0c101f050bdbcf"}'></script>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            const translations = {
+                ru: {
+                    'nav-home': 'Главная', 'nav-download': 'Скачать', 'nav-about': 'О нас', 'nav-team': 'Команда', 'nav-guide': 'Инструкция', 'nav-news': 'Новости', 'nav-guestbook': 'Гостевая', 'nav-faq': 'FAQ', 'nav-blog': 'Блог', 'nav-links': 'Ссылки', 'nav-privacy': 'Конфиденциальность', 'nav-discord': 'Discord',
+                    'qip2010-title': '🌀 QIP 2010',
+                    'qip2010-subtitle': 'Инструкция по установке и настройке',
+                    'qip2010-download-title': '📥 Скачать QIP 2010',
+                    'qip2010-download-desc': 'Готовый установщик QIP 2010 для Windows.',
+                    'qip2010-download-btn': 'Скачать QIP 2010 →',
+                    'qip2010-about-title': 'ℹ️ О сервисе PLQIP',
+                    'qip2010-about-desc': 'QIP 2010 работает через PLQIP — простой jabber-сервер с локальным доменом qip.ru. Он создан для возрождения оригинального QIP Infium / 2010 / 2012. Сервер фанатский, некоммерческий и работает на энтузиазме.',
+                    'qip2010-about-desc2': 'Сайт сервиса: plqip.pirogprod.ru',
+                    'qip2010-step1-title': '📥 Шаг 1: Установка',
+                    'qip2010-step1-desc': 'Запусти установщик от имени администратора. Прими лицензию и установи QIP 2010.',
+                    'qip2010-step2-title': '⚙️ Шаг 2: Настройка hosts',
+                    'qip2010-step2-desc': 'Открой Блокнот от имени администратора и открой файл C:\\Windows\\System32\\drivers\\etc\\hosts. В самый низ добавь строки:',
+                    'qip2010-step2-desc2': 'Сохрани файл. Или используй специальную утилиту для настройки (ссылка на сайте PLQIP).',
+                    'qip2010-step3-title': '📝 Шаг 3: Регистрация',
+                    'qip2010-step3-desc': 'Регистрация проходит через клиент (рекомендуется Infium 9028 / 9030 / 9034). Также можно зарегистрироваться с помощью специальной утилиты — ссылка на сайте PLQIP.',
+                    'qip2010-step3-desc2': 'После регистрации запомни логин и пароль.',
+                    'qip2010-step4-title': '🔑 Шаг 4: Вход',
+                    'qip2010-step4-desc': 'Запусти QIP 2010 и войди через данные аккаунта, зарегистрированного на PLQIP. После входа можешь добавить асю (KICQ) и другие аккаунты.',
+                    'qip2010-step5-title': '💬 Шаг 5: Добавление KICQ (аси)',
+                    'qip2010-step5-desc': 'Настройки → Учётные записи → Добавить → ICQ.',
+                    'qip2010-step5-desc2': 'Сервер: kicq.ru · Порт: 5190',
+                    'qip2010-step5-desc3': 'Введи свой UIN и пароль (регистрация на kicq.ru).',
+                    'qip2010-step6-title': '⚠️ Не работает',
+                    'qip2010-step6-desc': 'Звонки и видео — не работают.',
+                    'qip2010-problems-title': '❓ Проблемы',
+                    'qip2010-problems-desc': '• Проверь hosts — строки должны быть внизу файла\n• Порт: 5190\n• Добавь QIP в исключения антивируса\n• С некоторыми ранними версиями QIP могут быть проблемы',
+                    'qip2010-thanks-title': '🙏 Спасибо PirogProd Services',
+                    'qip2010-thanks-desc': 'Работа QIP 2010 возможна благодаря сервису PLQIP от PirogProd Services.',
+                    'qip2010-thanks-btn': 'Перейти на сайт →',
+                    'qip2010-back': '← Назад к выбору',
+                    'help-btn': 'Перейти в Discord →',
+                    'footer-text': 'GoToTalk Community © 2026 — неофициальный фанатский проект.'
+                },
+                en: {
+                    'nav-home': 'Home', 'nav-download': 'Download', 'nav-about': 'About', 'nav-team': 'Team', 'nav-guide': 'Guide', 'nav-news': 'News', 'nav-guestbook': 'Guestbook', 'nav-faq': 'FAQ', 'nav-blog': 'Blog', 'nav-links': 'Links', 'nav-privacy': 'Privacy', 'nav-discord': 'Discord',
+                    'qip2010-title': '🌀 QIP 2010',
+                    'qip2010-subtitle': 'Installation and setup guide',
+                    'qip2010-download-title': '📥 Download QIP 2010',
+                    'qip2010-download-desc': 'Ready-to-use QIP 2010 installer for Windows.',
+                    'qip2010-download-btn': 'Download QIP 2010 →',
+                    'qip2010-about-title': 'ℹ️ About PLQIP service',
+                    'qip2010-about-desc': 'QIP 2010 works through PLQIP — a simple jabber server with a local qip.ru domain. It was created to revive the original QIP Infium / 2010 / 2012. The server is fan-made, non-commercial and runs on enthusiasm.',
+                    'qip2010-about-desc2': 'Service website: plqip.pirogprod.ru',
+                    'qip2010-step1-title': '📥 Step 1: Installation',
+                    'qip2010-step1-desc': 'Run the installer as administrator. Accept the license and install QIP 2010.',
+                    'qip2010-step2-title': '⚙️ Step 2: Hosts setup',
+                    'qip2010-step2-desc': 'Open Notepad as administrator and open the file C:\\Windows\\System32\\drivers\\etc\\hosts. Add these lines at the very bottom:',
+                    'qip2010-step2-desc2': 'Save the file. Or use the special setup utility (link on the PLQIP website).',
+                    'qip2010-step3-title': '📝 Step 3: Registration',
+                    'qip2010-step3-desc': 'Registration is done through the client (Infium 9028 / 9030 / 9034 recommended). You can also register using a special utility — link on the PLQIP website.',
+                    'qip2010-step3-desc2': 'After registration, remember your login and password.',
+                    'qip2010-step4-title': '🔑 Step 4: Login',
+                    'qip2010-step4-desc': 'Launch QIP 2010 and log in with the account data registered on PLQIP. After logging in, you can add ICQ (KICQ) and other accounts.',
+                    'qip2010-step5-title': '💬 Step 5: Adding KICQ (ICQ)',
+                    'qip2010-step5-desc': 'Settings → Accounts → Add → ICQ.',
+                    'qip2010-step5-desc2': 'Server: kicq.ru · Port: 5190',
+                    'qip2010-step5-desc3': 'Enter your UIN and password (register on kicq.ru).',
+                    'qip2010-step6-title': '⚠️ Does not work',
+                    'qip2010-step6-desc': 'Calls and video — do not work.',
+                    'qip2010-problems-title': '❓ Problems',
+                    'qip2010-problems-desc': '• Check hosts — lines must be at the bottom of the file\n• Port: 5190\n• Add QIP to antivirus exceptions\n• Some early QIP versions may have issues',
+                    'qip2010-thanks-title': '🙏 Thanks to PirogProd Services',
+                    'qip2010-thanks-desc': 'QIP 2010 works thanks to the PLQIP service by PirogProd Services.',
+                    'qip2010-thanks-btn': 'Go to website →',
+                    'qip2010-back': '← Back to selection',
+                    'help-btn': 'Go to Discord →',
+                    'footer-text': 'GoToTalk Community © 2026 — unofficial fan project.'
+                }
+            };
+
+            let currentLang = localStorage.getItem('qip-lang') || 'ru';
+
+            function setLanguage(lang) {
+                currentLang = lang;
+                localStorage.setItem('qip-lang', lang);
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if (translations[lang] && translations[lang][key]) {
+                        el.innerHTML = translations[lang][key];
+                    }
+                });
+                document.documentElement.lang = lang;
+            }
+
+            function toggleLang() {
+                const nextLang = currentLang === 'ru' ? 'en' : 'ru';
+                setLanguage(nextLang);
+            }
+
+            (function initTheme() {
+                const themeToggle = document.getElementById('theme-toggle');
+                if (!themeToggle) return;
+                const savedTheme = localStorage.getItem('qip-theme');
+                if (savedTheme === 'dark') {
+                    document.body.classList.add('dark-theme');
+                    themeToggle.textContent = '☀️ Светлая';
+                }
+                themeToggle.addEventListener('click', function() {
+                    const isDark = document.body.classList.toggle('dark-theme');
+                    localStorage.setItem('qip-theme', isDark ? 'dark' : 'light');
+                    themeToggle.textContent = isDark ? '☀️ Светлая' : '🌙 Тёмная';
+                });
+            })();
+
+            document.addEventListener('DOMContentLoaded', function() {
+                setLanguage(currentLang);
+                const langBtn = document.getElementById('lang-toggle');
+                if (langBtn) {
+                    langBtn.addEventListener('click', toggleLang);
+                }
+            });
+        })();
+    </script>
+
+</body>
+</html>
