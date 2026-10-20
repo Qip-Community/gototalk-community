@@ -67,6 +67,8 @@
         document.body.appendChild(batContainer);
 
         function spawnBat() {
+            if (!batContainer) return; // <--- ЗАЩИТА ОТ ОШИБКИ ЗДЕСЬ
+
             const bat = document.createElement('span');
             bat.className = 'halloween-bat';
             bat.textContent = Math.random() > 0.5 ? '🦇' : '👻';
