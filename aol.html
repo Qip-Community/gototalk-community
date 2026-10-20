@@ -44,12 +44,12 @@
 
             <div class="platform-card">
                 <h2 data-i18n="aol-step2-title">🔧 Шаг 2: Установка</h2>
-                <p data-i18n="aol-step2-desc">Установите AIM из архива, следуя инструкциям установщика.</p>
+                <p data-i18n="aol-step2-desc">Установите AIM из архива, следуя инструкциям установщика. <strong>Пароль от архива:</strong> <code>mokerTS</code></p>
             </div>
 
             <div class="platform-card">
                 <h2 data-i18n="aol-step3-title">🔑 Шаг 3: Вход</h2>
-                <p data-i18n="aol-step3-desc">Введите свой Screenname и пароль. Пароль по умолчанию: <code>mokerTS</code></p>
+                <p data-i18n="aol-step3-desc">Введите свой Screenname и пароль от вашего аккаунта.</p>
             </div>
 
             <div class="platform-card help-card">
@@ -84,9 +84,9 @@
                     'aol-step1-title': '📥 Шаг 1: Скачивание',
                     'aol-step1-desc': 'Скачайте AIM 5.0 по ссылке ниже.',
                     'aol-step2-title': '🔧 Шаг 2: Установка',
-                    'aol-step2-desc': 'Установите AIM из архива, следуя инструкциям установщика.',
+                    'aol-step2-desc': 'Установите AIM из архива, следуя инструкциям установщика. <strong>Пароль от архива:</strong> <code>mokerTS</code>',
                     'aol-step3-title': '🔑 Шаг 3: Вход',
-                    'aol-step3-desc': 'Введите свой Screenname и пароль. Пароль по умолчанию: mokerTS',
+                    'aol-step3-desc': 'Введите свой Screenname и пароль от вашего аккаунта.',
                     'aol-help-title': '❓ Нужна помощь?',
                     'aol-help-desc': 'Если что-то пошло не так — пиши в наш Discord, поможем!',
                     'aol-back': '← Назад к выбору',
@@ -99,9 +99,9 @@
                     'aol-step1-title': '📥 Step 1: Download',
                     'aol-step1-desc': 'Download AIM 5.0 from the link below.',
                     'aol-step2-title': '🔧 Step 2: Installation',
-                    'aol-step2-desc': 'Install AIM from the archive following the installer instructions.',
+                    'aol-step2-desc': 'Install AIM from the archive following the installer instructions. <strong>Archive password:</strong> <code>mokerTS</code>',
                     'aol-step3-title': '🔑 Step 3: Login',
-                    'aol-step3-desc': 'Enter your Screenname and password. Default password: mokerTS',
+                    'aol-step3-desc': 'Enter your Screenname and account password.',
                     'aol-help-title': '❓ Need help?',
                     'aol-help-desc': 'If something went wrong — write in our Discord, we\'ll help!',
                     'aol-back': '← Back to selection',
@@ -117,7 +117,7 @@
                 document.querySelectorAll('[data-i18n]').forEach(el => {
                     const key = el.getAttribute('data-i18n');
                     if (translations[lang] && translations[lang][key]) {
-                        el.textContent = translations[lang][key];
+                        el.innerHTML = translations[lang][key];
                     }
                 });
                 document.documentElement.lang = lang;
