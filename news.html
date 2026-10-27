@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Команда</title>
+    <title>Новости</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
 </head>
@@ -16,9 +16,9 @@
                 <a href="index.html" data-i18n="nav-home">Главная</a>
                 <a href="download.html" data-i18n="nav-download">Скачать</a>
                 <a href="about.html" data-i18n="nav-about">О нас</a>
-                <a href="team.html" class="active" data-i18n="nav-team">Команда</a>
+                <a href="team.html" data-i18n="nav-team">Команда</a>
                 <a href="guide.html" data-i18n="nav-guide">Инструкция</a>
-                <a href="news.html" data-i18n="nav-news">Новости</a>
+                <a href="news.html" class="active" data-i18n="nav-news">Новости</a>
                 <a href="reviews.html" data-i18n="nav-guestbook">Гостевая</a>
                 <a href="faq.html" data-i18n="nav-faq">FAQ</a>
                 <a href="blog.html" data-i18n="nav-blog">Блог</a>
@@ -31,38 +31,213 @@
         </div>
     </header>
 
-    <section class="team-page">
+    <section class="news-page">
         <div class="container">
-            <h1 data-i18n="team-title">👥 Наша команда</h1>
-            <p class="subtitle" data-i18n="team-subtitle">Те, кто оживляет QIP 2005</p>
+            <h1 data-i18n="news-title">📰 Новости сообщества</h1>
 
-            <div class="team-grid">
-                <div class="team-card">
-                    <div class="team-avatar">👨‍💻</div>
-                    <h3>Олег</h3>
-                    <p data-i18n="team-oleg">Создатель, главный по репакам и настройкам</p>
-                </div>
-                <div class="team-card">
-                    <div class="team-avatar">👨‍💻</div>
-                    <h3>Макар (folk)</h3>
-                    <p data-i18n="team-makar">Сооснователь, поддержка и развитие сообщества</p>
-                </div>
-                <div class="team-card">
-                    <div class="team-avatar">👨‍💻</div>
-                    <h3>pirogprod</h3>
-                    <p data-i18n="team-pirogprod">Помог оживить QIP 2012, развивает собственные сервисы</p>
-                </div>
-                <div class="team-card">
-                    <div class="team-avatar">👨‍💻</div>
-                    <h3>Ульяновый</h3>
-                    <p data-i18n="team-ulyanovy">Участник команды QIP Community</p>
-                </div>
-                <div class="team-card">
-                    <div class="team-avatar">👨‍💻</div>
-                    <h3>Роман</h3>
-                    <p data-i18n="team-roman">Программист</p>
-                </div>
+            <!-- НОВОСТЬ: НОВЫЙ УЧАСТНИК РОМАН -->
+            <div class="news-item">
+                <h2 data-i18n="news-roman-title">👨‍💻 В команду присоединился программист Роман!</h2>
+                <p data-i18n="news-roman-desc">У нас отличные новости! Ряды GoToTalk Community пополнил новый участник — <strong>Роман</strong>. Он присоединился к нам в качестве IT-специалиста и программиста. Его навыки помогут нам развивать техническую часть проекта: делать сайт удобнее, а работу клиентов — стабильнее. Мы очень рады усилению команды и уверены, что вместе сделаем наш проект ещё лучше. Добро пожаловать, Роман!</p>
+                <span class="badge">28 октября 2026</span>
             </div>
+
+            <!-- НОВОСТЬ: ОБНОВЛЕНИЕ СКАЧИВАНИЯ -->
+            <div class="news-item">
+                <h2 data-i18n="news-dl-update-title">🚀 Обновление загрузок и спасение Grey Pack!</h2>
+                <p data-i18n="news-dl-update-desc">Мы прокачали раздел скачивания! Теперь основные клиенты — <strong>QIP 2005, 2010, 2012, AIM 5.0 и Android</strong> — скачиваются напрямую с сайта, без перехода на сторонние ресурсы. Кроме того, мы решили проблему с блокировкой <strong>QIP Infium Grey Pack</strong> на Google Диске и перенесли его на надежный хостинг с прямыми ссылками. Нажимайте «Скачать» и получайте файлы без задержек!</p>
+                <span class="badge">28 октября 2026</span>
+            </div>
+
+            <!-- НОВОСТЬ 1: GREY PACK -->
+            <div class="news-item">
+                <h2 data-i18n="news-grey-title">🎨 Выход QIP Infium Grey Pack!</h2>
+                <p data-i18n="news-grey-desc">Встречайте новый клиент в нашей коллекции — <strong>QIP Infium Grey Pack</strong>! Отличная кастомная сборка для тех, кто хочет разнообразия. Установка максимально простая, все нужные настройки уже внутри. Ссылка на скачивание и инструкция — в разделе «Скачать» или на главной странице.</p>
+                <span class="badge">22 октября 2026</span>
+            </div>
+
+            <!-- НОВОСТЬ 2: ИСПРАВЛЕНИЕ БАГА -->
+            <div class="news-item">
+                <h2 data-i18n="news-bugfix-title">🔧 Исправлен баг с меню навигации</h2>
+                <p data-i18n="news-bugfix-desc">Мы заметили неприятный баг: при нажатии на пункт меню «Ссылки» открывалась страница «Конфиденциальность». Мы всё починили! Теперь все ссылки в шапке сайта работают корректно и ведут туда, куда нужно. Спасибо за вашу внимательность!</p>
+                <span class="badge">22 октября 2026</span>
+            </div>
+
+            <!-- СТАРЫЕ НОВОСТИ -->
+            <div class="news-item">
+                <h2 data-i18n="news-icons-title">🖼️ Оригинальные иконки QIP</h2>
+                <p data-i18n="news-icons-desc">Мы обновили дизайн! Теперь на главной странице и на страницах мессенджеров вместо стандартных эмодзи красуются оригинальные пиксельные иконки. Легендарный зелёный QIP снова с нами — в том виде, в котором мы его помним.</p>
+                <span class="badge">20 октября 2026</span>
+            </div>
+
+            <div class="news-item">
+                <h2 data-i18n="news-halloween-title">🎃 Хэллоуин на сайте!</h2>
+                <p data-i18n="news-halloween-desc">В честь Хэллоуина мы добавили праздничное оформление: тыквы, летучие мыши и призраки. Включить или выключить режим можно кнопкой «🎃 Хэллоуин» в шапке сайта. В октябре он включается автоматически!</p>
+                <span class="badge">15 октября 2026</span>
+            </div>
+
+            <div class="news-item">
+                <h2 data-i18n="news-teacher-title">🍎 С Днём учителя!</h2>
+                <p data-i18n="news-teacher-desc">Поздравляем всех учителей, преподавателей и наставников с Днём учителя! Спасибо за ваше терпение, знания и теплоту, которые вы дарите каждый день. Ваш труд — это будущее, которое вы создаёте вместе со своими учениками. С праздником! 💐</p>
+                <span class="badge">5 октября 2026</span>
+            </div>
+
+            <div class="news-item">
+                <h2 data-i18n="news-october2-title">🎉 С праздником! 2 октября</h2>
+                <p data-i18n="news-october2-desc">Поздравляем всех причастных с двумя важными профессиональными праздниками! <strong>День среднего профессионального образования</strong> — праздник студентов, преподавателей и мастеров колледжей и техникумов, учреждённый в 2022 году. А также <strong>День метростроителя</strong> — день проектировщиков, проходчиков, инженеров и монтажников, которые создают метрополитен. Спасибо за ваш труд! 🚇🎓</p>
+                <span class="badge">2 октября 2026</span>
+            </div>
+
+            <div class="news-item">
+                <h2 data-i18n="news-qip2010-title">🌀 Выход QIP 2010 Repack!</h2>
+                <p data-i18n="news-qip2010-desc">Мы собрали и выложили <strong>QIP 2010 Repack</strong>! Внутри — готовый установщик с инструкцией, всё настроено для работы через сервис PLQIP от <a href="http://services.pirogprod.ru/" target="_blank">PirogProd Services</a>. Регистрация — через клиент Infium или утилиту. После входа можно добавить KICQ (асю) с сервером <code>kicq.ru</code> и портом <code>5190</code>. Ссылка на скачивание — в разделе «Скачать».</p>
+                <span class="badge">23 сентября 2026</span>
+            </div>
+
+            <div class="news-item">
+                <h2 data-i18n="news-domain-title">🌐 Сайт переехал на новый домен!</h2>
+                <p data-i18n="news-domain-desc">У нас отличные новости — сайт GoToTalk Community теперь доступен по новому, короткому и красивому адресу: <a href="https://www.gototalk.cloud-ip.cc" target="_blank">https://www.gototalk.cloud-ip.cc</a>. Старый адрес <code>qip-community.github.io/gototalk-community</code> тоже продолжает работать и перенаправляет на новый домен. Подключён HTTPS — соединение защищено. Обязательно сохраните новую ссылку!</p>
+                <span class="badge">23 сентября 2026</span>
+            </div>
+
+            <div class="news-item">
+                <h2 data-i18n="news-pirogprod-title">🥧 Новый участник команды — pirogprod</h2>
+                <p data-i18n="news-pirogprod-desc">У нас пополнение! К команде GoToTalk Community присоединился <strong>pirogprod</strong> — человек, который помог оживить <strong>QIP 2012</strong> и развивает собственные сервисы для мессенджера. Его опыт и инфраструктура помогут нам двигаться дальше: стабильнее, быстрее и с новыми возможностями для всех, кто ещё помнит настоящий QIP. Добро пожаловать в команду! 🎉</p>
+                <span class="badge">20 сентября 2026</span>
+            </div>
+
+            <div class="news-item">
+                <h2 data-i18n="news-qip2012-title">🌀 Добавлен QIP 2012</h2>
+                <p data-i18n="news-qip2012-desc">Теперь на сайте доступен QIP 2012! Отдельная страница с полной инструкцией: установка, настройка hosts, регистрация на PLQIP и добавление KICQ (аси) с сервером <code>kicq.ru</code> и портом <code>5190</code>. Ссылка на скачивание — в разделе «Скачать».</p>
+                <span class="badge">19 сентября 2026</span>
+            </div>
+
+            <div class="news-item">
+                <h2 data-i18n="news-android-title">📱 Выход QIP для Android!</h2>
+                <p data-i18n="news-android-desc">Теперь QIP доступен на Android! Скачай <code>.jar</code>-файл и запусти его через J2ME Loader. Готовый репак уже содержит все нужные настройки — просто выбери сервер <code>kicq.ru</code> и войди в аккаунт. Регистрация — через Telegram-бот <a href="https://t.me/KICQbot" target="_blank">@KICQbot</a>. Ссылка на скачивание — в разделе «Скачать».</p>
+                <span class="badge">17 сентября 2026</span>
+            </div>
+
+            <div class="news-item">
+                <h2 data-i18n="news-kicq-title">🌐 Новый сервер kicq.ru и регистрация через Telegram-бот</h2>
+                <p data-i18n="news-kicq-desc">QIP перешёл на новый сервер <code>kicq.ru</code>! Теперь регистрация проходит через Telegram-бот <a href="https://t.me/KICQbot" target="_blank">@KICQbot</a> — просто напишите ему /start и получите ссылку на сайт регистрации. Сервер работает быстрее и стабильнее прежнего. Если QIP не подключается — зайдите в настройки «Сервер/Прокси» и укажите <code>kicq.ru</code>. Подробности в инструкции и FAQ.</p>
+                <span class="badge">17 сентября 2026</span>
+            </div>
+
+            <div class="news-item">
+                <h2 data-i18n="news-gototalk-title">📡 Сайт переименован в GoToTalk Community</h2>
+                <p data-i18n="news-gototalk-desc">Мы сменили название на GoToTalk Community! Теперь наш проект объединяет не только QIP, но и MSN Messenger, AOL Instant Messenger и Mail.Ru Агент. На главной странице появился выбор мессенджера, а для каждого из них — своя страница с инструкцией по установке и настройке.</p>
+                <span class="badge">11 сентября 2026</span>
+            </div>
+
+            <div class="news-item">
+                <h2 data-i18n="news-messengers-title">💬 Добавлены MSN, AOL и Mail.Ru Агент</h2>
+                <p data-i18n="news-messengers-desc">Теперь на сайте доступны инструкции по установке и настройке MSN Messenger 6.2, AIM 5.0 и Агента Mail.Ru 5.1.2228. Для каждого мессенджера есть отдельная страница со ссылками на скачивание и подробным гайдом. Следите за новостями — скоро добавим ещё больше клиентов!</p>
+                <span class="badge">11 сентября 2026</span>
+            </div>
+
+            <div class="news-item">
+                <h2 data-i18n="news-september-title">🎓 С 1 сентября!</h2>
+                <p data-i18n="news-september-desc">QIP Community поздравляет всех школьников, студентов, учителей и родителей с Днём знаний! Пусть новый учебный год будет лёгким, интересным и полным открытий. А вечером — возвращайтесь в QIP, чтобы отдохнуть и пообщаться! 🚀</p>
+                <span class="badge">1 сентября 2026</span>
+            </div>
+
+            <div class="news-item">
+                <h2 data-i18n="news-widget-title">💬 Добавлен виджет Discord на сайт</h2>
+                <p data-i18n="news-widget-desc">Теперь на главной странице сайта QIP Community отображается виджет нашего Discord сервера. Вы можете видеть, кто из участников онлайн, и сразу присоединиться к общению!</p>
+                <span class="badge">31 августа 2026</span>
+            </div>
+
+            <div class="news-item">
+                <h2 data-i18n="news-links-title">🔗 Добавлена страница «Полезные ссылки»</h2>
+                <p data-i18n="news-links-desc">На сайте QIP Community появилась страница со всеми важными ссылками в одном месте. Теперь вы можете быстро найти Discord, скачать QIP, зарегистрироваться через Telegram-бот, перейти в блог и многое другое. Страница доступна по ссылке в главном меню.</p>
+                <span class="badge">26 августа 2026</span>
+            </div>
+
+            <div class="news-item">
+                <h2 data-i18n="news-blog-title">📝 Добавлен блог</h2>
+                <p data-i18n="news-blog-desc">На сайте QIP Community появился блог, где мы будем публиковать статьи о QIP, старом интернете, ICQ и ностальгии. В первом посте — история создания QIP, как мы общались в 2000-х и как нам удалось оживить мессенджер в 2026 году.</p>
+                <span class="badge">26 августа 2026</span>
+            </div>
+
+            <div class="news-item">
+                <h2 data-i18n="news-faq-title">❓ Добавлен раздел FAQ</h2>
+                <p data-i18n="news-faq-desc">На сайте QIP Community появился раздел с часто задаваемыми вопросами. Теперь вы можете быстро найти ответы на самые популярные вопросы о QIP, регистрации, настройке и не только. Раздел доступен по ссылке в главном меню.</p>
+                <span class="badge">26 августа 2026</span>
+            </div>
+
+            <div class="news-item">
+                <h2 data-i18n="news-theme-title">🌙 Добавлена тёмная тема</h2>
+                <p data-i18n="news-theme-desc">Теперь на сайте QIP Community доступна тёмная тема! Нажмите на кнопку «🌙 Тема» в шапке сайта, чтобы переключить оформление. Выбор темы сохраняется в браузере автоматически.</p>
+                <span class="badge">26 августа 2026</span>
+            </div>
+
+            <div class="news-item">
+                <h2 data-i18n="news-privacy-title">🔒 Добавлена страница «Конфиденциальность»</h2>
+                <p data-i18n="news-privacy-desc">Теперь на сайте QIP Community доступна страница с политикой конфиденциальности. В ней описано, какие данные мы собираем, как их используем и как защищаем. Страница доступна по ссылке в главном меню.</p>
+                <span class="badge">26 августа 2026</span>
+            </div>
+
+            <div class="news-item">
+                <h2 data-i18n="news-1-title">🔧 Технические работы завершены</h2>
+                <p data-i18n="news-1-desc">Сайт QIP Community снова работает в полном объёме! Мы провели плановое обслуживание, обновили некоторые элементы и улучшили производительность. Спасибо, что были с нами! Приятного пользования. 🚀</p>
+                <span class="badge">26 августа 2026</span>
+            </div>
+
+            <div class="news-item">
+                <h2 data-i18n="news-lang-title">🌐 Добавлен переключатель языков (RU / EN)</h2>
+                <p data-i18n="news-lang-desc">Теперь сайт QIP Community полностью переведён на русский и английский языки. В шапке сайта появилась кнопка переключения, которая запоминает выбранный язык. Приятного просмотра!</p>
+                <span class="badge">25 августа 2026</span>
+            </div>
+
+            <div class="news-item">
+                <h2 data-i18n="news-2-title">📊 Подключена аналитика сайта</h2>
+                <p data-i18n="news-2-desc">Мы подключили Cloudflare Web Analytics. Теперь мы видим, сколько людей заходит на сайт, откуда они приходят и как быстро загружаются страницы. Данные собираются автоматически, без куки и слежки.</p>
+                <span class="badge">25 августа 2026</span>
+            </div>
+
+            <div class="news-item">
+                <h2 data-i18n="news-3-title">📖 Открыта гостевая книга!</h2>
+                <p data-i18n="news-3-desc">Теперь каждый может оставить своё сообщение в гостевой книге QIP Community. Делитесь воспоминаниями, пожеланиями и просто приветами! Все сообщения сохраняются и видны всем посетителям.</p>
+                <span class="badge">25 августа 2026</span>
+            </div>
+
+            <div class="news-item">
+                <h2 data-i18n="news-4-title">🔹 Сайт полностью обновлён и переехал на GitHub</h2>
+                <p data-i18n="news-4-desc">Мы окончательно переехали с Tilda на GitHub Pages. Сайт стал быстрее, надёжнее и его нельзя заблокировать. Обновлён дизайн в стиле QIP 2005, добавлены все необходимые страницы: «О нас», «Инструкция», «Новости» и «Скачать». Всё работает как часы!</p>
+                <span class="badge">25 августа 2026</span>
+            </div>
+
+            <div class="news-item">
+                <h2 data-i18n="news-5-title">🔹 Добавлена иконка сайта (favicon)</h2>
+                <p data-i18n="news-5-desc">Теперь у сайта есть иконка в стиле QIP. Она отображается во вкладке браузера и делает сайт более профессиональным.</p>
+                <span class="badge">25 августа 2026</span>
+            </div>
+
+            <div class="news-item">
+                <h2 data-i18n="news-6-title">🔹 Дизайн обновлён в стиле QIP 2005</h2>
+                <p data-i18n="news-6-desc">Сайт теперь выглядит как настоящий QIP 2005: синий градиент, жёлтая полоса, винтажные кнопки и общая атмосфера старого интернета.</p>
+                <span class="badge">25 августа 2026</span>
+            </div>
+
+            <div class="news-item">
+                <h2 data-i18n="news-7-title">🔹 Сайт переехал на GitHub</h2>
+                <p data-i18n="news-7-desc">Мы ушли с Tilda и теперь полностью на GitHub. Блокировка больше не страшна.</p>
+                <span class="badge">25 августа 2026</span>
+            </div>
+
+            <div class="news-item">
+                <h2 data-i18n="news-8-title">🔹 Выход репака QIP 2005</h2>
+                <p data-i18n="news-8-desc">Выпущена первая версия репака для Windows 10/11. Все настройки уже внутри.</p>
+                <span class="badge">23 августа 2026</span>
+            </div>
+
+            <div class="news-item">
+                <h2 data-i18n="news-9-title">🔹 Запуск Discord сервера</h2>
+                <p data-i18n="news-9-desc">Создано сообщество в Discord. Присоединяйся для общения и помощи.</p>
+                <span class="badge">20 августа 2026</span>
+            </div>
+
         </div>
     </section>
 
@@ -83,22 +258,154 @@
             const translations = {
                 ru: {
                     'nav-home': 'Главная', 'nav-download': 'Скачать', 'nav-about': 'О нас', 'nav-team': 'Команда', 'nav-guide': 'Инструкция', 'nav-news': 'Новости', 'nav-guestbook': 'Гостевая', 'nav-faq': 'FAQ', 'nav-blog': 'Блог', 'nav-links': 'Ссылки', 'nav-privacy': 'Конфиденциальность', 'nav-discord': 'Discord',
-                    'team-title': '👥 Наша команда', 'team-subtitle': 'Те, кто оживляет QIP 2005',
-                    'team-oleg': 'Создатель, главный по репакам и настройкам',
-                    'team-makar': 'Сооснователь, поддержка и развитие сообщества',
-                    'team-pirogprod': 'Помог оживить QIP 2012, развивает собственные сервисы',
-                    'team-ulyanovy': 'Участник команды QIP Community',
-                    'team-roman': 'Программист',
+                    'news-title': '📰 Новости сообщества',
+                    
+                    'news-roman-title': '👨‍💻 В команду присоединился программист Роман!',
+                    'news-roman-desc': 'У нас отличные новости! Ряды GoToTalk Community пополнил новый участник — <strong>Роман</strong>. Он присоединился к нам в качестве IT-специалиста и программиста. Его навыки помогут нам развивать техническую часть проекта: делать сайт удобнее, а работу клиентов — стабильнее. Мы очень рады усилению команды и уверены, что вместе сделаем наш проект ещё лучше. Добро пожаловать, Роман!',
+
+                    'news-dl-update-title': '🚀 Обновление загрузок и спасение Grey Pack!',
+                    'news-dl-update-desc': 'Мы прокачали раздел скачивания! Теперь основные клиенты — <strong>QIP 2005, 2010, 2012, AIM 5.0 и Android</strong> — скачиваются напрямую с сайта, без перехода на сторонние ресурсы. Кроме того, мы решили проблему с блокировкой <strong>QIP Infium Grey Pack</strong> на Google Диске и перенесли его на надежный хостинг с прямыми ссылками. Нажимайте «Скачать» и получайте файлы без задержек!',
+
+                    'news-grey-title': '🎨 Выход QIP Infium Grey Pack!',
+                    'news-grey-desc': 'Встречайте новый клиент в нашей коллекции — <strong>QIP Infium Grey Pack</strong>! Отличная кастомная сборка для тех, кто хочет разнообразия. Установка максимально простая, все нужные настройки уже внутри. Ссылка на скачивание и инструкция — в разделе «Скачать» или на главной странице.',
+                    
+                    'news-bugfix-title': '🔧 Исправлен баг с меню навигации',
+                    'news-bugfix-desc': 'Мы заметили неприятный баг: при нажатии на пункт меню «Ссылки» открывалась страница «Конфиденциальность». Мы всё починили! Теперь все ссылки в шапке сайта работают корректно и ведут туда, куда нужно. Спасибо за вашу внимательность!',
+
+                    'news-icons-title': '🖼️ Оригинальные иконки QIP',
+                    'news-icons-desc': 'Мы обновили дизайн! Теперь на главной странице и на страницах мессенджеров вместо стандартных эмодзи красуются оригинальные пиксельные иконки. Легендарный зелёный QIP снова с нами — в том виде, в котором мы его помним.',
+                    'news-halloween-title': '🎃 Хэллоуин на сайте!',
+                    'news-halloween-desc': 'В честь Хэллоуина мы добавили праздничное оформление: тыквы, летучие мыши и призраки. Включить или выключить режим можно кнопкой «🎃 Хэллоуин» в шапке сайта. В октябре он включается автоматически!',
+                    'news-teacher-title': '🍎 С Днём учителя!',
+                    'news-teacher-desc': 'Поздравляем всех учителей, преподавателей и наставников с Днём учителя! Спасибо за ваше терпение, знания и теплоту, которые вы дарите каждый день. Ваш труд — это будущее, которое вы создаёте вместе со своими учениками. С праздником! 💐',
+                    'news-october2-title': '🎉 С праздником! 2 октября',
+                    'news-october2-desc': 'Поздравляем всех причастных с двумя важными профессиональными праздниками! <strong>День среднего профессионального образования</strong> — праздник студентов, преподавателей и мастеров колледжей и техникумов, учреждённый в 2022 году. А также <strong>День метростроителя</strong> — день проектировщиков, проходчиков, инженеров и монтажников, которые создают метрополитен. Спасибо за ваш труд! 🚇🎓',
+                    'news-qip2010-title': '🌀 Выход QIP 2010 Repack!',
+                    'news-qip2010-desc': 'Мы собрали и выложили <strong>QIP 2010 Repack</strong>! Внутри — готовый установщик с инструкцией, всё настроено для работы через сервис PLQIP от <a href="http://services.pirogprod.ru/" target="_blank">PirogProd Services</a>. Регистрация — через клиент Infium или утилиту. После входа можно добавить KICQ (асю) с сервером <code>kicq.ru</code> и портом <code>5190</code>. Ссылка на скачивание — в разделе «Скачать».',
+                    'news-domain-title': '🌐 Сайт переехал на новый домен!',
+                    'news-domain-desc': 'У нас отличные новости — сайт GoToTalk Community теперь доступен по новому, короткому и красивому адресу: <a href="https://www.gototalk.cloud-ip.cc" target="_blank">https://www.gototalk.cloud-ip.cc</a>. Старый адрес <code>qip-community.github.io/gototalk-community</code> тоже продолжает работать и перенаправляет на новый домен. Подключён HTTPS — соединение защищено. Обязательно сохраните новую ссылку!',
+                    'news-pirogprod-title': '🥧 Новый участник команды — pirogprod',
+                    'news-pirogprod-desc': 'У нас пополнение! К команде GoToTalk Community присоединился <strong>pirogprod</strong> — человек, который помог оживить <strong>QIP 2012</strong> и развивает собственные сервисы для мессенджера. Его опыт и инфраструктура помогут нам двигаться дальше: стабильнее, быстрее и с новыми возможностями для всех, кто ещё помнит настоящий QIP. Добро пожаловать в команду! 🎉',
+                    'news-qip2012-title': '🌀 Добавлен QIP 2012',
+                    'news-qip2012-desc': 'Теперь на сайте доступен QIP 2012! Отдельная страница с полной инструкцией: установка, настройка hosts, регистрация на PLQIP и добавление KICQ (аси) с сервером <code>kicq.ru</code> и портом <code>5190</code>. Ссылка на скачивание — в разделе «Скачать».',
+                    'news-android-title': '📱 Выход QIP для Android!',
+                    'news-android-desc': 'Теперь QIP доступен на Android! Скачай <code>.jar</code>-файл и запусти его через J2ME Loader. Готовый репак уже содержит все нужные настройки — просто выбери сервер <code>kicq.ru</code> и войди в аккаунт. Регистрация — через Telegram-бот <a href="https://t.me/KICQbot" target="_blank">@KICQbot</a>. Ссылка на скачивание — в разделе «Скачать».',
+                    'news-kicq-title': '🌐 Новый сервер kicq.ru и регистрация через Telegram-бот',
+                    'news-kicq-desc': 'QIP перешёл на новый сервер <code>kicq.ru</code>! Теперь регистрация проходит через Telegram-бот <a href="https://t.me/KICQbot" target="_blank">@KICQbot</a> — просто напишите ему /start и получите ссылку на сайт регистрации. Сервер работает быстрее и стабильнее прежнего. Если QIP не подключается — зайдите в настройки «Сервер/Прокси» и укажите <code>kicq.ru</code>. Подробности в инструкции и FAQ.',
+                    'news-gototalk-title': '📡 Сайт переименован в GoToTalk Community',
+                    'news-gototalk-desc': 'Мы сменили название на GoToTalk Community! Теперь наш проект объединяет не только QIP, но и MSN Messenger, AOL Instant Messenger и Mail.Ru Агент. На главной странице появился выбор мессенджера, а для каждого из них — своя страница с инструкцией по установке и настройке.',
+                    'news-messengers-title': '💬 Добавлены MSN, AOL и Mail.Ru Агент',
+                    'news-messengers-desc': 'Теперь на сайте доступны инструкции по установке и настройке MSN Messenger 6.2, AIM 5.0 и Агента Mail.Ru 5.1.2228. Для каждого мессенджера есть отдельная страница со ссылками на скачивание и подробным гайдом. Следите за новостями — скоро добавим ещё больше клиентов!',
+                    'news-september-title': '🎓 С 1 сентября!',
+                    'news-september-desc': 'QIP Community поздравляет всех школьников, студентов, учителей и родителей с Днём знаний! Пусть новый учебный год будет лёгким, интересным и полным открытий. А вечером — возвращайтесь в QIP, чтобы отдохнуть и пообщаться! 🚀',
+                    'news-widget-title': '💬 Добавлен виджет Discord на сайт',
+                    'news-widget-desc': 'Теперь на главной странице сайта QIP Community отображается виджет нашего Discord сервера. Вы можете видеть, кто из участников онлайн, и сразу присоединиться к общению!',
+                    'news-links-title': '🔗 Добавлена страница «Полезные ссылки»',
+                    'news-links-desc': 'На сайте QIP Community появилась страница со всеми важными ссылками в одном месте. Теперь вы можете быстро найти Discord, скачать QIP, зарегистрироваться через Telegram-бот, перейти в блог и многое другое. Страница доступна по ссылке в главном меню.',
+                    'news-blog-title': '📝 Добавлен блог',
+                    'news-blog-desc': 'На сайте QIP Community появился блог, где мы будем публиковать статьи о QIP, старом интернете, ICQ и ностальгии. В первом посте — история создания QIP, как мы общались в 2000-х и как нам удалось оживить мессенджер в 2026 году.',
+                    'news-faq-title': '❓ Добавлен раздел FAQ',
+                    'news-faq-desc': 'На сайте QIP Community появился раздел с часто задаваемыми вопросами. Теперь вы можете быстро найти ответы на самые популярные вопросы о QIP, регистрации, настройке и не только. Раздел доступен по ссылке в главном меню.',
+                    'news-theme-title': '🌙 Добавлена тёмная тема',
+                    'news-theme-desc': 'Теперь на сайте QIP Community доступна тёмная тема! Нажмите на кнопку «🌙 Тема» в шапке сайта, чтобы переключить оформление. Выбор темы сохраняется в браузере автоматически.',
+                    'news-privacy-title': '🔒 Добавлена страница «Конфиденциальность»',
+                    'news-privacy-desc': 'Теперь на сайте QIP Community доступна страница с политикой конфиденциальности. В ней описано, какие данные мы собираем, как их используем и как защищаем. Страница доступна по ссылке в главном меню.',
+                    'news-1-title': '🔧 Технические работы завершены',
+                    'news-1-desc': 'Сайт QIP Community снова работает в полном объёме! Мы провели плановое обслуживание, обновили некоторые элементы и улучшили производительность. Спасибо, что были с нами! Приятного пользования. 🚀',
+                    'news-lang-title': '🌐 Добавлен переключатель языков (RU / EN)',
+                    'news-lang-desc': 'Теперь сайт QIP Community полностью переведён на русский и английский языки. В шапке сайта появилась кнопка переключения, которая запоминает выбранный язык. Приятного просмотра!',
+                    'news-2-title': '📊 Подключена аналитика сайта',
+                    'news-2-desc': 'Мы подключили Cloudflare Web Analytics. Теперь мы видим, сколько людей заходит на сайт, откуда они приходят и как быстро загружаются страницы. Данные собираются автоматически, без куки и слежки.',
+                    'news-3-title': '📖 Открыта гостевая книга!',
+                    'news-3-desc': 'Теперь каждый может оставить своё сообщение в гостевой книге QIP Community. Делитесь воспоминаниями, пожеланиями и просто приветами! Все сообщения сохраняются и видны всем посетителям.',
+                    'news-4-title': '🔹 Сайт полностью обновлён и переехал на GitHub',
+                    'news-4-desc': 'Мы окончательно переехали с Tilda на GitHub Pages. Сайт стал быстрее, надёжнее и его нельзя заблокировать. Обновлён дизайн в стиле QIP 2005, добавлены все необходимые страницы: «О нас», «Инструкция», «Новости» и «Скачать». Всё работает как часы!',
+                    'news-5-title': '🔹 Добавлена иконка сайта (favicon)',
+                    'news-5-desc': 'Теперь у сайта есть иконка в стиле QIP. Она отображается во вкладке браузера и делает сайт более профессиональным.',
+                    'news-6-title': '🔹 Дизайн обновлён в стиле QIP 2005',
+                    'news-6-desc': 'Сайт теперь выглядит как настоящий QIP 2005: синий градиент, жёлтая полоса, винтажные кнопки и общая атмосфера старого интернета.',
+                    'news-7-title': '🔹 Сайт переехал на GitHub',
+                    'news-7-desc': 'Мы ушли с Tilda и теперь полностью на GitHub. Блокировка больше не страшна.',
+                    'news-8-title': '🔹 Выход репака QIP 2005',
+                    'news-8-desc': 'Выпущена первая версия репака для Windows 10/11. Все настройки уже внутри.',
+                    'news-9-title': '🔹 Запуск Discord сервера',
+                    'news-9-desc': 'Создано сообщество в Discord. Присоединяйся для общения и помощи.',
                     'footer-text': 'GoToTalk Community © 2026 — неофициальный фанатский проект.'
                 },
                 en: {
                     'nav-home': 'Home', 'nav-download': 'Download', 'nav-about': 'About', 'nav-team': 'Team', 'nav-guide': 'Guide', 'nav-news': 'News', 'nav-guestbook': 'Guestbook', 'nav-faq': 'FAQ', 'nav-blog': 'Blog', 'nav-links': 'Links', 'nav-privacy': 'Privacy', 'nav-discord': 'Discord',
-                    'team-title': '👥 Our Team', 'team-subtitle': 'Those who are reviving QIP 2005',
-                    'team-oleg': 'Founder, repacks and settings expert',
-                    'team-makar': 'Co-founder, support and community development',
-                    'team-pirogprod': 'Helped revive QIP 2012, runs his own services',
-                    'team-ulyanovy': 'Member of the QIP Community team',
-                    'team-roman': 'Programmer',
+                    'news-title': '📰 Community News',
+                    
+                    'news-roman-title': '👨‍💻 Programmer Roman joined the team!',
+                    'news-roman-desc': 'We have great news! The GoToTalk Community has a new member — <strong>Roman</strong>. He joined us as an IT specialist and programmer. His skills will help us develop the technical side of the project: make the site more convenient and the clients more stable. We are very happy to strengthen the team and are sure that together we will make our project even better. Welcome, Roman!',
+
+                    'news-dl-update-title': '🚀 Download update and Grey Pack rescue!',
+                    'news-dl-update-desc': 'We have upgraded the download section! Now the main clients — <strong>QIP 2005, 2010, 2012, AIM 5.0 and Android</strong> — download directly from the site, without redirecting to third-party resources. In addition, we solved the issue with the <strong>QIP Infium Grey Pack</strong> being blocked on Google Drive and moved it to a reliable hosting with direct links. Click "Download" and get your files without delays!',
+
+                    'news-grey-title': '🎨 QIP Infium Grey Pack Released!',
+                    'news-grey-desc': 'Meet the new client in our collection — <strong>QIP Infium Grey Pack</strong>! A great custom build for those who want variety. Installation is as simple as possible, all necessary settings are already inside. Download link and instructions are in the "Download" section or on the main page.',
+                    
+                    'news-bugfix-title': '🔧 Navigation menu bug fixed',
+                    'news-bugfix-desc': 'We noticed an annoying bug: when clicking on the "Links" menu item, the "Privacy" page opened. We fixed it! Now all links in the site header work correctly and lead where they should. Thanks for your attentiveness!',
+
+                    'news-icons-title': '🖼️ Original QIP icons',
+                    'news-icons-desc': 'We have updated the design! Now, on the main page and messenger pages, instead of standard emojis, original pixel icons are displayed. The legendary green QIP is back with us — in the form we remember it.',
+                    'news-halloween-title': '🎃 Halloween on the site!',
+                    'news-halloween-desc': 'In celebration of Halloween, we\'ve added a festive design: pumpkins, bats and ghosts. You can turn the mode on or off with the "🎃 Halloween" button in the site header. In October it turns on automatically!',
+                    'news-teacher-title': '🍎 Happy Teacher\'s Day!',
+                    'news-teacher-desc': 'We congratulate all teachers, educators and mentors on Teacher\'s Day! Thank you for your patience, knowledge and warmth that you give every day. Your work is the future you build together with your students. Happy holiday! 💐',
+                    'news-october2-title': '🎉 Happy Holidays! October 2',
+                    'news-october2-desc': 'Congratulations to everyone involved in two important professional holidays! <strong>Secondary Vocational Education Day</strong> — a holiday for students, teachers and masters of colleges and technical schools, established in 2022. Also <strong>Metro Builder Day</strong> — the day of designers, tunnellers, engineers and installers who create the subway. Thank you for your work! 🚇🎓',
+                    'news-qip2010-title': '🌀 QIP 2010 Repack released!',
+                    'news-qip2010-desc': 'We have compiled and released <strong>QIP 2010 Repack</strong>! Inside — a ready installer with instructions, everything is configured to work through the PLQIP service by <a href="http://services.pirogprod.ru/" target="_blank">PirogProd Services</a>. Registration — via the Infium client or a utility. After logging in, you can add KICQ (ICQ) with the <code>kicq.ru</code> server and port <code>5190</code>. Download link is in the "Download" section.',
+                    'news-domain-title': '🌐 Site Has Moved to a New Domain!',
+                    'news-domain-desc': 'Great news — the GoToTalk Community website is now available at a new, short and clean address: <a href="https://www.gototalk.cloud-ip.cc" target="_blank">https://www.gototalk.cloud-ip.cc</a>. The old address <code>qip-community.github.io/gototalk-community</code> still works and redirects to the new domain. HTTPS is enabled — the connection is secure. Be sure to save the new link!',
+                    'news-pirogprod-title': '🥧 New team member — pirogprod',
+                    'news-pirogprod-desc': 'We have a new addition! <strong>pirogprod</strong> has joined the GoToTalk Community team — the person who helped revive <strong>QIP 2012</strong> and runs his own services for the messenger. His experience and infrastructure will help us move forward: more stable, faster, and with new features for everyone who still remembers the real QIP. Welcome to the team! 🎉',
+                    'news-qip2012-title': '🌀 QIP 2012 added',
+                    'news-qip2012-desc': 'QIP 2012 is now available on the site! A separate page with a full guide: installation, hosts setup, PLQIP registration and adding KICQ (ICQ) with the <code>kicq.ru</code> server and port <code>5190</code>. Download link is in the "Download" section.',
+                    'news-android-title': '📱 QIP for Android released!',
+                    'news-android-desc': 'QIP is now available on Android! Download the <code>.jar</code> file and launch it via J2ME Loader. The ready repack already contains all the necessary settings — just select the <code>kicq.ru</code> server and log in. Registration — via the Telegram bot <a href="https://t.me/KICQbot" target="_blank">@KICQbot</a>. Download link is in the "Download" section.',
+                    'news-kicq-title': '🌐 New server kicq.ru and registration via Telegram bot',
+                    'news-kicq-desc': 'QIP has switched to the new server <code>kicq.ru</code>! Registration is now done via the Telegram bot <a href="https://t.me/KICQbot" target="_blank">@KICQbot</a> — just send it /start and get a link to the registration site. The server works faster and more stable than before. If QIP won\'t connect — go to "Server/Proxy" settings and enter <code>kicq.ru</code>. Details in the guide and FAQ.',
+                    'news-gototalk-title': '📡 Site Renamed to GoToTalk Community',
+                    'news-gototalk-desc': 'We have changed our name to GoToTalk Community! Now our project unites not only QIP, but also MSN Messenger, AOL Instant Messenger and Mail.Ru Agent. A messenger selection has appeared on the main page, and each of them has its own page with installation and setup instructions.',
+                    'news-messengers-title': '💬 MSN, AOL and Mail.Ru Agent Added',
+                    'news-messengers-desc': 'Installation and setup guides for MSN Messenger 6.2, AIM 5.0 and Mail.Ru Agent 5.1.2228 are now available on the site. Each messenger has its own page with download links and a detailed guide. Stay tuned — more clients coming soon!',
+                    'news-september-title': '🎓 Happy September 1st!',
+                    'news-september-desc': 'QIP Community congratulates all schoolchildren, students, teachers and parents on Knowledge Day! May the new school year be easy, interesting and full of discoveries. And in the evening — come back to QIP to relax and chat! 🚀',
+                    'news-widget-title': '💬 Discord Widget Added to the Site',
+                    'news-widget-desc': 'A widget of our Discord server is now displayed on the main page of the QIP Community website. You can see who is online and join the conversation right away!',
+                    'news-links-title': '🔗 Useful Links Page Added',
+                    'news-links-desc': 'The QIP Community website now has a page with all important links in one place. You can quickly find Discord, download QIP, register via the Telegram bot, go to the blog and much more.',
+                    'news-blog-title': '📝 Blog Added',
+                    'news-blog-desc': 'The QIP Community website now has a blog where we will publish articles about QIP, the old internet, ICQ and nostalgia.',
+                    'news-faq-title': '❓ FAQ Section Added',
+                    'news-faq-desc': 'The QIP Community website now has a Frequently Asked Questions section.',
+                    'news-theme-title': '🌙 Dark Theme Added',
+                    'news-theme-desc': 'The QIP Community website now has a dark theme! Click the "🌙 Theme" button in the header to switch.',
+                    'news-privacy-title': '🔒 Privacy Policy Page Added',
+                    'news-privacy-desc': 'The QIP Community website now has a privacy policy page.',
+                    'news-1-title': '🔧 Technical work completed',
+                    'news-1-desc': 'The QIP Community website is back up and running!',
+                    'news-lang-title': '🌐 Language Switcher Added (RU / EN)',
+                    'news-lang-desc': 'The QIP Community website is now fully translated into Russian and English.',
+                    'news-2-title': '📊 Website Analytics Connected',
+                    'news-2-desc': 'We have connected Cloudflare Web Analytics.',
+                    'news-3-title': '📖 Guestbook is Open!',
+                    'news-3-desc': 'Now everyone can leave their message in the QIP Community guestbook.',
+                    'news-4-title': '🔹 Website Fully Updated and Moved to GitHub',
+                    'news-4-desc': 'We have finally moved from Tilda to GitHub Pages.',
+                    'news-5-title': '🔹 Favicon Added',
+                    'news-5-desc': 'The site now has a QIP-style favicon.',
+                    'news-6-title': '🔹 Design Updated to QIP 2005 Style',
+                    'news-6-desc': 'The site now looks like the real QIP 2005.',
+                    'news-7-title': '🔹 Site Moved to GitHub',
+                    'news-7-desc': 'We left Tilda and now fully rely on GitHub.',
+                    'news-8-title': '🔹 QIP 2005 Repack Released',
+                    'news-8-desc': 'The first version of the repack for Windows 10/11 has been released.',
+                    'news-9-title': '🔹 Discord Server Launched',
+                    'news-9-desc': 'A community has been created on Discord.',
                     'footer-text': 'GoToTalk Community © 2026 — unofficial fan project.'
                 }
             };
@@ -111,7 +418,7 @@
                 document.querySelectorAll('[data-i18n]').forEach(el => {
                     const key = el.getAttribute('data-i18n');
                     if (translations[lang] && translations[lang][key]) {
-                        el.textContent = translations[lang][key];
+                        el.innerHTML = translations[lang][key];
                     }
                 });
                 document.documentElement.lang = lang;
@@ -147,5 +454,6 @@
         })();
     </script>
 
+    <script src="halloween.js"></script>
 </body>
 </html>
