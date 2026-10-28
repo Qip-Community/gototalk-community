@@ -39,7 +39,7 @@
             <div class="platform-card">
                 <h2 data-i18n="mailagent-step1-title">📥 Шаг 1: Скачивание (Windows)</h2>
                 <p data-i18n="mailagent-step1-desc">Скачайте Агент Mail.Ru 5.1.2228 и патчер по ссылке ниже.</p>
-                <a href="https://drive.google.com/drive/folders/1frMrNURK3kb7F1yzhpb54vMCZY6Q_iPn?usp=sharing" target="_blank" class="btn">Скачать Агент Mail.Ru →</a>
+                <a href="https://drive.google.com/drive/folders/1frMrNURK3kb7F1yzhpb54vMCZY6Q_iPn?usp=sharing" target="_blank" class="btn" data-i18n="mailagent-step1-btn">Скачать Агент Mail.Ru →</a>
             </div>
 
             <!-- НОВЫЙ БЛОК ДЛЯ ANDROID -->
@@ -72,7 +72,7 @@
             <div class="platform-card help-card">
                 <h2 data-i18n="mailagent-help-title">❓ Нужна помощь?</h2>
                 <p data-i18n="mailagent-help-desc">Если что-то пошло не так — пиши в наш Discord, поможем!</p>
-                <a href="https://discord.gg/VSJpGajNmP" target="_blank" class="btn">Перейти в Discord →</a>
+                <a href="https://discord.gg/VSJpGajNmP" target="_blank" class="btn" data-i18n="help-btn">Перейти в Discord →</a>
             </div>
 
             <a href="index.html" class="btn btn-secondary" data-i18n="mailagent-back">← Назад к выбору</a>
@@ -100,8 +100,10 @@
                     'mailagent-subtitle': 'Инструкция по установке и настройке',
                     'mailagent-step1-title': '📥 Шаг 1: Скачивание (Windows)',
                     'mailagent-step1-desc': 'Скачайте Агент Mail.Ru 5.1.2228 и патчер по ссылке ниже.',
+                    'mailagent-step1-btn': 'Скачать Агент Mail.Ru →',
                     'mailagent-android-title': '📱 Версия для Android',
                     'mailagent-android-desc': 'Скачайте версию Агента Mail.Ru для Android по ссылке ниже.',
+                    'mailagent-android-btn': 'Скачать для Android (.apk) →',
                     'mailagent-step2-title': '🔧 Шаг 2: Установка',
                     'mailagent-step2-desc': 'Установите Агент Mail.Ru. Полностью закройте Мейл.Ru перед патчем!',
                     'mailagent-step3-title': '⚙️ Шаг 3: Патч',
@@ -112,6 +114,7 @@
                     'mailagent-step5-desc': 'Зарегистрируйтесь на сайте mrim.su/reg.',
                     'mailagent-help-title': '❓ Нужна помощь?',
                     'mailagent-help-desc': 'Если что-то пошло не так — пиши в наш Discord, поможем!',
+                    'help-btn': 'Перейти в Discord →',
                     'mailagent-back': '← Назад к выбору',
                     'footer-text': 'GoToTalk Community © 2026 — неофициальный фанатский проект.'
                 },
@@ -121,8 +124,10 @@
                     'mailagent-subtitle': 'Installation and setup guide',
                     'mailagent-step1-title': '📥 Step 1: Download (Windows)',
                     'mailagent-step1-desc': 'Download Mail.Ru Agent 5.1.2228 and the patcher from the link below.',
+                    'mailagent-step1-btn': 'Download Mail.Ru Agent →',
                     'mailagent-android-title': '📱 Android Version',
                     'mailagent-android-desc': 'Download the Android version of Mail.Ru Agent from the link below.',
+                    'mailagent-android-btn': 'Download for Android (.apk) →',
                     'mailagent-step2-title': '🔧 Step 2: Installation',
                     'mailagent-step2-desc': 'Install Mail.Ru Agent. Close it completely before patching!',
                     'mailagent-step3-title': '⚙️ Step 3: Patch',
@@ -133,6 +138,7 @@
                     'mailagent-step5-desc': 'Register on mrim.su/reg.',
                     'mailagent-help-title': '❓ Need help?',
                     'mailagent-help-desc': 'If something went wrong — write in our Discord, we\'ll help!',
+                    'help-btn': 'Go to Discord →',
                     'mailagent-back': '← Back to selection',
                     'footer-text': 'GoToTalk Community © 2026 — unofficial fan project.'
                 }
@@ -146,7 +152,7 @@
                 document.querySelectorAll('[data-i18n]').forEach(el => {
                     const key = el.getAttribute('data-i18n');
                     if (translations[lang] && translations[lang][key]) {
-                        el.textContent = translations[lang][key];
+                        el.innerHTML = translations[lang][key];
                     }
                 });
                 document.documentElement.lang = lang;
