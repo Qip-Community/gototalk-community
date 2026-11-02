@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>404 — GoToTalk Community</title>
+    <title>404 — AOL Community</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <style>
@@ -151,14 +151,13 @@
             background: rgba(0, 0, 0, 0.35);
             font-size: 0.8rem;
             font-variant-numeric: tabular-nums;
+            transition: transform 0.1s;
         }
-        .btn-gototalk.shake { animation: shake 0.35s; }
+        .btn-gototalk.shake { animation: shake 0.1s; }
         @keyframes shake {
             0%, 100% { transform: translateX(0); }
-            20% { transform: translateX(-6px); }
-            40% { transform: translateX(6px); }
-            60% { transform: translateX(-4px); }
-            80% { transform: translateX(4px); }
+            25% { transform: translateX(-4px); }
+            75% { transform: translateX(4px); }
         }
 
         .btn-disco {
@@ -181,7 +180,6 @@
         }
         .btn-snake:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0, 255, 102, 0.6); }
 
-        /* ===== КНОПКА «НЕ НАЖИМАТЬ» ===== */
         .btn-rickroll {
             background: linear-gradient(135deg, #ff0033, #cc0000);
             color: #fff;
@@ -200,7 +198,6 @@
             background: linear-gradient(135deg, #ff1a4d, #e60000);
         }
         .btn-rickroll:active { transform: scale(0.95); }
-
         @keyframes pulseRed {
             0% {
                 box-shadow:
@@ -218,8 +215,6 @@
                     0 8px 24px rgba(255, 0, 51, 0.5);
             }
         }
-
-        /* Убегающая кнопка */
         .btn-rickroll.runaway {
             position: fixed;
             z-index: 500;
@@ -245,7 +240,6 @@
             backdrop-filter: blur(6px);
         }
         #rickModal.active { display: flex; }
-
         #rickModal .box {
             max-width: 460px;
             width: 90%;
@@ -261,7 +255,6 @@
             from { transform: scale(0.5) rotate(-5deg); opacity: 0; }
             to   { transform: scale(1) rotate(0); opacity: 1; }
         }
-
         #rickModal .rick-emoji {
             font-size: 64px;
             line-height: 1;
@@ -272,7 +265,6 @@
             from { transform: translateY(0) rotate(-8deg); }
             to   { transform: translateY(-10px) rotate(8deg); }
         }
-
         #rickModal h2 {
             color: #ff3366;
             font-size: 1.5rem;
@@ -281,20 +273,17 @@
             letter-spacing: 2px;
             text-shadow: 0 0 20px #ff0033;
         }
-
         #rickModal p {
             color: #eaf2ff;
             margin-bottom: 20px;
             font-size: 0.95rem;
         }
-
         #rickModal .rick-actions {
             display: flex;
             gap: 10px;
             justify-content: center;
             flex-wrap: wrap;
         }
-
         #rickModal .rick-btn {
             padding: 10px 22px;
             border-radius: 999px;
@@ -315,80 +304,6 @@
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
-        /* ===== СКРИМЕР ===== */
-        #screamer {
-            position: fixed;
-            inset: 0;
-            z-index: 99999;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            background: #000;
-            overflow: hidden;
-        }
-        #screamer.active { display: flex; }
-        #screamer img {
-            width: 100%; height: 100%;
-            object-fit: cover;
-            animation: zoomShake 0.08s infinite alternate;
-        }
-        @keyframes zoomShake {
-            from { transform: scale(1) rotate(-2deg); }
-            to   { transform: scale(1.25) rotate(2deg); }
-        }
-        #screamer::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: #ff0000;
-            opacity: 0;
-            pointer-events: none;
-            animation: flash 0.12s infinite alternate;
-            z-index: 1;
-        }
-        @keyframes flash {
-            from { opacity: 0; }
-            to   { opacity: 0.35; }
-        }
-        #screamer .warn {
-            position: absolute;
-            bottom: 8vh;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: clamp(1.4rem, 6vw, 4rem);
-            font-weight: 900;
-            color: #ff0000;
-            text-shadow: 0 0 20px #ff0000, 0 0 40px #000, 3px 3px 0 #000;
-            text-align: center;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            animation: pulseWarn 0.3s infinite alternate;
-            white-space: nowrap;
-            pointer-events: none;
-            z-index: 2;
-        }
-        @keyframes pulseWarn {
-            from { transform: translateX(-50%) scale(1); }
-            to   { transform: translateX(-50%) scale(1.15); }
-        }
-        #screamer .close-btn {
-            position: absolute;
-            top: 16px; right: 16px;
-            padding: 10px 18px;
-            border-radius: 999px;
-            background: rgba(255, 255, 255, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            color: #fff;
-            font-weight: 700;
-            cursor: pointer;
-            z-index: 3;
-        }
-        body.screamer-on { animation: bodyShake 0.15s infinite alternate; }
-        @keyframes bodyShake {
-            from { transform: translate(0, 0); }
-            to   { transform: translate(2px, -2px); }
-        }
-
         /* ===== ДИСКОТЕКА ===== */
         #disco {
             position: fixed;
@@ -401,7 +316,6 @@
             background: #000;
         }
         #disco.active { display: flex; }
-
         #disco .layer {
             position: absolute;
             inset: -50%;
@@ -655,7 +569,7 @@
     <div class="bubble"></div>
 
     <main class="card">
-        <div class="logo">GoToTalk Community</div>
+        <div class="logo">AOL Community</div>
         <div class="code">404</div>
         <h1>Страница не найдена</h1>
         <p>
@@ -688,13 +602,6 @@
                 <button class="rick-btn ghost" id="rickClose" type="button">Закрыть</button>
             </div>
         </div>
-    </div>
-
-    <!-- СКРИМЕР -->
-    <div id="screamer" role="alertdialog" aria-modal="true" aria-label="Предупреждение">
-        <img id="screamerImg" src="https://i.imgur.com/9K4jVYc.gif" alt="screamer" />
-        <div class="warn">Мы тебя предупреждали</div>
-        <button class="close-btn" id="closeScreamer" type="button">Закрыть (Esc)</button>
     </div>
 
     <!-- ДИСКОТЕКА -->
@@ -739,7 +646,6 @@
         const TARGET_URL    = "https://www.gototalk.cloud-ip.cc/";
         const RICK_URL      = "https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1";
         const CLICKS_NEEDED = 10;
-        const SCREAMER_MS   = 2000;
         const DISCO_MS      = 4000;
         const SNAKE_TARGET  = 5;
 
@@ -749,10 +655,7 @@
         const snakeBtn  = document.getElementById("snakeBtn");
         const rickBtn   = document.getElementById("rickBtn");
         const counterEl = document.getElementById("gtCount");
-        const screamer  = document.getElementById("screamer");
-        const closeBtn  = document.getElementById("closeScreamer");
         const fsHint    = document.getElementById("fsHint");
-        const screamerImg = document.getElementById("screamerImg");
         const disco     = document.getElementById("disco");
         const discoBall = document.getElementById("discoBall");
         const stopDisco = document.getElementById("stopDisco");
@@ -770,6 +673,7 @@
         const rickClose     = document.getElementById("rickClose");
 
         let clicks = 0;
+        let isAutoClicking = false;
         let fired  = false;
         let audioCtx = null;
         let discoTimer = null;
@@ -812,55 +716,22 @@
         }
 
         // ===== ЗВУК =====
-        function playScareSound() {
+        function playBeep(freq, dur, type) {
             try {
                 const Ctx = window.AudioContext || window.webkitAudioContext;
                 if (!Ctx) return;
-                if (audioCtx) { try { audioCtx.close(); } catch (e) {} }
-                audioCtx = new Ctx();
-                const master = audioCtx.createGain();
-                master.gain.value = 1.0;
-                master.connect(audioCtx.destination);
-
-                const bufferSize = audioCtx.sampleRate * 3;
-                const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
-                const data = buffer.getChannelData(0);
-                for (let i = 0; i < bufferSize; i++) data[i] = (Math.random() * 2 - 1);
-                const noise = audioCtx.createBufferSource();
-                noise.buffer = buffer;
-                const filter = audioCtx.createBiquadFilter();
-                filter.type = "bandpass"; filter.frequency.value = 1500; filter.Q.value = 0.5;
-                const dist = audioCtx.createWaveShaper();
-                const curve = new Float32Array(2048);
-                for (let i = 0; i < 2048; i++) {
-                    const x = (i / 2048) * 2 - 1;
-                    curve[i] = Math.tanh(x * 10);
-                }
-                dist.curve = curve;
-                noise.connect(filter).connect(dist).connect(master);
-                noise.start();
-
-                const osc = audioCtx.createOscillator();
-                osc.type = "sawtooth";
-                osc.frequency.setValueAtTime(150, audioCtx.currentTime);
-                const lfo = audioCtx.createOscillator();
-                lfo.type = "square"; lfo.frequency.value = 8;
-                const lfoGain = audioCtx.createGain();
-                lfoGain.gain.value = 500;
-                lfo.connect(lfoGain).connect(osc.frequency);
-                osc.connect(master);
-                osc.start(); lfo.start();
-                osc.stop(audioCtx.currentTime + 2.5);
-                lfo.stop(audioCtx.currentTime + 2.5);
-
-                const sub = audioCtx.createOscillator();
-                sub.type = "sine"; sub.frequency.value = 55;
-                const subGain = audioCtx.createGain();
-                subGain.gain.value = 0.8;
-                sub.connect(subGain).connect(master);
-                sub.start(); sub.stop(audioCtx.currentTime + 2.5);
-            } catch (e) { console.warn(e); }
+                if (!audioCtx) audioCtx = new Ctx();
+                const o = audioCtx.createOscillator();
+                o.type = type || "square";
+                o.frequency.value = freq;
+                const g = audioCtx.createGain();
+                g.gain.setValueAtTime(0.15, audioCtx.currentTime);
+                g.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + dur);
+                o.connect(g).connect(audioCtx.destination);
+                o.start(); o.stop(audioCtx.currentTime + dur);
+            } catch (e) {}
         }
+        
         function playDiscoBeat() {
             try {
                 const Ctx = window.AudioContext || window.webkitAudioContext;
@@ -906,23 +777,8 @@
                 }
             } catch (e) { console.warn(e); }
         }
-        function playBeep(freq, dur, type) {
-            try {
-                const Ctx = window.AudioContext || window.webkitAudioContext;
-                if (!Ctx) return;
-                if (!audioCtx) audioCtx = new Ctx();
-                const o = audioCtx.createOscillator();
-                o.type = type || "square";
-                o.frequency.value = freq;
-                const g = audioCtx.createGain();
-                g.gain.setValueAtTime(0.15, audioCtx.currentTime);
-                g.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + dur);
-                o.connect(g).connect(audioCtx.destination);
-                o.start(); o.stop(audioCtx.currentTime + dur);
-            } catch (e) {}
-        }
+        
         function playRickJingle() {
-            // Простая мелодия-намёк (не рискуем копирайтом)
             const notes = [523, 659, 784, 1046, 784, 1046];
             notes.forEach((f, i) => setTimeout(() => playBeep(f, 0.15, "square"), i * 120));
         }
@@ -939,11 +795,10 @@
             rickModal.classList.remove("active");
         }
 
-        rickBtn.addEventListener("click", (e) => {
+        rickBtn.addEventListener("click", () => {
             rickAttempts++;
             openRickModal();
 
-            // После 2-й попытки — кнопка начинает «убегать»
             if (rickAttempts >= 2 && rickAttempts < 5) {
                 rickBtn.classList.add("runaway");
                 const w = window.innerWidth, h = window.innerHeight;
@@ -952,7 +807,6 @@
                 rickBtn.style.left = Math.max(20, Math.random() * maxX) + "px";
                 rickBtn.style.top  = Math.max(20, Math.random() * maxY) + "px";
             }
-            // После 5-й — фиксируем в углу
             if (rickAttempts >= 5) {
                 rickBtn.classList.remove("runaway");
                 rickBtn.style.left = "";
@@ -960,7 +814,6 @@
             }
         });
 
-        // При наведении после 2-й попытки — тоже убегает
         rickBtn.addEventListener("mouseenter", () => {
             if (rickAttempts >= 2 && rickAttempts < 5) {
                 const w = window.innerWidth, h = window.innerHeight;
@@ -974,7 +827,6 @@
         rickOpen.addEventListener("click", () => {
             window.open(RICK_URL, "_blank", "noopener");
             closeRickModal();
-            // Через 3 секунды — редирект на GoToTalk
             setTimeout(() => {
                 window.location.href = TARGET_URL;
             }, 3000);
@@ -1182,29 +1034,40 @@
         }
 
         // ===== ЦЕПОЧКА =====
-        function fireScreamer() {
+        function fireChain() {
             if (fired) return;
             fired = true;
             goFullscreen();
-            screamer.classList.add("active");
-            document.body.classList.add("screamer-on");
-            playScareSound();
-            if (navigator.vibrate) navigator.vibrate([200, 50, 200, 50, 400]);
-            setTimeout(() => {
-                screamer.classList.remove("active");
-                document.body.classList.remove("screamer-on");
-                startDisco(true);
-            }, SCREAMER_MS);
+            startDisco(true); // дискотека → змейка → GoToTalk
         }
 
+        // 👇 ЛОГИКА АВТОКЛИКЕРА 👇
         btn.addEventListener("click", () => {
-            if (fired) return;
-            clicks++;
-            counterEl.textContent = clicks;
-            btn.classList.remove("shake");
-            void btn.offsetWidth;
-            btn.classList.add("shake");
-            if (clicks >= CLICKS_NEEDED) fireScreamer();
+            if (fired || isAutoClicking) return;
+            
+            isAutoClicking = true;
+            playBeep(400, 0.05, "sine"); // стартовый писк
+
+            let autoCount = 0;
+            const interval = setInterval(() => {
+                autoCount++;
+                counterEl.textContent = autoCount;
+
+                // Анимация тряски кнопки и счетчика
+                btn.classList.remove("shake");
+                void btn.offsetWidth;
+                btn.classList.add("shake");
+                
+                counterEl.style.transform = "scale(1.5)";
+                setTimeout(() => counterEl.style.transform = "scale(1)", 50);
+
+                playBeep(600 + autoCount * 40, 0.03, "square"); // восходящий писк
+
+                if (autoCount >= CLICKS_NEEDED) {
+                    clearInterval(interval);
+                    setTimeout(fireChain, 200); // небольшая пауза перед запуском
+                }
+            }, 80); // скорость прокликивания: каждые 80мс (займет ~0.8 сек)
         });
 
         discoBtn.addEventListener("click", () => {
@@ -1237,13 +1100,6 @@
         document.addEventListener("keydown", (e) => {
             if (e.key === "Escape") {
                 if (rickModal.classList.contains("active")) { closeRickModal(); return; }
-                if (screamer.classList.contains("active")) {
-                    screamer.classList.remove("active");
-                    document.body.classList.remove("screamer-on");
-                    if (audioCtx) { try { audioCtx.close(); audioCtx = null; } catch (err) {} }
-                    fired = false; clicks = 0; counterEl.textContent = "0";
-                    return;
-                }
                 if (disco.classList.contains("active")) { stopDiscoFn(); return; }
                 if (snakeEl.classList.contains("active")) { stopSnakeFn(); return; }
                 return;
@@ -1266,7 +1122,6 @@
             }
         }, true);
 
-        // Мобильные стрелки
         document.querySelectorAll("#snake .dpad button").forEach(btnEl => {
             btnEl.addEventListener("click", () => {
                 const d = btnEl.dataset.dir;
@@ -1277,7 +1132,6 @@
             });
         });
 
-        // Свайпы
         let touchStartX = 0, touchStartY = 0;
         canvas.addEventListener("touchstart", (e) => {
             touchStartX = e.touches[0].clientX;
@@ -1290,12 +1144,6 @@
             if (Math.abs(dx) > Math.abs(dy)) setDir({ x: dx > 0 ? 1 : -1, y: 0 });
             else setDir({ x: 0, y: dy > 0 ? 1 : -1 });
         }, { passive: true });
-
-        // Скример fallback
-        screamerImg.addEventListener("error", () => {
-            screamerImg.style.display = "none";
-            screamer.style.background = "repeating-linear-gradient(45deg, #ff0000 0 40px, #000 40px 80px)";
-        });
 
         window.addEventListener("resize", () => {
             if (snakeEl.classList.contains("active")) resizeCanvas();
