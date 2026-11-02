@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 — AOL Community</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <style>
+        :root {
+            --aol-blue: #0057b8;
+            --aol-yellow: #ffcc00;
+            --aol-dark: #0a1a33;
+            --aol-glow: #00d4ff;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+            background:
+                radial-gradient(circle at 20% 20%, #123a6b 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, #0057b8 0%, transparent 55%),
+                linear-gradient(135deg, var(--aol-dark), #061024 100%);
+            color: #eaf2ff;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, var(--aol-glow), transparent 70%);
+            opacity: 0.25;
+            animation: float 12s ease-in-out infinite;
+            pointer-events: none;
+        }
+        .bubble:nth-child(1) { width: 180px; height: 180px; top: 10%; left: 8%; animation-delay: 0s; }
+        .bubble:nth-child(2) { width: 90px;  height: 90px;  top: 70%; left: 20%; animation-delay: 3s; }
+        .bubble:nth-child(3) { width: 140px; height: 140px; top: 15%; right: 12%; animation-delay: 6s; }
+        .bubble:nth-child(4) { width: 60px;  height: 60px;  bottom: 15%; right: 25%; animation-delay: 9s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50%      { transform: translateY(-30px) scale(1.1); }
+        }
+
+        .card {
+            position: relative;
+            z-index: 2;
+            max-width: 560px;
+            width: 100%;
+            text-align: center;
+            padding: 48px 36px;
+            border-radius: 24px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(0, 212, 255, 0.25);
+            backdrop-filter: blur(14px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+            animation: rise 0.8s ease-out both;
+        }
+
+        @keyframes rise {
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .logo {
+            font-size: 15px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--aol-glow);
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .code {
+            font-size: clamp(80px, 18vw, 140px);
+            font-weight: 900;
+            line-height: 1;
+            background: linear-gradient(180deg, #ffffff 0%, var(--aol-glow) 60%, var(--aol-blue) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 40px rgba(0, 212, 255, 0.35);
+            margin-bottom: 8px;
+        }
+
+        h1 { font-size: 1.5rem; font-weight: 600; margin-bottom: 14px; }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #b9c9e2;
+            margin-bottom: 30px;
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 13px 26px;
+            border-radius: 999px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+            border: 1px solid transparent;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--aol-yellow), #ffb300);
+            color: #1a1a1a;
+            box-shadow: 0 8px 24px rgba(255, 204, 0, 0.35);
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(255, 204, 0, 0.5); }
+
+        .btn-ghost {
+            background: transparent;
+            color: #eaf2ff;
+            border-color: rgba(0, 212, 255, 0.45);
+        }
+        .btn-ghost:hover { background: rgba(0, 212, 255, 0.12); transform: translateY(-2px); }
+
+        .btn-gototalk {
+            background: linear-gradient(135deg, #7a2cff, #ff2c8c);
+            color: #fff;
+            box-shadow: 0 8px 24px rgba(122, 44, 255, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-gototalk:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(255, 44, 140, 0.55); }
+        .btn-gototalk .count {
+            display: inline-block;
+            min-width: 22px;
+            padding: 1px 7px;
+            border-radius: 999px;
+            background: rgba(0, 0, 0, 0.35);
+            font-size: 0.8rem;
+            font-variant-numeric: tabular-nums;
+        }
+        .btn-gototalk.shake { animation: shake 0.35s; }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20% { transform: translateX(-6px); }
+            40% { transform: translateX(6px); }
+            60% { transform: translateX(-4px); }
+            80% { transform: translateX(4px); }
+        }
+
+        .footer-note {
+            margin-top: 28px;
+            font-size: 0.78rem;
+            color: #6f86a8;
+            letter-spacing: 1px;
+        }
+
+        /* ===== ХАРДКОР-СКРИМЕР ===== */
+        #screamer {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            background: #000;
+            overflow: hidden;
+        }
+        #screamer.active { display: flex; }
+
+        #screamer img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: zoomShake 0.08s infinite alternate;
+        }
+
+        @keyframes zoomShake {
+            from { transform: scale(1) rotate(-2deg); }
+            to   { transform: scale(1.25) rotate(2deg); }
+        }
+
+        #screamer::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: #ff0000;
+            opacity: 0;
+            pointer-events: none;
+            animation: flash 0.12s infinite alternate;
+            z-index: 1;
+        }
+        @keyframes flash {
+            from { opacity: 0; }
+            to   { opacity: 0.35; }
+        }
+
+        #screamer .warn {
+            position: absolute;
+            bottom: 8vh;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: clamp(1.4rem, 6vw, 4rem);
+            font-weight: 900;
+            color: #ff0000;
+            text-shadow: 0 0 20px #ff0000, 0 0 40px #000, 3px 3px 0 #000;
+            text-align: center;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            animation: pulseWarn 0.3s infinite alternate;
+            white-space: nowrap;
+            pointer-events: none;
+            z-index: 2;
+        }
+        @keyframes pulseWarn {
+            from { transform: translateX(-50%) scale(1); }
+            to   { transform: translateX(-50%) scale(1.15); }
+        }
+
+        #screamer .close-btn {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            padding: 10px 18px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            color: #fff;
+            font-weight: 700;
+            cursor: pointer;
+            z-index: 3;
+        }
+
+        body.screamer-on { animation: bodyShake 0.15s infinite alternate; }
+        @keyframes bodyShake {
+            from { transform: translate(0, 0); }
+            to   { transform: translate(2px, -2px); }
+        }
+
+        /* ===== ИНДИКАТОР ПОЛНОГО ЭКРАНА ===== */
+        #fsHint {
+            position: fixed;
+            top: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 8px 16px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(0, 212, 255, 0.5);
+            border-radius: 999px;
+            color: #eaf2ff;
+            font-size: 0.8rem;
+            z-index: 100000;
+            display: none;
+            pointer-events: none;
+        }
+        #fsHint.show { display: block; }
+    </style>
+</head>
+<body>
+
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+
+    <main class="card">
+        <div class="logo">AOL Community</div>
+        <div class="code">404</div>
+        <h1>Страница не найдена</h1>
+        <p>
+            Похоже, этот адрес потерялся в сети. Возможно, страница была
+            перемещена, удалена или вы ошиблись в ссылке.
+        </p>
+
+        <div class="actions">
+            <a href="/" class="btn btn-primary">🏠 На главную</a>
+            <a href="javascript:history.back()" class="btn btn-ghost">← Назад</a>
+            <button id="gototalkBtn" class="btn btn-gototalk" type="button">
+                💬 GoToTalk Community <span class="count" id="gtCount">0</span>
+            </button>
+        </div>
+
+        <div class="footer-note">YOU'VE GOT MAIL · ERROR 404 · PAGE NOT FOUND</div>
+    </main>
+
+    <div id="screamer" role="alertdialog" aria-modal="true" aria-label="Предупреждение">
+        <img id="screamerImg"
+             src="https://i.imgur.com/9K4jVYc.gif"
+             alt="screamer" />
+        <div class="warn">Мы тебя предупреждали</div>
+        <button class="close-btn" id="closeScreamer" type="button">Закрыть (Esc)</button>
+    </div>
+
+    <div id="fsHint">⛶ Полный экран активирован · Esc — выйти</div>
+
+    <script>
+    (function () {
+        "use strict";
+
+        const TARGET_URL    = "https://www.gototalk.cloud-ip.cc/";
+        const CLICKS_NEEDED = 10;
+        const REDIRECT_MS   = 2000;
+
+        const btn       = document.getElementById("gototalkBtn");
+        const counterEl = document.getElementById("gtCount");
+        const screamer  = document.getElementById("screamer");
+        const closeBtn  = document.getElementById("closeScreamer");
+        const fsHint    = document.getElementById("fsHint");
+        const screamerImg = document.getElementById("screamerImg");
+
+        let clicks = 0;
+        let fired  = false;
+        let audioCtx = null;
+
+        // ===== ПОЛНЫЙ ЭКРАН (аналог F11) =====
+        function goFullscreen() {
+            const el = document.documentElement;
+            const req =
+                el.requestFullscreen ||
+                el.webkitRequestFullscreen ||
+                el.mozRequestFullScreen ||
+                el.msRequestFullscreen;
+
+            if (req) {
+                // Вызывается ВНУТРИ обработчика клика → браузер разрешит
+                const p = req.call(el, { navigationUI: "hide" });
+                if (p && typeof p.catch === "function") {
+                    p.catch((err) => {
+                        console.warn("Fullscreen отклонён:", err);
+                        showFsHint("⚠️ Полный экран заблокирован браузером");
+                    });
+                }
+            } else {
+                showFsHint("⚠️ Fullscreen API не поддерживается");
+            }
+        }
+
+        function exitFullscreen() {
+            const d = document;
+            const exit =
+                d.exitFullscreen ||
+                d.webkitExitFullscreen ||
+                d.mozCancelFullScreen ||
+                d.msExitFullscreen;
+            if (exit && (d.fullscreenElement || d.webkitFullscreenElement)) {
+                try { exit.call(d); } catch (e) {}
+            }
+        }
+
+        // Подсказка при входе/выходе из полного экрана
+        function onFsChange() {
+            const isFs = !!(document.fullscreenElement ||
+                            document.webkitFullscreenElement ||
+                            document.mozFullScreenElement ||
+                            document.msFullscreenElement);
+            if (isFs) {
+                showFsHint("⛶ Полный экран · Esc — выйти");
+            } else {
+                fsHint.classList.remove("show");
+            }
+        }
+        document.addEventListener("fullscreenchange", onFsChange);
+        document.addEventListener("webkitfullscreenchange", onFsChange);
+        document.addEventListener("mozfullscreenchange", onFsChange);
+        document.addEventListener("MSFullscreenChange", onFsChange);
+
+        function showFsHint(text) {
+            fsHint.textContent = text;
+            fsHint.classList.add("show");
+            clearTimeout(showFsHint._t);
+            showFsHint._t = setTimeout(() => fsHint.classList.remove("show"), 4000);
+        }
+
+        // ===== ГРОМКИЙ ЗВУК =====
+        function playScareSound() {
+            try {
+                const Ctx = window.AudioContext || window.webkitAudioContext;
+                if (!Ctx) return;
+                if (audioCtx) { try { audioCtx.close(); } catch (e) {} }
+                audioCtx = new Ctx();
+
+                const master = audioCtx.createGain();
+                master.gain.value = 1.0;
+                master.connect(audioCtx.destination);
+
+                // Резкий шум
+                const bufferSize = audioCtx.sampleRate * 3;
+                const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+                const data = buffer.getChannelData(0);
+                for (let i = 0; i < bufferSize; i++) data[i] = (Math.random() * 2 - 1);
+
+                const noise = audioCtx.createBufferSource();
+                noise.buffer = buffer;
+
+                const filter = audioCtx.createBiquadFilter();
+                filter.type = "bandpass";
+                filter.frequency.value = 1500;
+                filter.Q.value = 0.5;
+
+                const dist = audioCtx.createWaveShaper();
+                const curve = new Float32Array(2048);
+                for (let i = 0; i < 2048; i++) {
+                    const x = (i / 2048) * 2 - 1;
+                    curve[i] = Math.tanh(x * 10);
+                }
+                dist.curve = curve;
+
+                noise.connect(filter).connect(dist).connect(master);
+                noise.start();
+
+                // Сирена
+                const osc = audioCtx.createOscillator();
+                osc.type = "sawtooth";
+                osc.frequency.setValueAtTime(150, audioCtx.currentTime);
+                const lfo = audioCtx.createOscillator();
+                lfo.type = "square";
+                lfo.frequency.value = 8;
+                const lfoGain = audioCtx.createGain();
+                lfoGain.gain.value = 500;
+                lfo.connect(lfoGain).connect(osc.frequency);
+                osc.connect(master);
+                osc.start(); lfo.start();
+                osc.stop(audioCtx.currentTime + 2.5);
+                lfo.stop(audioCtx.currentTime + 2.5);
+
+                // Сабвуфер
+                const sub = audioCtx.createOscillator();
+                sub.type = "sine";
+                sub.frequency.value = 55;
+                const subGain = audioCtx.createGain();
+                subGain.gain.value = 0.8;
+                sub.connect(subGain).connect(master);
+                sub.start();
+                sub.stop(audioCtx.currentTime + 2.5);
+            } catch (e) {
+                console.warn("Audio error:", e);
+            }
+        }
+
+        // ===== ЗАПУСК СКРИМЕРА =====
+        function fireScreamer() {
+            if (fired) return;
+            fired = true;
+
+            // 1) ПОЛНЫЙ ЭКРАН — вызываем ПЕРВЫМ, внутри клика
+            goFullscreen();
+
+            // 2) Показываем скример
+            screamer.classList.add("active");
+            document.body.classList.add("screamer-on");
+
+            // 3) Звук
+            playScareSound();
+
+            // 4) Вибрация
+            if (navigator.vibrate) {
+                navigator.vibrate([200, 50, 200, 50, 400]);
+            }
+
+            // 5) Автопереход
+            setTimeout(() => {
+                window.location.href = TARGET_URL;
+            }, REDIRECT_MS);
+        }
+
+        btn.addEventListener("click", () => {
+            if (fired) return;
+
+            clicks++;
+            counterEl.textContent = clicks;
+
+            btn.classList.remove("shake");
+            void btn.offsetWidth;
+            btn.classList.add("shake");
+
+            if (clicks >= CLICKS_NEEDED) {
+                fireScreamer();
+            }
+        });
+
+        // Пробуем «залочить» Esc через перехват keydown (мягко — не мешает браузеру)
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && screamer.classList.contains("active")) {
+                // Закрываем скример, но НЕ выходим из fullscreen — пусть пользователь сам
+                screamer.classList.remove("active");
+                document.body.classList.remove("screamer-on");
+                if (audioCtx) { try { audioCtx.close(); audioCtx = null; } catch (err) {} }
+                if (navigator.vibrate) navigator.vibrate(0);
+                fired = false;
+                clicks = 0;
+                counterEl.textContent = "0";
+                // Полный экран остаётся — пользователь выйдет вторым Esc
+            }
+        }, true);
+
+        closeBtn.addEventListener("click", () => {
+            screamer.classList.remove("active");
+            document.body.classList.remove("screamer-on");
+            if (audioCtx) { try { audioCtx.close(); audioCtx = null; } catch (e) {} }
+            if (navigator.vibrate) navigator.vibrate(0);
+            exitFullscreen();
+            fired = false;
+            clicks = 0;
+            counterEl.textContent = "0";
+        });
+
+        // Ловим ошибки загрузки картинки — если imgur недоступен
+        screamerImg.addEventListener("error", () => {
+            screamerImg.style.display = "none";
+            screamer.style.background =
+                "repeating-linear-gradient(45deg, #ff0000 0 40px, #000 40px 80px)";
+        });
+    })();
+    </script>
+
+</body>
+</html>
