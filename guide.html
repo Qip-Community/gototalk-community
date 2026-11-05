@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Инструкция</title>
+    
+    <meta name="description" content="Пошаговая инструкция по установке и настройке QIP на Windows и Android. Регистрация, настройка сервера и первые шаги в мессенджере." />
+    <meta property="og:title" content="Инструкция по установке | GoToTalk Community" />
+    <meta property="og:description" content="Узнайте, как установить QIP и начать общение." />
+
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <style>
@@ -42,45 +47,47 @@
         </div>
     </header>
 
-    <section class="guide-page">
-        <div class="container">
-            <h1 data-i18n="guide-title">📖 Инструкция по установке</h1>
-            <p class="subtitle" data-i18n="guide-subtitle">Выбери свою платформу</p>
+    <main>
+        <section class="guide-page">
+            <div class="container">
+                <h1 data-i18n="guide-title">📖 Инструкция по установке</h1>
+                <p class="subtitle" data-i18n="guide-subtitle">Выбери свою платформу</p>
 
-            <div class="guide-tabs">
-                <button class="guide-tab active" data-tab="windows" data-i18n="guide-tab-windows">🪟 Windows</button>
-                <button class="guide-tab" data-tab="android" data-i18n="guide-tab-android">📱 Android</button>
+                <div class="guide-tabs">
+                    <button class="guide-tab active" data-tab="windows" data-i18n="guide-tab-windows">🪟 Windows</button>
+                    <button class="guide-tab" data-tab="android" data-i18n="guide-tab-android">📱 Android</button>
+                </div>
+
+                <div class="guide-content active" id="guide-windows">
+                    <ol>
+                        <li data-i18n="guide-win-step1"><strong>Зарегистрируйся через Telegram-бота</strong> — перейди в <a href="https://t.me/KICQbot" target="_blank">@KICQbot</a>, напиши /start и получи ссылку на сайт регистрации.</li>
+                        <li data-i18n="guide-win-step2"><strong>Заполни форму регистрации</strong> — укажи почту, никнейм (по желанию) и пароль. Придумай любой UIN (номер) и запомни его!</li>
+                        <li data-i18n="guide-win-step3"><strong>Скачай QIP</strong> — перейди в раздел «Скачать» и загрузи репак для Windows.</li>
+                        <li data-i18n="guide-win-step4"><strong>Установи программу</strong> — запусти установщик и следуй инструкциям.</li>
+                        <li data-i18n="guide-win-step5"><strong>Настрой сервер</strong> — в QIP открой «Сервер/Прокси» и введи <code>kicq.ru</code> вместо <code>login.icq.com</code>.</li>
+                        <li data-i18n="guide-win-step6"><strong>Войди в аккаунт</strong> — используй свой UIN и пароль.</li>
+                        <li data-i18n="guide-win-step7"><strong>Готово!</strong> Ты снова в QIP. Если не подключается — попробуй несколько раз сменить статус. 😊</li>
+                    </ol>
+                </div>
+
+                <div class="guide-content" id="guide-android">
+                    <ol>
+                        <li data-i18n="guide-and-step1"><strong>Скачай J2ME Loader</strong> — установи из Google Play: <a href="https://play.google.com/store/apps/details?id=ru.playsoftware.j2meloader" target="_blank">J2ME Loader</a>.</li>
+                        <li data-i18n="guide-and-step2"><strong>Скачай jimm.jar</strong> — файл лежит в разделе «Скачать» (Android) или в Discord в канале <code>#client</code>.</li>
+                        <li data-i18n="guide-and-step3"><strong>Запусти через J2ME Loader</strong> — открой J2ME Loader → выбери скачанный <code>jimm.jar</code> → нажми START.</li>
+                        <li data-i18n="guide-and-step4"><strong>Настрой разрешение экрана</strong> — перед запуском выставь:<br />Ширина: <code>480</code><br />Высота: <code>600</code></li>
+                        <li data-i18n="guide-and-step5"><strong>Настрой подключение в Jimm</strong> — зайди в Настройки → Подключение, введи сервер <code>kicq.ru</code> и убери галочку «Безопасный вход».</li>
+                        <li data-i18n="guide-and-step6"><strong>Зарегистрируйся через Telegram-бота</strong> — перейди в <a href="https://t.me/KICQbot" target="_blank">@KICQbot</a>, напиши /start и получи ссылку на сайт регистрации.</li>
+                        <li data-i18n="guide-and-step7"><strong>Заполни форму регистрации</strong> — укажи почту, никнейм (по желанию) и пароль. Придумай любой UIN (номер) и запомни его!</li>
+                        <li data-i18n="guide-and-step8"><strong>Войди в Jimm</strong> — открой Jimm → «Учётная запись» → введи UIN и пароль → «Подключиться».</li>
+                        <li data-i18n="guide-and-step9"><strong>Готово!</strong> QIP работает на твоём Android! 🚀</li>
+                    </ol>
+                </div>
+
+                <p data-i18n="guide-help">Если что-то пошло не так — пиши в <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>, поможем.</p>
             </div>
-
-            <div class="guide-content active" id="guide-windows">
-                <ol>
-                    <li data-i18n="guide-win-step1"><strong>Зарегистрируйся через Telegram-бота</strong> — перейди в <a href="https://t.me/KICQbot" target="_blank">@KICQbot</a>, напиши /start и получи ссылку на сайт регистрации.</li>
-                    <li data-i18n="guide-win-step2"><strong>Заполни форму регистрации</strong> — укажи почту, никнейм (по желанию) и пароль. Придумай любой UIN (номер) и запомни его!</li>
-                    <li data-i18n="guide-win-step3"><strong>Скачай QIP</strong> — перейди в раздел «Скачать» и загрузи репак для Windows.</li>
-                    <li data-i18n="guide-win-step4"><strong>Установи программу</strong> — запусти установщик и следуй инструкциям.</li>
-                    <li data-i18n="guide-win-step5"><strong>Настрой сервер</strong> — в QIP открой «Сервер/Прокси» и введи <code>kicq.ru</code> вместо <code>login.icq.com</code>.</li>
-                    <li data-i18n="guide-win-step6"><strong>Войди в аккаунт</strong> — используй свой UIN и пароль.</li>
-                    <li data-i18n="guide-win-step7"><strong>Готово!</strong> Ты снова в QIP. Если не подключается — попробуй несколько раз сменить статус. 😊</li>
-                </ol>
-            </div>
-
-            <div class="guide-content" id="guide-android">
-                <ol>
-                    <li data-i18n="guide-and-step1"><strong>Скачай J2ME Loader</strong> — установи из Google Play: <a href="https://play.google.com/store/apps/details?id=ru.playsoftware.j2meloader" target="_blank">J2ME Loader</a>.</li>
-                    <li data-i18n="guide-and-step2"><strong>Скачай jimm.jar</strong> — файл лежит в разделе «Скачать» (Android) или в Discord в канале <code>#client</code>.</li>
-                    <li data-i18n="guide-and-step3"><strong>Запусти через J2ME Loader</strong> — открой J2ME Loader → выбери скачанный <code>jimm.jar</code> → нажми START.</li>
-                    <li data-i18n="guide-and-step4"><strong>Настрой разрешение экрана</strong> — перед запуском выставь:<br />Ширина: <code>480</code><br />Высота: <code>600</code></li>
-                    <li data-i18n="guide-and-step5"><strong>Настрой подключение в Jimm</strong> — зайди в Настройки → Подключение, введи сервер <code>kicq.ru</code> и убери галочку «Безопасный вход».</li>
-                    <li data-i18n="guide-and-step6"><strong>Зарегистрируйся через Telegram-бота</strong> — перейди в <a href="https://t.me/KICQbot" target="_blank">@KICQbot</a>, напиши /start и получи ссылку на сайт регистрации.</li>
-                    <li data-i18n="guide-and-step7"><strong>Заполни форму регистрации</strong> — укажи почту, никнейм (по желанию) и пароль. Придумай любой UIN (номер) и запомни его!</li>
-                    <li data-i18n="guide-and-step8"><strong>Войди в Jimm</strong> — открой Jimm → «Учётная запись» → введи UIN и пароль → «Подключиться».</li>
-                    <li data-i18n="guide-and-step9"><strong>Готово!</strong> QIP работает на твоём Android! 🚀</li>
-                </ol>
-            </div>
-
-            <p data-i18n="guide-help">Если что-то пошло не так — пиши в <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>, поможем.</p>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
@@ -203,8 +210,6 @@
         })();
     </script>
 
-    <!-- Default Statcounter code for GoToTalk Community
-    https://www.gototalk.cloud-ip.cc -->
     <script type="text/javascript">
     var sc_project=13364769; 
     var sc_invisible=1; 
@@ -216,7 +221,5 @@
     href="https://statcounter.com/" target="_blank"><img class="statcounter"
     src="https://c.statcounter.com/13364769/0/dde2fe88/1/" alt="Web Analytics"
     referrerPolicy="no-referrer-when-downgrade"></a></div></noscript> 
-    <!-- End of Statcounter Code -->
-
 </body>
 </html>

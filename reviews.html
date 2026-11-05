@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Гостевая книга</title>
+    
+    <meta name="description" content="Оставьте свой отзыв или пожелание в гостевой книге GoToTalk Community. Делитесь воспоминаниями о старом интернете." />
+    <meta property="og:title" content="Гостевая книга | GoToTalk Community" />
+    <meta property="og:description" content="Оставь свой след в истории проекта." />
+
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
 </head>
@@ -31,25 +36,27 @@
         </div>
     </header>
 
-    <section class="reviews-page">
-        <div class="container">
-            <h1 data-i18n="guestbook-title">📖 Гостевая книга</h1>
-            <p class="subtitle" data-i18n="guestbook-subtitle">Оставь свой след в истории GoToTalk Community</p>
+    <main>
+        <section class="reviews-page">
+            <div class="container">
+                <h1 data-i18n="guestbook-title">📖 Гостевая книга</h1>
+                <p class="subtitle" data-i18n="guestbook-subtitle">Оставь свой след в истории GoToTalk Community</p>
 
-            <div class="review-form">
-                <h2 data-i18n="guestbook-form-title">✏️ Написать сообщение</h2>
-                <form id="reviewForm">
-                    <input type="text" id="reviewName" placeholder="Ваше имя или ник" required />
-                    <textarea id="reviewText" rows="4" placeholder="Ваше сообщение..." required></textarea>
-                    <button type="submit" class="btn" data-i18n="guestbook-form-btn">Отправить</button>
-                </form>
-            </div>
+                <div class="review-form">
+                    <h2 data-i18n="guestbook-form-title">✏️ Написать сообщение</h2>
+                    <form id="reviewForm">
+                        <input type="text" id="reviewName" placeholder="Ваше имя или ник" required />
+                        <textarea id="reviewText" rows="4" placeholder="Ваше сообщение..." required></textarea>
+                        <button type="submit" class="btn" data-i18n="guestbook-form-btn">Отправить</button>
+                    </form>
+                </div>
 
-            <div id="reviewsList">
-                <p class="placeholder" data-i18n="guestbook-loading">Загружаем сообщения...</p>
+                <div id="reviewsList">
+                    <p class="placeholder" data-i18n="guestbook-loading">Загружаем сообщения...</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
@@ -200,8 +207,6 @@
         })();
     </script>
 
-    <!-- Default Statcounter code for GoToTalk Community
-    https://www.gototalk.cloud-ip.cc -->
     <script type="text/javascript">
     var sc_project=13364769; 
     var sc_invisible=1; 
@@ -213,7 +218,5 @@
     href="https://statcounter.com/" target="_blank"><img class="statcounter"
     src="https://c.statcounter.com/13364769/0/dde2fe88/1/" alt="Web Analytics"
     referrerPolicy="no-referrer-when-downgrade"></a></div></noscript> 
-    <!-- End of Statcounter Code -->
-
 </body>
 </html>

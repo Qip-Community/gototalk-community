@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QIP 2012</title>
+    
+    <meta name="description" content="Скачать QIP 2012 (Infium). Инструкция по установке, настройке hosts и регистрации на сервере PLQIP." />
+    <meta property="og:title" content="QIP 2012 | GoToTalk Community" />
+    <meta property="og:description" content="QIP 2012 Infium снова работает." />
+
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
 </head>
@@ -31,60 +36,62 @@
         </div>
     </header>
 
-    <section class="guide-page">
-        <div class="container">
-            <h1 data-i18n="qip2012-title">🌀 QIP 2012</h1>
-            <p class="subtitle" data-i18n="qip2012-subtitle">Инструкция по установке и настройке</p>
+    <main>
+        <section class="guide-page">
+            <div class="container">
+                <h1 data-i18n="qip2012-title">🌀 QIP 2012</h1>
+                <p class="subtitle" data-i18n="qip2012-subtitle">Инструкция по установке и настройке</p>
 
-            <div class="platform-card" style="text-align: center;">
-                <h2 data-i18n="qip2012-download-title">📥 Скачать QIP 2012</h2>
-                <p data-i18n="qip2012-download-desc">Готовый установщик QIP 2012 для Windows.</p>
-                <a href="qip2012.exe" class="btn" download data-i18n="qip2012-download-btn">Скачать QIP 2012 →</a>
+                <div class="platform-card" style="text-align: center;">
+                    <h2 data-i18n="qip2012-download-title">📥 Скачать QIP 2012</h2>
+                    <p data-i18n="qip2012-download-desc">Готовый установщик QIP 2012 для Windows.</p>
+                    <a href="qip2012.exe" class="btn" download data-i18n="qip2012-download-btn">Скачать QIP 2012 →</a>
+                </div>
+
+                <div class="platform-card">
+                    <h2 data-i18n="qip2012-step1-title">📥 Шаг 1: Установка</h2>
+                    <p data-i18n="qip2012-step1-desc">Запусти установщик от имени администратора. Прими лицензию и установи QIP 2012.</p>
+                </div>
+
+                <div class="platform-card">
+                    <h2 data-i18n="qip2012-step2-title">⚙️ Шаг 2: Настройка hosts</h2>
+                    <p data-i18n="qip2012-step2-desc">Открой Блокнот от имени администратора и открой файл <code>C:\Windows\System32\drivers\etc\hosts</code>. В самый низ добавь строки:</p>
+                    <p><code>45.142.36.40 qip.ru</code><br /><code>45.142.36.40 webim.qip.ru</code></p>
+                    <p data-i18n="qip2012-step2-desc2">Сохрани файл.</p>
+                </div>
+
+                <div class="platform-card">
+                    <h2 data-i18n="qip2012-step3-title">📝 Шаг 3: Регистрация</h2>
+                    <p data-i18n="qip2012-step3-desc">Зайди на <a href="https://plqip.pirogprod.ru" target="_blank">plqip.pirogprod.ru</a> и зарегистрируй аккаунт. Запомни логин и пароль.</p>
+                </div>
+
+                <div class="platform-card">
+                    <h2 data-i18n="qip2012-step4-title">🔑 Шаг 4: Вход</h2>
+                    <p data-i18n="qip2012-step4-desc">Изначально вход идёт через PLQIP. Запусти QIP и введи данные учётной записи, которую ты зарегистрировал на сервисе PLQIP. После входа можешь добавить асю (KICQ) и другие аккаунты.</p>
+                </div>
+
+                <div class="platform-card">
+                    <h2 data-i18n="qip2012-step5-title">💬 Шаг 5: Добавление KICQ (аси)</h2>
+                    <p data-i18n="qip2012-step5-desc">Настройки → Учётные записи → Добавить → ICQ.</p>
+                    <p data-i18n="qip2012-step5-desc2">Сервер: <code>kicq.ru</code><br />Порт: <code>5190</code></p>
+                    <p data-i18n="qip2012-step5-desc3">Введи свой UIN и пароль (регистрация на kicq.ru).</p>
+                </div>
+
+                <div class="platform-card">
+                    <h2 data-i18n="qip2012-step6-title">⚠️ Не работает</h2>
+                    <p data-i18n="qip2012-step6-desc">Звонки и видео — не работают.</p>
+                </div>
+
+                <div class="platform-card help-card">
+                    <h2 data-i18n="qip2012-problems-title">❓ Проблемы</h2>
+                    <p data-i18n="qip2012-problems-desc">• Проверь hosts — строки должны быть внизу файла<br />• Порт: <code>5190</code><br />• Добавь QIP в исключения антивируса</p>
+                    <a href="https://discord.gg/VSJpGajNmP" target="_blank" class="btn" data-i18n="help-btn">Перейти в Discord →</a>
+                </div>
+
+                <a href="index.html" class="btn btn-secondary" data-i18n="qip2012-back">← Назад к выбору</a>
             </div>
-
-            <div class="platform-card">
-                <h2 data-i18n="qip2012-step1-title">📥 Шаг 1: Установка</h2>
-                <p data-i18n="qip2012-step1-desc">Запусти установщик от имени администратора. Прими лицензию и установи QIP 2012.</p>
-            </div>
-
-            <div class="platform-card">
-                <h2 data-i18n="qip2012-step2-title">⚙️ Шаг 2: Настройка hosts</h2>
-                <p data-i18n="qip2012-step2-desc">Открой Блокнот от имени администратора и открой файл <code>C:\Windows\System32\drivers\etc\hosts</code>. В самый низ добавь строки:</p>
-                <p><code>45.142.36.40 qip.ru</code><br /><code>45.142.36.40 webim.qip.ru</code></p>
-                <p data-i18n="qip2012-step2-desc2">Сохрани файл.</p>
-            </div>
-
-            <div class="platform-card">
-                <h2 data-i18n="qip2012-step3-title">📝 Шаг 3: Регистрация</h2>
-                <p data-i18n="qip2012-step3-desc">Зайди на <a href="https://plqip.pirogprod.ru" target="_blank">plqip.pirogprod.ru</a> и зарегистрируй аккаунт. Запомни логин и пароль.</p>
-            </div>
-
-            <div class="platform-card">
-                <h2 data-i18n="qip2012-step4-title">🔑 Шаг 4: Вход</h2>
-                <p data-i18n="qip2012-step4-desc">Изначально вход идёт через PLQIP. Запусти QIP и введи данные учётной записи, которую ты зарегистрировал на сервисе PLQIP. После входа можешь добавить асю (KICQ) и другие аккаунты.</p>
-            </div>
-
-            <div class="platform-card">
-                <h2 data-i18n="qip2012-step5-title">💬 Шаг 5: Добавление KICQ (аси)</h2>
-                <p data-i18n="qip2012-step5-desc">Настройки → Учётные записи → Добавить → ICQ.</p>
-                <p data-i18n="qip2012-step5-desc2">Сервер: <code>kicq.ru</code><br />Порт: <code>5190</code></p>
-                <p data-i18n="qip2012-step5-desc3">Введи свой UIN и пароль (регистрация на kicq.ru).</p>
-            </div>
-
-            <div class="platform-card">
-                <h2 data-i18n="qip2012-step6-title">⚠️ Не работает</h2>
-                <p data-i18n="qip2012-step6-desc">Звонки и видео — не работают.</p>
-            </div>
-
-            <div class="platform-card help-card">
-                <h2 data-i18n="qip2012-problems-title">❓ Проблемы</h2>
-                <p data-i18n="qip2012-problems-desc">• Проверь hosts — строки должны быть внизу файла<br />• Порт: <code>5190</code><br />• Добавь QIP в исключения антивируса</p>
-                <a href="https://discord.gg/VSJpGajNmP" target="_blank" class="btn" data-i18n="help-btn">Перейти в Discord →</a>
-            </div>
-
-            <a href="index.html" class="btn btn-secondary" data-i18n="qip2012-back">← Назад к выбору</a>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
@@ -203,8 +210,6 @@
         })();
     </script>
 
-    <!-- Default Statcounter code for GoToTalk Community
-    https://www.gototalk.cloud-ip.cc -->
     <script type="text/javascript">
     var sc_project=13364769; 
     var sc_invisible=1; 
@@ -216,7 +221,5 @@
     href="https://statcounter.com/" target="_blank"><img class="statcounter"
     src="https://c.statcounter.com/13364769/0/dde2fe88/1/" alt="Web Analytics"
     referrerPolicy="no-referrer-when-downgrade"></a></div></noscript> 
-    <!-- End of Statcounter Code -->
-
 </body>
 </html>

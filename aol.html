@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AOL Community</title>
+    <title>AOL Instant Messenger</title>
+    
+    <meta name="description" content="Инструкция по установке AIM 5.0. Пароль от архива и вход в аккаунт AOL Instant Messenger." />
+    <meta property="og:title" content="AIM 5.0 | GoToTalk Community" />
+    <meta property="og:description" content="Классический AOL Instant Messenger возвращается." />
+
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
 </head>
@@ -31,36 +36,38 @@
         </div>
     </header>
 
-    <section class="guide-page">
-        <div class="container">
-            <h1 data-i18n="aol-title">👤 AIM 5.0 (1995)</h1>
-            <p class="subtitle" data-i18n="aol-subtitle">Инструкция по установке и настройке</p>
+    <main>
+        <section class="guide-page">
+            <div class="container">
+                <h1 data-i18n="aol-title">👤 AIM 5.0 (1995)</h1>
+                <p class="subtitle" data-i18n="aol-subtitle">Инструкция по установке и настройке</p>
 
-            <div class="platform-card">
-                <h2 data-i18n="aol-step1-title">📥 Шаг 1: Скачивание</h2>
-                <p data-i18n="aol-step1-desc">Скачайте AIM 5.0 по ссылке ниже.</p>
-                <a href="aim50.rar" class="btn" download>Скачать AIM 5.0 →</a>
+                <div class="platform-card">
+                    <h2 data-i18n="aol-step1-title">📥 Шаг 1: Скачивание</h2>
+                    <p data-i18n="aol-step1-desc">Скачайте AIM 5.0 по ссылке ниже.</p>
+                    <a href="aim50.rar" class="btn" download>Скачать AIM 5.0 →</a>
+                </div>
+
+                <div class="platform-card">
+                    <h2 data-i18n="aol-step2-title">🔧 Шаг 2: Установка</h2>
+                    <p data-i18n="aol-step2-desc">Установите AIM из архива, следуя инструкциям установщика. <strong>Пароль от архива:</strong> <code>mokerTS</code></p>
+                </div>
+
+                <div class="platform-card">
+                    <h2 data-i18n="aol-step3-title">🔑 Шаг 3: Вход</h2>
+                    <p data-i18n="aol-step3-desc">Введите свой Screenname и пароль от вашего аккаунта.</p>
+                </div>
+
+                <div class="platform-card help-card">
+                    <h2 data-i18n="aol-help-title">❓ Нужна помощь?</h2>
+                    <p data-i18n="aol-help-desc">Если что-то пошло не так — пиши в наш Discord, поможем!</p>
+                    <a href="https://discord.gg/VSJpGajNmP" target="_blank" class="btn">Перейти в Discord →</a>
+                </div>
+
+                <a href="index.html" class="btn btn-secondary" data-i18n="aol-back">← Назад к выбору</a>
             </div>
-
-            <div class="platform-card">
-                <h2 data-i18n="aol-step2-title">🔧 Шаг 2: Установка</h2>
-                <p data-i18n="aol-step2-desc">Установите AIM из архива, следуя инструкциям установщика. <strong>Пароль от архива:</strong> <code>mokerTS</code></p>
-            </div>
-
-            <div class="platform-card">
-                <h2 data-i18n="aol-step3-title">🔑 Шаг 3: Вход</h2>
-                <p data-i18n="aol-step3-desc">Введите свой Screenname и пароль от вашего аккаунта.</p>
-            </div>
-
-            <div class="platform-card help-card">
-                <h2 data-i18n="aol-help-title">❓ Нужна помощь?</h2>
-                <p data-i18n="aol-help-desc">Если что-то пошло не так — пиши в наш Discord, поможем!</p>
-                <a href="https://discord.gg/VSJpGajNmP" target="_blank" class="btn">Перейти в Discord →</a>
-            </div>
-
-            <a href="index.html" class="btn btn-secondary" data-i18n="aol-back">← Назад к выбору</a>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
@@ -153,8 +160,6 @@
         })();
     </script>
 
-    <!-- Default Statcounter code for GoToTalk Community
-    https://www.gototalk.cloud-ip.cc -->
     <script type="text/javascript">
     var sc_project=13364769; 
     var sc_invisible=1; 
@@ -166,7 +171,5 @@
     href="https://statcounter.com/" target="_blank"><img class="statcounter"
     src="https://c.statcounter.com/13364769/0/dde2fe88/1/" alt="Web Analytics"
     referrerPolicy="no-referrer-when-downgrade"></a></div></noscript> 
-    <!-- End of Statcounter Code -->
-
 </body>
 </html>

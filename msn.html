@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MSN Community</title>
+    <title>MSN Messenger 6.2</title>
+    
+    <meta name="description" content="Инструкция по установке и настройке MSN Messenger 6.2. Регистрация на Escargot и вход в аккаунт." />
+    <meta property="og:title" content="MSN Messenger 6.2 | GoToTalk Community" />
+    <meta property="og:description" content="Вернитесь в эпоху Windows Live Messenger." />
+
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
 </head>
@@ -31,42 +36,44 @@
         </div>
     </header>
 
-    <section class="guide-page">
-        <div class="container">
-            <h1 data-i18n="msn-title">🦋 MSN Messenger 6.2</h1>
-            <p class="subtitle" data-i18n="msn-subtitle">Инструкция по установке и настройке</p>
+    <main>
+        <section class="guide-page">
+            <div class="container">
+                <h1 data-i18n="msn-title">🦋 MSN Messenger 6.2</h1>
+                <p class="subtitle" data-i18n="msn-subtitle">Инструкция по установке и настройке</p>
 
-            <div class="platform-card">
-                <h2 data-i18n="msn-step1-title">📝 Шаг 1: Регистрация</h2>
-                <p data-i18n="msn-step1-desc">Зарегистрируйтесь на сайте Escargot с типом аккаунта <strong>«Screenname»</strong> (не UIN!).</p>
-                <a href="https://account.escargot.chat/register/" target="_blank" class="btn">Перейти на Escargot →</a>
+                <div class="platform-card">
+                    <h2 data-i18n="msn-step1-title">📝 Шаг 1: Регистрация</h2>
+                    <p data-i18n="msn-step1-desc">Зарегистрируйтесь на сайте Escargot с типом аккаунта <strong>«Screenname»</strong> (не UIN!).</p>
+                    <a href="https://account.escargot.chat/register/" target="_blank" class="btn">Перейти на Escargot →</a>
+                </div>
+
+                <div class="platform-card">
+                    <h2 data-i18n="msn-step2-title">📥 Шаг 2: Скачивание MSN</h2>
+                    <p data-i18n="msn-step2-desc">Скачайте MSN 6.2 на русском языке по ссылке ниже.</p>
+                    <a href="https://drive.google.com/drive/folders/1tkOsJdTkLJQLEhnm-ATEOfky2h92SCMx?usp=sharing" target="_blank" class="btn">Скачать MSN 6.2 →</a>
+                </div>
+
+                <div class="platform-card">
+                    <h2 data-i18n="msn-step3-title">🔧 Шаг 3: Установка</h2>
+                    <p data-i18n="msn-step3-desc">Установите MSN из архива. После установки откройте файл <code>RUN_AFTER_INSTALL</code> и нажмите <strong>Patch All</strong>.</p>
+                </div>
+
+                <div class="platform-card">
+                    <h2 data-i18n="msn-step4-title">🔑 Шаг 4: Вход</h2>
+                    <p data-i18n="msn-step4-desc">Введите свои данные (Screenname и пароль), которые вы указали при регистрации на Escargot.</p>
+                </div>
+
+                <div class="platform-card help-card">
+                    <h2 data-i18n="msn-help-title">❓ Нужна помощь?</h2>
+                    <p data-i18n="msn-help-desc">Если что-то пошло не так — пиши в наш Discord, поможем!</p>
+                    <a href="https://discord.gg/VSJpGajNmP" target="_blank" class="btn">Перейти в Discord →</a>
+                </div>
+
+                <a href="index.html" class="btn btn-secondary" data-i18n="msn-back">← Назад к выбору</a>
             </div>
-
-            <div class="platform-card">
-                <h2 data-i18n="msn-step2-title">📥 Шаг 2: Скачивание MSN</h2>
-                <p data-i18n="msn-step2-desc">Скачайте MSN 6.2 на русском языке по ссылке ниже.</p>
-                <a href="https://drive.google.com/drive/folders/1tkOsJdTkLJQLEhnm-ATEOfky2h92SCMx?usp=sharing" target="_blank" class="btn">Скачать MSN 6.2 →</a>
-            </div>
-
-            <div class="platform-card">
-                <h2 data-i18n="msn-step3-title">🔧 Шаг 3: Установка</h2>
-                <p data-i18n="msn-step3-desc">Установите MSN из архива. После установки откройте файл <code>RUN_AFTER_INSTALL</code> и нажмите <strong>Patch All</strong>.</p>
-            </div>
-
-            <div class="platform-card">
-                <h2 data-i18n="msn-step4-title">🔑 Шаг 4: Вход</h2>
-                <p data-i18n="msn-step4-desc">Введите свои данные (Screenname и пароль), которые вы указали при регистрации на Escargot.</p>
-            </div>
-
-            <div class="platform-card help-card">
-                <h2 data-i18n="msn-help-title">❓ Нужна помощь?</h2>
-                <p data-i18n="msn-help-desc">Если что-то пошло не так — пиши в наш Discord, поможем!</p>
-                <a href="https://discord.gg/VSJpGajNmP" target="_blank" class="btn">Перейти в Discord →</a>
-            </div>
-
-            <a href="index.html" class="btn btn-secondary" data-i18n="msn-back">← Назад к выбору</a>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
@@ -163,8 +170,6 @@
         })();
     </script>
 
-    <!-- Default Statcounter code for GoToTalk Community
-    https://www.gototalk.cloud-ip.cc -->
     <script type="text/javascript">
     var sc_project=13364769; 
     var sc_invisible=1; 
@@ -176,7 +181,5 @@
     href="https://statcounter.com/" target="_blank"><img class="statcounter"
     src="https://c.statcounter.com/13364769/0/dde2fe88/1/" alt="Web Analytics"
     referrerPolicy="no-referrer-when-downgrade"></a></div></noscript> 
-    <!-- End of Statcounter Code -->
-
 </body>
 </html>

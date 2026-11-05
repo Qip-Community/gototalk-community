@@ -5,16 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GoToTalk Community</title>
     
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="GoToTalk Community — неофициальный фанатский проект, возрождающий легендарные мессенджеры: QIP 2005, QIP 2010, QIP 2012, MSN, AOL и Mail.Ru Агент. Скачивайте репаки, читайте инструкции и возвращайтесь в старый добрый интернет." />
-    <meta name="keywords" content="QIP, QIP 2005, QIP 2010, QIP 2012, ICQ, MSN, AOL, Mail.Ru Агент, репак, скачать, мессенджер, ностальгия" />
-    
-    <!-- Open Graph (для красивых ссылок в Discord и соцсетях) -->
+    <meta name="description" content="GoToTalk Community — неофициальный фанатский проект, возрождающий легендарные мессенджеры: QIP 2005, QIP 2010, QIP 2012, MSN, AOL и Mail.Ru Агент." />
     <meta property="og:title" content="GoToTalk Community" />
     <meta property="og:description" content="Возвращаем легендарные мессенджеры к жизни. Скачивайте репаки QIP, MSN, AOL и общайтесь снова!" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.gototalk.cloud-ip.cc/" />
-    <meta property="og:image" content="https://www.gototalk.cloud-ip.cc/icon-qip.png" />
 
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
@@ -43,7 +38,6 @@
         </div>
     </header>
 
-    <!-- Добавлен тег <main> для доступности -->
     <main>
         <section class="launcher">
             <div class="container">
@@ -51,49 +45,41 @@
                 <p class="subtitle" data-i18n="launcher-subtitle">Выберите мессенджер</p>
 
                 <div class="launcher-grid">
-
                     <a href="qip.html" class="launcher-card">
                         <img src="icon-qip.png" alt="QIP 2005" class="launcher-img">
                         <h2>QIP 2005</h2>
                         <p data-i18n="launcher-qip">Легендарный QIP 2005</p>
                     </a>
-
                     <a href="qip2012.html" class="launcher-card">
                         <img src="icon-qip2012.png" alt="QIP 2012" class="launcher-img">
                         <h2>QIP 2012</h2>
                         <p data-i18n="launcher-qip2012">QIP 2012 Infium</p>
                     </a>
-
                     <a href="qip2010.html" class="launcher-card">
                         <img src="icon-qip2010.png" alt="QIP 2010" class="launcher-img">
                         <h2>QIP 2010</h2>
                         <p data-i18n="launcher-qip2010">QIP 2010</p>
                     </a>
-
                     <a href="grey.html" class="launcher-card">
                         <img src="icon-grey.png" alt="QIP Grey Pack" class="launcher-img">
                         <h2>QIP Grey Pack</h2>
                         <p data-i18n="launcher-grey">QIP Infium Grey Pack</p>
                     </a>
-
                     <a href="msn.html" class="launcher-card">
                         <img src="icon-msn.png" alt="MSN" class="launcher-img">
                         <h2>MSN</h2>
                         <p data-i18n="launcher-msn">Windows Live Messenger</p>
                     </a>
-
                     <a href="aol.html" class="launcher-card">
                         <img src="icon-aol.png" alt="AOL" class="launcher-img">
                         <h2>AOL</h2>
                         <p data-i18n="launcher-aol">AOL Instant Messenger</p>
                     </a>
-
                     <a href="mailagent.html" class="launcher-card">
                         <img src="icon-mailagent.png" alt="Mail Agent" class="launcher-img">
                         <h2>Mail Agent</h2>
                         <p data-i18n="launcher-mailagent">Mail.Ru Агент</p>
                     </a>
-
                 </div>
             </div>
         </section>
@@ -150,7 +136,7 @@
                 document.querySelectorAll('[data-i18n]').forEach(el => {
                     const key = el.getAttribute('data-i18n');
                     if (translations[lang] && translations[lang][key]) {
-                        el.textContent = translations[lang][key];
+                        el.innerHTML = translations[lang][key];
                     }
                 });
                 document.documentElement.lang = lang;
@@ -186,8 +172,6 @@
         })();
     </script>
 
-    <!-- Default Statcounter code for GoToTalk Community
-    https://www.gototalk.cloud-ip.cc -->
     <script type="text/javascript">
     var sc_project=13364769; 
     var sc_invisible=1; 
@@ -199,7 +183,5 @@
     href="https://statcounter.com/" target="_blank"><img class="statcounter"
     src="https://c.statcounter.com/13364769/0/dde2fe88/1/" alt="Web Analytics"
     referrerPolicy="no-referrer-when-downgrade"></a></div></noscript> 
-    <!-- End of Statcounter Code -->
-
 </body>
 </html>

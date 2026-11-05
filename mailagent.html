@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mail Agent Community</title>
+    <title>Агент Mail.Ru 5.1.2228</title>
+    
+    <meta name="description" content="Инструкция по установке Агента Mail.Ru 5.1.2228. Патчер, совместимость с Windows XP и версия для Android." />
+    <meta property="og:title" content="Агент Mail.Ru | GoToTalk Community" />
+    <meta property="og:description" content="Легендарный Mail.Ru Агент снова в сети." />
+
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
 </head>
@@ -31,59 +36,61 @@
         </div>
     </header>
 
-    <section class="guide-page">
-        <div class="container">
-            <h1 data-i18n="mailagent-title">📧 Агент Mail.Ru 5.1.2228</h1>
-            <p class="subtitle" data-i18n="mailagent-subtitle">Инструкция по установке и настройке</p>
+    <main>
+        <section class="guide-page">
+            <div class="container">
+                <h1 data-i18n="mailagent-title">📧 Агент Mail.Ru 5.1.2228</h1>
+                <p class="subtitle" data-i18n="mailagent-subtitle">Инструкция по установке и настройке</p>
 
-            <div class="platform-card">
-                <h2 data-i18n="mailagent-step1-title">📥 Шаг 1: Скачивание (Windows)</h2>
-                <p data-i18n="mailagent-step1-desc">Скачайте Агент Mail.Ru 5.1.2228 и патчер по ссылке ниже.</p>
-                <a href="https://drive.google.com/drive/folders/1frMrNURK3kb7F1yzhpb54vMCZY6Q_iPn?usp=sharing" target="_blank" class="btn" data-i18n="mailagent-step1-btn">Скачать Агент Mail.Ru →</a>
-            </div>
-
-            <!-- БЛОК ДЛЯ ANDROID С ПРЕДУПРЕЖДЕНИЕМ -->
-            <div class="platform-card">
-                <h2 data-i18n="mailagent-android-title">📱 Версия для Android</h2>
-                <p data-i18n="mailagent-android-desc">Скачайте версию Агента Mail.Ru для Android по ссылке ниже.</p>
-                <a href="agent_3.2.811_arm64_fix.apk" class="btn" download data-i18n="mailagent-android-btn">Скачать для Android (.apk) →</a>
-                
-                <!-- ПРЕДУПРЕЖДЕНИЕ О БАГЕ -->
-                <div style="margin-top: 15px; padding: 12px 15px; background-color: #fff3cd; border-left: 4px solid #ffcc00; color: #856404; border-radius: 4px;">
-                    <strong data-i18n="mailagent-bug-warning-title">⚠️ Важное предупреждение:</strong>
-                    <span data-i18n="mailagent-bug-warning-desc">На данный момент в Android-версии есть баг: при попытке отправить фото (через скрепку, камеру или галерею) приложение может вылетать. Мы уже работаем над решением этой проблемы.</span>
+                <div class="platform-card">
+                    <h2 data-i18n="mailagent-step1-title">📥 Шаг 1: Скачивание (Windows)</h2>
+                    <p data-i18n="mailagent-step1-desc">Скачайте Агент Mail.Ru 5.1.2228 и патчер по ссылке ниже.</p>
+                    <a href="https://drive.google.com/drive/folders/1frMrNURK3kb7F1yzhpb54vMCZY6Q_iPn?usp=sharing" target="_blank" class="btn" data-i18n="mailagent-step1-btn">Скачать Агент Mail.Ru →</a>
                 </div>
-            </div>
 
-            <div class="platform-card">
-                <h2 data-i18n="mailagent-step2-title">🔧 Шаг 2: Установка (Windows)</h2>
-                <p data-i18n="mailagent-step2-desc">Установите Агент Mail.Ru. <strong>Полностью закройте Мейл.Ru перед патчем!</strong></p>
-            </div>
+                <!-- БЛОК ДЛЯ ANDROID С ПРЕДУПРЕЖДЕНИЕМ -->
+                <div class="platform-card">
+                    <h2 data-i18n="mailagent-android-title">📱 Версия для Android</h2>
+                    <p data-i18n="mailagent-android-desc">Скачайте версию Агента Mail.Ru для Android по ссылке ниже.</p>
+                    <a href="agent_3.2.811_arm64_fix.apk" class="btn" download data-i18n="mailagent-android-btn">Скачать для Android (.apk) →</a>
+                    
+                    <!-- ПРЕДУПРЕЖДЕНИЕ О БАГЕ -->
+                    <div style="margin-top: 15px; padding: 12px 15px; background-color: #fff3cd; border-left: 4px solid #ffcc00; color: #856404; border-radius: 4px;">
+                        <strong data-i18n="mailagent-bug-warning-title">⚠️ Важное предупреждение:</strong>
+                        <span data-i18n="mailagent-bug-warning-desc">На данный момент в Android-версии есть баг: при попытке отправить фото (через скрепку, камеру или галерею) приложение может вылетать. Мы уже работаем над решением этой проблемы.</span>
+                    </div>
+                </div>
 
-            <div class="platform-card">
-                <h2 data-i18n="mailagent-step3-title">⚙️ Шаг 3: Патч</h2>
-                <p data-i18n="mailagent-step3-desc">Запустите <code>RenaissancePatcher.exe</code> и пропатчьте Агент.</p>
-            </div>
+                <div class="platform-card">
+                    <h2 data-i18n="mailagent-step2-title">🔧 Шаг 2: Установка (Windows)</h2>
+                    <p data-i18n="mailagent-step2-desc">Установите Агент Mail.Ru. <strong>Полностью закройте Мейл.Ru перед патчем!</strong></p>
+                </div>
 
-            <div class="platform-card">
-                <h2 data-i18n="mailagent-step4-title">🖥️ Шаг 4: Совместимость</h2>
-                <p data-i18n="mailagent-step4-desc">После установки поставьте совместимость на <strong>Windows XP (Пакет обновлений 3)</strong>.</p>
-            </div>
+                <div class="platform-card">
+                    <h2 data-i18n="mailagent-step3-title">⚙️ Шаг 3: Патч</h2>
+                    <p data-i18n="mailagent-step3-desc">Запустите <code>RenaissancePatcher.exe</code> и пропатчьте Агент.</p>
+                </div>
 
-            <div class="platform-card">
-                <h2 data-i18n="mailagent-step5-title">🔑 Шаг 5: Регистрация</h2>
-                <p data-i18n="mailagent-step5-desc">Зарегистрируйтесь на сайте <a href="https://mrim.su/reg" target="_blank">mrim.su/reg</a>.</p>
-            </div>
+                <div class="platform-card">
+                    <h2 data-i18n="mailagent-step4-title">🖥️ Шаг 4: Совместимость</h2>
+                    <p data-i18n="mailagent-step4-desc">После установки поставьте совместимость на <strong>Windows XP (Пакет обновлений 3)</strong>.</p>
+                </div>
 
-            <div class="platform-card help-card">
-                <h2 data-i18n="mailagent-help-title">❓ Нужна помощь?</h2>
-                <p data-i18n="mailagent-help-desc">Если что-то пошло не так — пиши в наш Discord, поможем!</p>
-                <a href="https://discord.gg/VSJpGajNmP" target="_blank" class="btn" data-i18n="help-btn">Перейти в Discord →</a>
-            </div>
+                <div class="platform-card">
+                    <h2 data-i18n="mailagent-step5-title">🔑 Шаг 5: Регистрация</h2>
+                    <p data-i18n="mailagent-step5-desc">Зарегистрируйтесь на сайте <a href="https://mrim.su/reg" target="_blank">mrim.su/reg</a>.</p>
+                </div>
 
-            <a href="index.html" class="btn btn-secondary" data-i18n="mailagent-back">← Назад к выбору</a>
-        </div>
-    </section>
+                <div class="platform-card help-card">
+                    <h2 data-i18n="mailagent-help-title">❓ Нужна помощь?</h2>
+                    <p data-i18n="mailagent-help-desc">Если что-то пошло не так — пиши в наш Discord, поможем!</p>
+                    <a href="https://discord.gg/VSJpGajNmP" target="_blank" class="btn" data-i18n="help-btn">Перейти в Discord →</a>
+                </div>
+
+                <a href="index.html" class="btn btn-secondary" data-i18n="mailagent-back">← Назад к выбору</a>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
@@ -198,8 +205,6 @@
         })();
     </script>
 
-    <!-- Default Statcounter code for GoToTalk Community
-    https://www.gototalk.cloud-ip.cc -->
     <script type="text/javascript">
     var sc_project=13364769; 
     var sc_invisible=1; 
@@ -211,7 +216,5 @@
     href="https://statcounter.com/" target="_blank"><img class="statcounter"
     src="https://c.statcounter.com/13364769/0/dde2fe88/1/" alt="Web Analytics"
     referrerPolicy="no-referrer-when-downgrade"></a></div></noscript> 
-    <!-- End of Statcounter Code -->
-
 </body>
 </html>
