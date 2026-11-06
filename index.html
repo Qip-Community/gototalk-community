@@ -11,6 +11,16 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.gototalk.cloud-ip.cc/" />
 
+    <!-- Скрипт темы (перенесен в head для устранения CLS) -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('qip-theme');
+            if (savedTheme === 'dark') {
+                document.documentElement.classList.add('dark-theme');
+            }
+        })();
+    </script>
+
     <!-- ⚡ ОПТИМИЗАЦИЯ СКОРОСТИ -->
     <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
     <link rel="preconnect" href="https://www.statcounter.com" crossorigin>
