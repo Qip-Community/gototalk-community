@@ -277,6 +277,8 @@ nav a.active {
     transition: 0.3s;
     display: block;
     text-decoration: none;
+    /* ИСПРАВЛЕНИЕ CLS: Фиксируем высоту карточки, чтобы она не прыгала */
+    min-height: 200px; 
 }
 
 .launcher-card:hover {
@@ -498,6 +500,8 @@ footer {
     text-align: center;
     border-top: 1px solid #7a9ec4;
     transition: background 0.3s, border-color 0.3s;
+    /* ИСПРАВЛЕНИЕ CLS: Фиксируем высоту подвала */
+    min-height: 80px; 
 }
 
 footer p {
