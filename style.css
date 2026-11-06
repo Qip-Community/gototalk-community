@@ -15,7 +15,7 @@ body {
     font-size: 13px;
     line-height: 1.5;
     transition: background 0.3s, color 0.3s;
-    /* ИСПРАВЛЕНИЕ CLS: Резервируем место под скроллбар */
+    /* Резервируем место под скроллбар */
     overflow-y: scroll;
 }
 
@@ -72,7 +72,7 @@ nav {
     gap: 5px;
 }
 
-/* ИСПРАВЛЕНИЕ ДЛЯ PAGESPEED: Области прикосновения */
+/* Области прикосновения */
 nav a {
     margin-left: 18px;
     color: #c0d8f0;
@@ -96,7 +96,7 @@ nav a.active {
     padding-bottom: 2px;
 }
 
-/* ИСПРАВЛЕНИЕ ДЛЯ PAGESPEED: Кнопки тоже должны быть крупнее */
+/* Кнопки */
 .lang-toggle,
 .theme-toggle {
     background: none;
@@ -277,8 +277,9 @@ nav a.active {
     transition: 0.3s;
     display: block;
     text-decoration: none;
-    /* ИСПРАВЛЕНИЕ CLS: Фиксируем высоту карточки, чтобы она не прыгала */
     min-height: 200px; 
+    /* Фиксируем карточку от прыжков */
+    contain: layout; 
 }
 
 .launcher-card:hover {
@@ -500,7 +501,6 @@ footer {
     text-align: center;
     border-top: 1px solid #7a9ec4;
     transition: background 0.3s, border-color 0.3s;
-    /* ИСПРАВЛЕНИЕ CLS: Фиксируем высоту подвала */
     min-height: 80px; 
 }
 
@@ -1134,7 +1134,7 @@ body.dark-theme .review-form textarea {
     nav a {
         margin: 0 10px 0 0;
         font-size: 11px;
-        padding: 6px 2px; /* Отступы для мобильных */
+        padding: 6px 2px; 
     }
     .features {
         flex-direction: column;
@@ -1376,6 +1376,10 @@ body.halloween-mode .halloween-toggle {
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
+    
+    /* ФИКСИРУЕМ РАЗМЕРЫ, ЧТОБЫ УБРАТЬ СМЕЩЕНИЕ (CLS) */
+    aspect-ratio: 1 / 1;
+    max-height: 75px;
 }
 
 /* Картинка в шапке страницы QIP (Hero) */
