@@ -2,6 +2,11 @@
 /* БАЗОВЫЕ СТИЛИ                                */
 /* ============================================ */
 
+html {
+    /* Жестко резервируем место под скроллбар */
+    overflow-y: scroll;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +20,7 @@ body {
     font-size: 13px;
     line-height: 1.5;
     transition: background 0.3s, color 0.3s;
-    /* Резервируем место под скроллбар */
+    /* Дублируем для body на всякий случай */
     overflow-y: scroll;
 }
 
