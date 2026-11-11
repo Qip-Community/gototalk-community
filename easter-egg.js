@@ -1,5 +1,6 @@
-<!-- === ПАСХАЛКА: набери "miku", "monika" или "hatsune" (или вызови miku() / monika() в консоли) === -->
-<script>
+/* ============================================ */
+/* ПАСХАЛКА: Мику Хацунэ для GoToTalk Community */
+/* ============================================ */
 (function mikuEasterEgg() {
     'use strict';
 
@@ -24,33 +25,32 @@
     window.miku = spawnMiku;
     window.monika = spawnMiku;
 
-    // === Замена всех картинок и логотипа ===
     function replaceEverything() {
-        // 1. Меняем ВСЕ картинки на сайте
+        // 1. Все картинки на сайте
         const imgs = document.querySelectorAll('img:not(#miku-gif)');
         imgs.forEach(img => {
             img.src = 'miku-dance.gif'; 
             img.style.objectFit = 'contain';
             img.style.background = 'rgba(57, 197, 187, 0.2)';
-            // Если в карточке была иконка, она растянется, поэтому зададим размер
-            img.style.width = '80px'; 
-            img.style.height = '80px';
+            if (img.classList.contains('launcher-img') || img.classList.contains('hero-img')) {
+                img.style.width = '80px'; 
+                img.style.height = '80px';
+            }
         });
 
-        // 2. Меняем текст логотипа в шапке
+        // 2. Логотип в шапке
         const logo = document.querySelector('.logo');
         if (logo) {
             logo.innerHTML = '📡 MIKU <span>HATSUNE</span>';
         }
         
-        // 3. Меняем заголовок страницы (во вкладке браузера)
+        // 3. Заголовок вкладки браузера
         document.title = "💚 MIKU MIKU NI SHITE AGERU 💚";
     }
 
     function spawnMiku() {
         if (document.getElementById('miku-fullscreen')) return;
 
-        // Меняем всё на сайте
         replaceEverything();
 
         if (!document.getElementById('miku-styles')) {
@@ -58,18 +58,10 @@
             style.id = 'miku-styles';
             style.textContent = `
                 #miku-fullscreen {
-                    position: fixed;
-                    inset: 0;
-                    z-index: 999999;
-                    background-color: rgba(0, 0, 0, 0.85);
-                    backdrop-filter: blur(8px);
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    opacity: 0;
-                    transition: opacity 0.5s ease-in-out;
-                    pointer-events: none;
+                    position: fixed; inset: 0; z-index: 999999;
+                    background-color: rgba(0, 0, 0, 0.85); backdrop-filter: blur(8px);
+                    display: flex; flex-direction: column; justify-content: center; align-items: center;
+                    opacity: 0; transition: opacity 0.5s ease-in-out; pointer-events: none;
                 }
                 #miku-fullscreen.show { opacity: 1; pointer-events: auto; }
                 .miku-dance-container {
@@ -119,7 +111,6 @@
         const closeBtn = document.createElement('div');
         closeBtn.className = 'miku-close-btn';
         closeBtn.innerHTML = '✕';
-        closeBtn.title = 'Закрыть (Картинки останутся!)';
         closeBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             closeMiku();
@@ -150,7 +141,6 @@
         overlay.appendChild(textBox);
         document.body.appendChild(overlay);
 
-        // АУДИО
         const audio = new Audio('miku-song.mp3');
         audio.loop = true;
         audio.volume = 0.5;
@@ -167,17 +157,15 @@
         overlay.addEventListener('click', (e) => {
             if (e.target === overlay) closeMiku();
         });
+
+        console.log('%c💚 Мику Хацунэ: みくみくにしてあげる♪', 'color:#39c5bb;font-size:16px;font-weight:bold;');
     }
 
-    // === Функция закрытия окна (картинки не возвращаются, музыка играет) ===
     function closeMiku() {
         const overlay = document.getElementById('miku-fullscreen');
         if (!overlay) return;
-        
-        // Просто убираем окно с гифкой. 
-        // Никакого restoreAllImages() тут нет, поэтому иконки на сайте остаются Мику!
         overlay.classList.remove('show');
         setTimeout(() => overlay.remove(), 500);
+        console.log('Окно закрыто, но Мику осталась на сайте, а музыка играет. F5 чтобы вернуть всё назад.');
     }
 })();
-</script>

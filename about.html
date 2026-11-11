@@ -4,29 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GoToTalk — О нас</title>
-    
-    <meta name="description" content="Узнайте больше о проекте GoToTalk Community. Мы — неофициальное сообщество энтузиастов, которое сохраняет и оживляет легендарный QIP 2005." />
-    <meta property="og:title" content="О нас | GoToTalk Community" />
-    <meta property="og:description" content="Мы создаём репаки, пишем инструкции и помогаем вернуть старый интернет." />
-
-    <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
-    <link rel="preconnect" href="https://www.statcounter.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"></noscript>
     <link rel="stylesheet" href="style.css" />
-
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
 </head>
 <body>
-
     <header>
         <div class="container header-flex">
             <div class="logo">📡 GoToTalk <span>Community</span></div>
-            <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
             <nav>
                 <a href="index.html" data-i18n="nav-home">Главная</a>
                 <a href="download.html" data-i18n="nav-download">Скачать</a>
@@ -45,124 +30,72 @@
             </nav>
         </div>
     </header>
-
     <main>
         <section class="about-page">
             <div class="container">
                 <h1 data-i18n="about-title">📌 О проекте</h1>
                 <p data-i18n="about-desc1"><strong>QIP Community</strong> — это неофициальное сообщество, которое сохраняет и оживляет легендарный QIP 2005.</p>
-                <p data-i18n="about-desc2">Мы создаём репаки, пишем инструкции и помогаем с настройкой всем желающим. Наша цель — вернуть старый интернет и дать людям возможность снова общаться так, как они привыкли.</p>
-                <p data-i18n="about-desc3">Проект не имеет отношения к оригинальным разработчикам QIP. Мы делаем это для души, для истории и для ностальгии.</p>
+                <p data-i18n="about-desc2">Мы создаём репаки, пишем инструкции и помогаем с настройкой всем желающим. Наша цель — вернуть старый интернет.</p>
+                <p data-i18n="about-desc3">Проект не имеет отношения к оригинальным разработчикам QIP. Мы делаем это для души и ностальгии.</p>
             </div>
         </section>
     </main>
-
     <footer>
         <div class="container">
             <p data-i18n="footer-text">GoToTalk Community © 2026 — неофициальный фанатский проект.</p>
-            <div class="socials">
-                <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>
-                <a href="#">YouTube</a>
-                <a href="#">TikTok</a>
-            </div>
-            <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "310462293df347eaaf0c101f050bdbcf"}'></script>
+            <div class="socials"><a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a><a href="#">YouTube</a><a href="#">TikTok</a></div>
         </div>
     </footer>
-
     <script>
         (function() {
             const translations = {
-                ru: {
-                    'nav-home': 'Главная', 'nav-download': 'Скачать', 'nav-about': 'О нас', 'nav-team': 'Команда', 'nav-guide': 'Инструкция', 'nav-news': 'Новости', 'nav-guestbook': 'Гостевая', 'nav-faq': 'FAQ', 'nav-blog': 'Блог', 'nav-links': 'Ссылки', 'nav-privacy': 'Конфиденциальность', 'nav-discord': 'Discord',
-                    'about-title': '📌 О проекте',
-                    'about-desc1': '<strong>QIP Community</strong> — это неофициальное сообщество, которое сохраняет и оживляет легендарный QIP 2005.',
-                    'about-desc2': 'Мы создаём репаки, пишем инструкции и помогаем с настройкой всем желающим. Наша цель — вернуть старый интернет и дать людям возможность снова общаться так, как они привыкли.',
-                    'about-desc3': 'Проект не имеет отношения к оригинальным разработчикам QIP. Мы делаем это для души, для истории и для ностальгии.',
-                    'footer-text': 'GoToTalk Community © 2026 — неофициальный фанатский проект.'
-                },
-                en: {
-                    'nav-home': 'Home', 'nav-download': 'Download', 'nav-about': 'About', 'nav-team': 'Team', 'nav-guide': 'Guide', 'nav-news': 'News', 'nav-guestbook': 'Guestbook', 'nav-faq': 'FAQ', 'nav-blog': 'Blog', 'nav-links': 'Links', 'nav-privacy': 'Privacy', 'nav-discord': 'Discord',
-                    'about-title': '📌 About the Project',
-                    'about-desc1': '<strong>QIP Community</strong> is an unofficial community that preserves and revives the legendary QIP 2005.',
-                    'about-desc2': 'We create repacks, write guides, and help everyone with setup. Our goal is to bring back the old internet and give people the opportunity to communicate the way they used to.',
-                    'about-desc3': 'The project is not affiliated with the original QIP developers. We do this for the soul, for history, and for nostalgia.',
-                    'footer-text': 'GoToTalk Community © 2026 — unofficial fan project.'
-                }
+                ru: { 'nav-home': 'Главная', 'nav-download': 'Скачать', 'nav-about': 'О нас', 'nav-team': 'Команда', 'nav-guide': 'Инструкция', 'nav-news': 'Новости', 'nav-guestbook': 'Гостевая', 'nav-faq': 'FAQ', 'nav-blog': 'Блог', 'nav-links': 'Ссылки', 'nav-privacy': 'Конфиденциальность', 'nav-discord': 'Discord', 'about-title': '📌 О проекте', 'about-desc1': 'QIP Community — неофициальное сообщество.', 'about-desc2': 'Мы создаём репаки и пишем инструкции.', 'about-desc3': 'Проект не имеет отношения к оригинальным разработчикам.', 'footer-text': 'GoToTalk Community © 2026 — неофициальный фанатский проект.' },
+                en: { 'nav-home': 'Home', 'nav-download': 'Download', 'nav-about': 'About', 'nav-team': 'Team', 'nav-guide': 'Guide', 'nav-news': 'News', 'nav-guestbook': 'Guestbook', 'nav-faq': 'FAQ', 'nav-blog': 'Blog', 'nav-links': 'Links', 'nav-privacy': 'Privacy', 'nav-discord': 'Discord', 'about-title': '📌 About', 'about-desc1': 'QIP Community is an unofficial community.', 'about-desc2': 'We create repacks and guides.', 'about-desc3': 'Not affiliated with original developers.', 'footer-text': 'GoToTalk Community © 2026 — unofficial fan project.' }
             };
-
             let currentLang = localStorage.getItem('qip-lang') || 'ru';
-
             function setLanguage(lang) {
-                currentLang = lang;
-                localStorage.setItem('qip-lang', lang);
+                currentLang = lang; localStorage.setItem('qip-lang', lang);
                 document.querySelectorAll('[data-i18n]').forEach(el => {
                     const key = el.getAttribute('data-i18n');
-                    if (translations[lang] && translations[lang][key]) {
-                        el.innerHTML = translations[lang][key];
-                    }
+                    if (translations[lang] && translations[lang][key]) el.innerHTML = translations[lang][key];
                 });
                 document.documentElement.lang = lang;
             }
-
-            function toggleLang() {
-                const nextLang = currentLang === 'ru' ? 'en' : 'ru';
-                setLanguage(nextLang);
-            }
-
+            function toggleLang() { setLanguage(currentLang === 'ru' ? 'en' : 'ru'); }
             (function initTheme() {
                 const themeToggle = document.getElementById('theme-toggle');
                 if (!themeToggle) return;
                 const savedTheme = localStorage.getItem('qip-theme');
-                if (savedTheme === 'dark') {
-                    document.body.classList.add('dark-theme');
-                    themeToggle.textContent = '☀️ Светлая';
-                }
+                if (savedTheme === 'dark') { document.body.classList.add('dark-theme'); themeToggle.textContent = '☀️ Светлая'; }
                 themeToggle.addEventListener('click', function() {
                     const isDark = document.body.classList.toggle('dark-theme');
                     localStorage.setItem('qip-theme', isDark ? 'dark' : 'light');
                     themeToggle.textContent = isDark ? '☀️ Светлая' : '🌙 Тёмная';
                 });
             })();
-
             document.addEventListener('DOMContentLoaded', function() {
                 setLanguage(currentLang);
                 const langBtn = document.getElementById('lang-toggle');
-                if (langBtn) {
-                    langBtn.addEventListener('click', toggleLang);
-                }
+                if (langBtn) langBtn.addEventListener('click', toggleLang);
             });
         })();
     </script>
-
-    <script type="text/javascript">
-    var sc_project=13364769; 
-    var sc_invisible=1; 
-    var sc_security="dde2fe88"; 
-    </script>
-    <script type="text/javascript"
-    src="https://www.statcounter.com/counter/counter.js" async></script>
-    <noscript><div class="statcounter"><a title="Web Analytics"
-    href="https://statcounter.com/" target="_blank"><img class="statcounter"
-    src="https://c.statcounter.com/13364769/0/dde2fe88/1/" alt="Web Analytics"
-    referrerPolicy="no-referrer-when-downgrade"></a></div></noscript> 
-
-<script>
-(function() {
-    const toggle = document.getElementById('menu-toggle');
-    const nav = toggle && toggle.nextElementSibling;
-    if (toggle && nav) {
-        toggle.addEventListener('click', function() {
-            nav.classList.toggle('nav-open');
-            toggle.classList.toggle('active');
-        });
-        nav.querySelectorAll('a').forEach(function(link) {
-            link.addEventListener('click', function() {
-                nav.classList.remove('nav-open');
-                toggle.classList.remove('active');
+    <script>
+    (function() {
+        const toggle = document.getElementById('menu-toggle');
+        const nav = toggle && toggle.nextElementSibling;
+        if (toggle && nav) {
+            toggle.addEventListener('click', function() {
+                nav.classList.toggle('nav-open'); toggle.classList.toggle('active');
             });
-        });
-    }
-})();
-</script>
+            nav.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    nav.classList.remove('nav-open'); toggle.classList.remove('active');
+                });
+            });
+        }
+    })();
+    </script>
+    <script src="easter-egg.js"></script>
 </body>
 </html>

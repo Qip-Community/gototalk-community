@@ -4,24 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GoToTalk Community</title>
-    
     <meta name="description" content="GoToTalk Community — неофициальный фанатский проект, возрождающий легендарные мессенджеры: QIP 2005, QIP 2010, QIP 2012, MSN, AOL и Mail.Ru Агент." />
     <meta property="og:title" content="GoToTalk Community" />
     <meta property="og:description" content="Возвращаем легендарные мессенджеры к жизни. Скачивайте репаки QIP, MSN, AOL и общайтесь снова!" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.gototalk.cloud-ip.cc/" />
-
-    <!-- Скрипт темы -->
     <script>
         (function() {
             const savedTheme = localStorage.getItem('qip-theme');
-            if (savedTheme === 'dark') {
-                document.documentElement.classList.add('dark-theme');
-            }
+            if (savedTheme === 'dark') { document.documentElement.classList.add('dark-theme'); }
         })();
     </script>
-
-    <!-- ОПТИМИЗАЦИЯ СКОРОСТИ -->
     <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
     <link rel="preconnect" href="https://www.statcounter.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,17 +22,13 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"></noscript>
     <link rel="stylesheet" href="style.css" />
-
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
 </head>
 <body>
-
     <header>
         <div class="container header-flex">
             <div class="logo">📡 GoToTalk <span>Community</span></div>
-            <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
             <nav>
                 <a href="index.html" class="active" data-i18n="nav-home">Главная</a>
                 <a href="download.html" data-i18n="nav-download">Скачать</a>
@@ -58,350 +47,104 @@
             </nav>
         </div>
     </header>
-
     <main>
         <section class="launcher">
             <div class="container">
-                <div class="launcher-badge">
-                    <span class="status-dot"></span>
-                    <span data-i18n="launcher-badge">Серверы активны • Возрождение 2026</span>
-                </div>
+                <div class="launcher-badge"><span class="status-dot"></span><span data-i18n="launcher-badge">Серверы активны • Возрождение 2026</span></div>
                 <h1 data-i18n="launcher-title">Куда вы хотели зайти?</h1>
                 <p class="subtitle" data-i18n="launcher-subtitle">Выберите мессенджер</p>
-
                 <div class="launcher-grid">
                     <a href="qip.html" class="launcher-card">
                         <img src="icon-qip.png" alt="QIP 2005" class="launcher-img" width="75" height="75" loading="lazy">
-                        <h2>QIP 2005</h2>
-                        <p data-i18n="launcher-qip">Легендарный QIP 2005</p>
+                        <h2>QIP 2005</h2><p data-i18n="launcher-qip">Легендарный QIP 2005</p>
                     </a>
                     <a href="qip2012.html" class="launcher-card">
                         <img src="icon-qip2012.png" alt="QIP 2012" class="launcher-img" width="75" height="75" loading="lazy">
-                        <h2>QIP 2012</h2>
-                        <p data-i18n="launcher-qip2012">QIP 2012 Infium</p>
+                        <h2>QIP 2012</h2><p data-i18n="launcher-qip2012">QIP 2012 Infium</p>
                     </a>
                     <a href="qip2010.html" class="launcher-card">
                         <img src="icon-qip2010.png" alt="QIP 2010" class="launcher-img" width="75" height="75" loading="lazy">
-                        <h2>QIP 2010</h2>
-                        <p data-i18n="launcher-qip2010">QIP 2010</p>
+                        <h2>QIP 2010</h2><p data-i18n="launcher-qip2010">QIP 2010</p>
                     </a>
                     <a href="grey.html" class="launcher-card">
                         <img src="icon-grey.png" alt="QIP Grey Pack" class="launcher-img" width="75" height="75" loading="lazy">
-                        <h2>QIP Grey Pack</h2>
-                        <p data-i18n="launcher-grey">QIP Infium Grey Pack</p>
+                        <h2>QIP Grey Pack</h2><p data-i18n="launcher-grey">QIP Infium Grey Pack</p>
                     </a>
                     <a href="msn.html" class="launcher-card">
                         <img src="icon-msn.png" alt="MSN" class="launcher-img" width="75" height="75" loading="lazy">
-                        <h2>MSN</h2>
-                        <p data-i18n="launcher-msn">Windows Live Messenger</p>
+                        <h2>MSN</h2><p data-i18n="launcher-msn">Windows Live Messenger</p>
                     </a>
                     <a href="aol.html" class="launcher-card">
                         <img src="icon-aol.png" alt="AOL" class="launcher-img" width="75" height="75" loading="lazy">
-                        <h2>AOL</h2>
-                        <p data-i18n="launcher-aol">AOL Instant Messenger</p>
+                        <h2>AOL</h2><p data-i18n="launcher-aol">AOL Instant Messenger</p>
                     </a>
                     <a href="mailagent.html" class="launcher-card">
                         <img src="icon-mailagent.png" alt="Mail Agent" class="launcher-img" width="75" height="75" loading="lazy">
-                        <h2>Mail Agent</h2>
-                        <p data-i18n="launcher-mailagent">Mail.Ru Агент</p>
+                        <h2>Mail Agent</h2><p data-i18n="launcher-mailagent">Mail.Ru Агент</p>
                     </a>
                 </div>
             </div>
         </section>
     </main>
-
     <footer>
         <div class="container">
             <p data-i18n="footer-text">GoToTalk Community © 2026 — неофициальный фанатский проект.</p>
             <div class="socials">
-                <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>
-                <a href="#">YouTube</a>
-                <a href="#">TikTok</a>
+                <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a><a href="#">YouTube</a><a href="#">TikTok</a>
             </div>
-            <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "310462293df347eaaf0c101f050bdbcf"}'></script>
         </div>
     </footer>
-
     <script>
         (function() {
             const translations = {
-                ru: {
-                    'nav-home': 'Главная', 'nav-download': 'Скачать', 'nav-about': 'О нас', 'nav-team': 'Команда', 'nav-guide': 'Инструкция', 'nav-news': 'Новости', 'nav-guestbook': 'Гостевая', 'nav-faq': 'FAQ', 'nav-blog': 'Блог', 'nav-links': 'Ссылки', 'nav-privacy': 'Конфиденциальность', 'nav-discord': 'Discord',
-                    'launcher-badge': 'Серверы активны • Возрождение 2026',
-                    'launcher-title': 'Куда вы хотели зайти?',
-                    'launcher-subtitle': 'Выберите мессенджер',
-                    'launcher-qip': 'Легендарный QIP 2005',
-                    'launcher-qip2012': 'QIP 2012 Infium',
-                    'launcher-qip2010': 'QIP 2010',
-                    'launcher-grey': 'QIP Infium Grey Pack',
-                    'launcher-msn': 'Windows Live Messenger',
-                    'launcher-aol': 'AOL Instant Messenger',
-                    'launcher-mailagent': 'Mail.Ru Агент',
-                    'footer-text': 'GoToTalk Community © 2026 — неофициальный фанатский проект.'
-                },
-                en: {
-                    'nav-home': 'Home', 'nav-download': 'Download', 'nav-about': 'About', 'nav-team': 'Team', 'nav-guide': 'Guide', 'nav-news': 'News', 'nav-guestbook': 'Guestbook', 'nav-faq': 'FAQ', 'nav-blog': 'Blog', 'nav-links': 'Links', 'nav-privacy': 'Privacy', 'nav-discord': 'Discord',
-                    'launcher-badge': 'Servers active • Revival 2026',
-                    'launcher-title': 'Where do you want to go?',
-                    'launcher-subtitle': 'Choose a messenger',
-                    'launcher-qip': 'Legendary QIP 2005',
-                    'launcher-qip2012': 'QIP 2012 Infium',
-                    'launcher-qip2010': 'QIP 2010',
-                    'launcher-grey': 'QIP Infium Grey Pack',
-                    'launcher-msn': 'Windows Live Messenger',
-                    'launcher-aol': 'AOL Instant Messenger',
-                    'launcher-mailagent': 'Mail.Ru Agent',
-                    'footer-text': 'GoToTalk Community © 2026 — unofficial fan project.'
-                }
+                ru: { 'nav-home': 'Главная', 'nav-download': 'Скачать', 'nav-about': 'О нас', 'nav-team': 'Команда', 'nav-guide': 'Инструкция', 'nav-news': 'Новости', 'nav-guestbook': 'Гостевая', 'nav-faq': 'FAQ', 'nav-blog': 'Блог', 'nav-links': 'Ссылки', 'nav-privacy': 'Конфиденциальность', 'nav-discord': 'Discord', 'launcher-badge': 'Серверы активны • Возрождение 2026', 'launcher-title': 'Куда вы хотели зайти?', 'launcher-subtitle': 'Выберите мессенджер', 'launcher-qip': 'Легендарный QIP 2005', 'launcher-qip2012': 'QIP 2012 Infium', 'launcher-qip2010': 'QIP 2010', 'launcher-grey': 'QIP Infium Grey Pack', 'launcher-msn': 'Windows Live Messenger', 'launcher-aol': 'AOL Instant Messenger', 'launcher-mailagent': 'Mail.Ru Агент', 'footer-text': 'GoToTalk Community © 2026 — неофициальный фанатский проект.' },
+                en: { 'nav-home': 'Home', 'nav-download': 'Download', 'nav-about': 'About', 'nav-team': 'Team', 'nav-guide': 'Guide', 'nav-news': 'News', 'nav-guestbook': 'Guestbook', 'nav-faq': 'FAQ', 'nav-blog': 'Blog', 'nav-links': 'Links', 'nav-privacy': 'Privacy', 'nav-discord': 'Discord', 'launcher-badge': 'Servers active • Revival 2026', 'launcher-title': 'Where do you want to go?', 'launcher-subtitle': 'Choose a messenger', 'launcher-qip': 'Legendary QIP 2005', 'launcher-qip2012': 'QIP 2012 Infium', 'launcher-qip2010': 'QIP 2010', 'launcher-grey': 'QIP Infium Grey Pack', 'launcher-msn': 'Windows Live Messenger', 'launcher-aol': 'AOL Instant Messenger', 'launcher-mailagent': 'Mail.Ru Agent', 'footer-text': 'GoToTalk Community © 2026 — unofficial fan project.' }
             };
-
             let currentLang = localStorage.getItem('qip-lang') || 'ru';
-
             function setLanguage(lang) {
-                currentLang = lang;
-                localStorage.setItem('qip-lang', lang);
+                currentLang = lang; localStorage.setItem('qip-lang', lang);
                 document.querySelectorAll('[data-i18n]').forEach(el => {
                     const key = el.getAttribute('data-i18n');
-                    if (translations[lang] && translations[lang][key]) {
-                        el.innerHTML = translations[lang][key];
-                    }
+                    if (translations[lang] && translations[lang][key]) el.innerHTML = translations[lang][key];
                 });
                 document.documentElement.lang = lang;
             }
-
-            function toggleLang() {
-                const nextLang = currentLang === 'ru' ? 'en' : 'ru';
-                setLanguage(nextLang);
-            }
-
+            function toggleLang() { setLanguage(currentLang === 'ru' ? 'en' : 'ru'); }
             (function initTheme() {
                 const themeToggle = document.getElementById('theme-toggle');
                 if (!themeToggle) return;
                 const savedTheme = localStorage.getItem('qip-theme');
-                if (savedTheme === 'dark') {
-                    document.body.classList.add('dark-theme');
-                    themeToggle.textContent = '☀️ Светлая';
-                }
+                if (savedTheme === 'dark') { document.body.classList.add('dark-theme'); themeToggle.textContent = '☀️ Светлая'; }
                 themeToggle.addEventListener('click', function() {
                     const isDark = document.body.classList.toggle('dark-theme');
                     localStorage.setItem('qip-theme', isDark ? 'dark' : 'light');
                     themeToggle.textContent = isDark ? '☀️ Светлая' : '🌙 Тёмная';
                 });
             })();
-
             document.addEventListener('DOMContentLoaded', function() {
                 setLanguage(currentLang);
                 const langBtn = document.getElementById('lang-toggle');
-                if (langBtn) {
-                    langBtn.addEventListener('click', toggleLang);
-                }
+                if (langBtn) langBtn.addEventListener('click', toggleLang);
             });
         })();
     </script>
-
-    <script type="text/javascript">
-    var sc_project=13364769; 
-    var sc_invisible=1; 
-    var sc_security="dde2fe88"; 
-    </script>
-    <script type="text/javascript"
-    src="https://www.statcounter.com/counter/counter.js" async></script>
-    <noscript><div class="statcounter"><a title="Web Analytics"
-    href="https://statcounter.com/" target="_blank"><img class="statcounter"
-    src="https://c.statcounter.com/13364769/0/dde2fe88/1/" alt="Web Analytics"
-    referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-
-<script>
-(function() {
-    const toggle = document.getElementById('menu-toggle');
-    const nav = toggle && toggle.nextElementSibling;
-    if (toggle && nav) {
-        toggle.addEventListener('click', function() {
-            nav.classList.toggle('nav-open');
-            toggle.classList.toggle('active');
-        });
-        nav.querySelectorAll('a').forEach(function(link) {
-            link.addEventListener('click', function() {
-                nav.classList.remove('nav-open');
-                toggle.classList.remove('active');
+    <script>
+    (function() {
+        const toggle = document.getElementById('menu-toggle');
+        const nav = toggle && toggle.nextElementSibling;
+        if (toggle && nav) {
+            toggle.addEventListener('click', function() {
+                nav.classList.toggle('nav-open'); toggle.classList.toggle('active');
             });
-        });
-    }
-})();
-</script>
-
-<!-- === ПАСХАЛКА: набери "miku", "monika" или "hatsune" (или вызови miku() / monika() в консоли) === -->
-<script>
-(function mikuEasterEgg() {
-    'use strict';
-
-    let buffer = '';
-    const SECRETS = ['monika', 'miku', 'hatsune'];
-    const MAX_LEN = 7;
-
-    document.addEventListener('keydown', function (e) {
-        const tag = document.activeElement && document.activeElement.tagName;
-        if (tag === 'INPUT' || tag === 'TEXTAREA') return;
-        if (e.key.length !== 1) return;
-
-        buffer += e.key.toLowerCase();
-        buffer = buffer.slice(-MAX_LEN);
-
-        if (SECRETS.some(s => buffer.endsWith(s))) {
-            buffer = '';
-            spawnMiku();
+            nav.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    nav.classList.remove('nav-open'); toggle.classList.remove('active');
+                });
+            });
         }
-    });
-
-    window.miku = spawnMiku;
-    window.monika = spawnMiku;
-
-    // === Замена всех картинок и логотипа (НЕОБРАТИМО до перезагрузки) ===
-    function replaceEverything() {
-        const imgs = document.querySelectorAll('img:not(#miku-gif)');
-        imgs.forEach(img => {
-            img.src = 'miku-dance.gif'; // Меняем картинку на Мику
-            img.style.objectFit = 'contain';
-            img.style.background = 'rgba(57, 197, 187, 0.2)';
-            img.style.width = '80px'; 
-            img.style.height = '80px';
-        });
-
-        const logo = document.querySelector('.logo');
-        if (logo) {
-            logo.innerHTML = '📡 MIKU <span>HATSUNE</span>';
-        }
-        
-        document.title = "💚 MIKU MIKU NI SHITE AGERU 💚";
-    }
-
-    function spawnMiku() {
-        if (document.getElementById('miku-fullscreen')) return;
-
-        replaceEverything(); // Меняем всё на сайте
-
-        if (!document.getElementById('miku-styles')) {
-            const style = document.createElement('style');
-            style.id = 'miku-styles';
-            style.textContent = `
-                #miku-fullscreen {
-                    position: fixed; inset: 0; z-index: 999999;
-                    background-color: rgba(0, 0, 0, 0.85); backdrop-filter: blur(8px);
-                    display: flex; flex-direction: column; justify-content: center; align-items: center;
-                    opacity: 0; transition: opacity 0.5s ease-in-out; pointer-events: none;
-                }
-                #miku-fullscreen.show { opacity: 1; pointer-events: auto; }
-                .miku-dance-container {
-                    display: flex; justify-content: center; align-items: center;
-                    max-width: 90vw; max-height: 80vh; cursor: pointer; position: relative;
-                }
-                #miku-gif {
-                    max-width: 100%; max-height: 80vh; object-fit: contain;
-                    border-radius: 16px; box-shadow: 0 0 60px rgba(57, 197, 187, 0.8);
-                    animation: miku-pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-                    transition: transform 0.2s;
-                }
-                .miku-close-btn {
-                    position: absolute; top: -15px; right: -15px;
-                    background: #ff4757; color: white; border: 3px solid #fff;
-                    border-radius: 50%; width: 40px; height: 40px;
-                    font-size: 20px; font-weight: bold; cursor: pointer;
-                    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-                    display: flex; justify-content: center; align-items: center;
-                    transition: transform 0.2s, background 0.2s; z-index: 10;
-                }
-                .miku-close-btn:hover { transform: scale(1.1); background: #ff6b81; }
-                #miku-text {
-                    margin-top: 24px;
-                    background: linear-gradient(135deg, #39c5bb, #2a9d94);
-                    color: #fff; padding: 14px 32px; border-radius: 30px;
-                    font-family: 'Segoe UI', Arial, sans-serif; font-size: 24px;
-                    font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-                    border: 3px solid #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-                    pointer-events: none; white-space: nowrap;
-                    animation: miku-pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s backwards;
-                }
-                @keyframes miku-pop {
-                    0% { transform: scale(0.5); opacity: 0; }
-                    100% { transform: scale(1); opacity: 1; }
-                }
-            `;
-            document.head.appendChild(style);
-        }
-
-        const overlay = document.createElement('div');
-        overlay.id = 'miku-fullscreen';
-
-        const gifContainer = document.createElement('div');
-        gifContainer.className = 'miku-dance-container';
-
-        const closeBtn = document.createElement('div');
-        closeBtn.className = 'miku-close-btn';
-        closeBtn.innerHTML = '✕';
-        closeBtn.title = 'Закрыть (Картинки останутся!)';
-        closeBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            closeMiku();
-        });
-
-        const img = document.createElement('img');
-        img.id = 'miku-gif';
-        img.src = 'miku-dance.gif'; 
-        img.alt = 'Miku Dancing';
-        
-        img.onerror = function() {
-            img.style.display = 'none';
-            const fallback = document.createElement('h1');
-            fallback.textContent = '💃 Мику танцует! 💃';
-            fallback.style.color = '#fff';
-            fallback.style.fontSize = '4rem';
-            fallback.style.textShadow = '0 0 20px #39c5bb';
-            gifContainer.appendChild(fallback);
-        };
-
-        const textBox = document.createElement('div');
-        textBox.id = 'miku-text';
-        textBox.textContent = '💚 Мику Хацунэ: みくみくにしてあげる♪';
-
-        gifContainer.appendChild(img);
-        gifContainer.appendChild(closeBtn);
-        overlay.appendChild(gifContainer);
-        overlay.appendChild(textBox);
-        document.body.appendChild(overlay);
-
-        // АУДИО
-        const audio = new Audio('miku-song.mp3');
-        audio.loop = true;
-        audio.volume = 0.5;
-        window.mikuAudio = audio; // Сохраняем в глобальную переменную
-        
-        audio.play().catch(e => {
-            console.log('Автоплей музыки заблокирован браузером.');
-        });
-
-        requestAnimationFrame(() => {
-            overlay.classList.add('show');
-        });
-
-        overlay.addEventListener('click', (e) => {
-            if (e.target === overlay) closeMiku();
-        });
-
-        console.log('%c💚 Мику Хацунэ: みくみくにしてあげる♪', 'color:#39c5bb;font-size:16px;font-weight:bold;');
-    }
-
-    // === Функция закрытия (Картинки НЕ ВОЗВРАЩАЮТСЯ, Музыка НЕ ВЫКЛЮЧАЕТСЯ) ===
-    function closeMiku() {
-        const overlay = document.getElementById('miku-fullscreen');
-        if (!overlay) return;
-        
-        // Просто убираем окно с гифкой
-        overlay.classList.remove('show');
-        setTimeout(() => overlay.remove(), 500);
-        
-        console.log('Окно закрыто, но Мику осталась на сайте, а музыка играет. F5 чтобы вернуть всё назад.');
-    }
-})();
-</script>
+    })();
+    </script>
+    <!-- ПОДКЛЮЧЕНИЕ ПАСХАЛКИ -->
+    <script src="easter-egg.js"></script>
 </body>
 </html>
