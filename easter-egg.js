@@ -7,7 +7,6 @@
     const SECRETS = ['monika', 'miku', 'hatsune'];
     const MAX_LEN = 7;
 
-    // === Обработка ввода с клавиатуры ===
     document.addEventListener('keydown', function (e) {
         const tag = document.activeElement && document.activeElement.tagName;
         if (tag === 'INPUT' || tag === 'TEXTAREA') return;
@@ -25,22 +24,34 @@
     window.miku = spawnMiku;
     window.monika = spawnMiku;
 
-    // === Замена всех картинок на Мику (без сохранения старых путей) ===
-    function replaceAllImages() {
+    // === Замена всех картинок и логотипа ===
+    function replaceEverything() {
+        // 1. Меняем ВСЕ картинки на сайте
         const imgs = document.querySelectorAll('img:not(#miku-gif)');
         imgs.forEach(img => {
-            img.src = 'miku-dance.gif'; // Подставляем Мику навсегда
+            img.src = 'miku-dance.gif'; 
             img.style.objectFit = 'contain';
-            img.style.background = 'rgba(57, 197, 187, 0.2)'; // Легкий бирюзовый фон
+            img.style.background = 'rgba(57, 197, 187, 0.2)';
+            // Если в карточке была иконка, она растянется, поэтому зададим размер
+            img.style.width = '80px'; 
+            img.style.height = '80px';
         });
+
+        // 2. Меняем текст логотипа в шапке
+        const logo = document.querySelector('.logo');
+        if (logo) {
+            logo.innerHTML = '📡 MIKU <span>HATSUNE</span>';
+        }
+        
+        // 3. Меняем заголовок страницы (во вкладке браузера)
+        document.title = "💚 MIKU MIKU NI SHITE AGERU 💚";
     }
 
-    // === Логика запуска ===
     function spawnMiku() {
         if (document.getElementById('miku-fullscreen')) return;
 
-        // Меняем все картинки на сайте
-        replaceAllImages();
+        // Меняем всё на сайте
+        replaceEverything();
 
         if (!document.getElementById('miku-styles')) {
             const style = document.createElement('style');
@@ -60,74 +71,37 @@
                     transition: opacity 0.5s ease-in-out;
                     pointer-events: none;
                 }
-                #miku-fullscreen.show {
-                    opacity: 1;
-                    pointer-events: auto;
-                }
-
+                #miku-fullscreen.show { opacity: 1; pointer-events: auto; }
                 .miku-dance-container {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    max-width: 90vw;
-                    max-height: 80vh;
-                    cursor: pointer;
-                    position: relative;
+                    display: flex; justify-content: center; align-items: center;
+                    max-width: 90vw; max-height: 80vh; cursor: pointer; position: relative;
                 }
-
                 #miku-gif {
-                    max-width: 100%;
-                    max-height: 80vh;
-                    object-fit: contain;
-                    border-radius: 16px;
-                    box-shadow: 0 0 60px rgba(57, 197, 187, 0.8);
+                    max-width: 100%; max-height: 80vh; object-fit: contain;
+                    border-radius: 16px; box-shadow: 0 0 60px rgba(57, 197, 187, 0.8);
                     animation: miku-pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
                     transition: transform 0.2s;
                 }
-
-                /* Кнопка закрытия */
                 .miku-close-btn {
-                    position: absolute;
-                    top: -15px;
-                    right: -15px;
-                    background: #ff4757;
-                    color: white;
-                    border: 3px solid #fff;
-                    border-radius: 50%;
-                    width: 40px;
-                    height: 40px;
-                    font-size: 20px;
-                    font-weight: bold;
-                    cursor: pointer;
+                    position: absolute; top: -15px; right: -15px;
+                    background: #ff4757; color: white; border: 3px solid #fff;
+                    border-radius: 50%; width: 40px; height: 40px;
+                    font-size: 20px; font-weight: bold; cursor: pointer;
                     box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    transition: transform 0.2s, background 0.2s;
-                    z-index: 10;
+                    display: flex; justify-content: center; align-items: center;
+                    transition: transform 0.2s, background 0.2s; z-index: 10;
                 }
-                .miku-close-btn:hover {
-                    transform: scale(1.1);
-                    background: #ff6b81;
-                }
-
+                .miku-close-btn:hover { transform: scale(1.1); background: #ff6b81; }
                 #miku-text {
                     margin-top: 24px;
                     background: linear-gradient(135deg, #39c5bb, #2a9d94);
-                    color: #fff;
-                    padding: 14px 32px;
-                    border-radius: 30px;
-                    font-family: 'Segoe UI', Arial, sans-serif;
-                    font-size: 24px;
-                    font-weight: bold;
-                    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-                    border: 3px solid #fff;
-                    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-                    pointer-events: none;
-                    white-space: nowrap;
+                    color: #fff; padding: 14px 32px; border-radius: 30px;
+                    font-family: 'Segoe UI', Arial, sans-serif; font-size: 24px;
+                    font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+                    border: 3px solid #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+                    pointer-events: none; white-space: nowrap;
                     animation: miku-pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s backwards;
                 }
-
                 @keyframes miku-pop {
                     0% { transform: scale(0.5); opacity: 0; }
                     100% { transform: scale(1); opacity: 1; }
@@ -136,7 +110,6 @@
             document.head.appendChild(style);
         }
 
-        // Создаём контейнер
         const overlay = document.createElement('div');
         overlay.id = 'miku-fullscreen';
 
@@ -146,7 +119,7 @@
         const closeBtn = document.createElement('div');
         closeBtn.className = 'miku-close-btn';
         closeBtn.innerHTML = '✕';
-        closeBtn.title = 'Закрыть';
+        closeBtn.title = 'Закрыть (Картинки останутся!)';
         closeBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             closeMiku();
@@ -177,12 +150,10 @@
         overlay.appendChild(textBox);
         document.body.appendChild(overlay);
 
-        // === АУДИО ===
+        // АУДИО
         const audio = new Audio('miku-song.mp3');
         audio.loop = true;
         audio.volume = 0.5;
-        
-        // Сохраняем ссылку на аудио в глобальную переменную, чтобы оно не удалялось
         window.mikuAudio = audio;
         
         audio.play().catch(e => {
@@ -193,22 +164,18 @@
             overlay.classList.add('show');
         });
 
-        // Клик по фону закрывает окно
         overlay.addEventListener('click', (e) => {
-            if (e.target === overlay) {
-                closeMiku();
-            }
+            if (e.target === overlay) closeMiku();
         });
-
-        console.log('%c💚 Мику Хацунэ: みくみくにしてあげる♪', 'color:#39c5bb;font-size:16px;font-weight:bold;');
     }
 
-    // === Функция закрытия окна (музыка продолжает играть, картинки не возвращаются) ===
+    // === Функция закрытия окна (картинки не возвращаются, музыка играет) ===
     function closeMiku() {
         const overlay = document.getElementById('miku-fullscreen');
         if (!overlay) return;
-
-        // Просто убираем окно. Картинки остаются заменёнными. Аудио играет дальше.
+        
+        // Просто убираем окно с гифкой. 
+        // Никакого restoreAllImages() тут нет, поэтому иконки на сайте остаются Мику!
         overlay.classList.remove('show');
         setTimeout(() => overlay.remove(), 500);
     }
