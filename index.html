@@ -24,8 +24,11 @@
     <!-- ⚡ ОПТИМИЗАЦИЯ СКОРОСТИ -->
     <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
     <link rel="preconnect" href="https://www.statcounter.com" crossorigin>
-    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="style.css"></noscript>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"></noscript>
+    <link rel="stylesheet" href="style.css" />
 
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
 </head>
@@ -34,6 +37,9 @@
     <header>
         <div class="container header-flex">
             <div class="logo">📡 GoToTalk <span>Community</span></div>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
             <nav>
                 <a href="index.html" class="active" data-i18n="nav-home">Главная</a>
                 <a href="download.html" data-i18n="nav-download">Скачать</a>
@@ -56,37 +62,41 @@
     <main>
         <section class="launcher">
             <div class="container">
+                <div class="launcher-badge">
+                    <span class="status-dot"></span>
+                    <span data-i18n="launcher-badge">Серверы активны • Возрождение 2026</span>
+                </div>
                 <h1 data-i18n="launcher-title">Куда вы хотели зайти?</h1>
                 <p class="subtitle" data-i18n="launcher-subtitle">Выберите мессенджер</p>
 
                 <div class="launcher-grid">
                     <a href="qip.html" class="launcher-card">
-                        <img src="icon-qip.webp" alt="QIP 2005" class="launcher-img" width="75" height="75" loading="lazy">
+                        <img src="icon-qip.png" alt="QIP 2005" class="launcher-img" width="75" height="75" loading="lazy">
                         <h2>QIP 2005</h2>
                         <p data-i18n="launcher-qip">Легендарный QIP 2005</p>
                     </a>
                     <a href="qip2012.html" class="launcher-card">
-                        <img src="icon-qip2012.webp" alt="QIP 2012" class="launcher-img" width="75" height="75" loading="lazy">
+                        <img src="icon-qip2012.png" alt="QIP 2012" class="launcher-img" width="75" height="75" loading="lazy">
                         <h2>QIP 2012</h2>
                         <p data-i18n="launcher-qip2012">QIP 2012 Infium</p>
                     </a>
                     <a href="qip2010.html" class="launcher-card">
-                        <img src="icon-qip2010.webp" alt="QIP 2010" class="launcher-img" width="75" height="75" loading="lazy">
+                        <img src="icon-qip2010.png" alt="QIP 2010" class="launcher-img" width="75" height="75" loading="lazy">
                         <h2>QIP 2010</h2>
                         <p data-i18n="launcher-qip2010">QIP 2010</p>
                     </a>
                     <a href="grey.html" class="launcher-card">
-                        <img src="icon-grey.webp" alt="QIP Grey Pack" class="launcher-img" width="75" height="75" loading="lazy">
+                        <img src="icon-grey.png" alt="QIP Grey Pack" class="launcher-img" width="75" height="75" loading="lazy">
                         <h2>QIP Grey Pack</h2>
                         <p data-i18n="launcher-grey">QIP Infium Grey Pack</p>
                     </a>
                     <a href="msn.html" class="launcher-card">
-                        <img src="icon-msn.webp" alt="MSN" class="launcher-img" width="75" height="75" loading="lazy">
+                        <img src="icon-msn.png" alt="MSN" class="launcher-img" width="75" height="75" loading="lazy">
                         <h2>MSN</h2>
                         <p data-i18n="launcher-msn">Windows Live Messenger</p>
                     </a>
                     <a href="aol.html" class="launcher-card">
-                        <img src="icon-aol.webp" alt="AOL" class="launcher-img" width="75" height="75" loading="lazy">
+                        <img src="icon-aol.png" alt="AOL" class="launcher-img" width="75" height="75" loading="lazy">
                         <h2>AOL</h2>
                         <p data-i18n="launcher-aol">AOL Instant Messenger</p>
                     </a>
@@ -117,6 +127,7 @@
             const translations = {
                 ru: {
                     'nav-home': 'Главная', 'nav-download': 'Скачать', 'nav-about': 'О нас', 'nav-team': 'Команда', 'nav-guide': 'Инструкция', 'nav-news': 'Новости', 'nav-guestbook': 'Гостевая', 'nav-faq': 'FAQ', 'nav-blog': 'Блог', 'nav-links': 'Ссылки', 'nav-privacy': 'Конфиденциальность', 'nav-discord': 'Discord',
+                    'launcher-badge': 'Серверы активны • Возрождение 2026',
                     'launcher-title': 'Куда вы хотели зайти?',
                     'launcher-subtitle': 'Выберите мессенджер',
                     'launcher-qip': 'Легендарный QIP 2005',
@@ -130,6 +141,7 @@
                 },
                 en: {
                     'nav-home': 'Home', 'nav-download': 'Download', 'nav-about': 'About', 'nav-team': 'Team', 'nav-guide': 'Guide', 'nav-news': 'News', 'nav-guestbook': 'Guestbook', 'nav-faq': 'FAQ', 'nav-blog': 'Blog', 'nav-links': 'Links', 'nav-privacy': 'Privacy', 'nav-discord': 'Discord',
+                    'launcher-badge': 'Servers active • Revival 2026',
                     'launcher-title': 'Where do you want to go?',
                     'launcher-subtitle': 'Choose a messenger',
                     'launcher-qip': 'Legendary QIP 2005',
@@ -198,5 +210,24 @@
     href="https://statcounter.com/" target="_blank"><img class="statcounter"
     src="https://c.statcounter.com/13364769/0/dde2fe88/1/" alt="Web Analytics"
     referrerPolicy="no-referrer-when-downgrade"></a></div></noscript> 
+
+<script>
+(function() {
+    const toggle = document.getElementById('menu-toggle');
+    const nav = toggle && toggle.nextElementSibling;
+    if (toggle && nav) {
+        toggle.addEventListener('click', function() {
+            nav.classList.toggle('nav-open');
+            toggle.classList.toggle('active');
+        });
+        nav.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                nav.classList.remove('nav-open');
+                toggle.classList.remove('active');
+            });
+        });
+    }
+})();
+</script>
 </body>
 </html>

@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Политика конфиденциальности</title>
+    <title>GoToTalk — Политика конфиденциальности</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"></noscript>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
 </head>
@@ -11,7 +15,10 @@
 
     <header>
         <div class="container header-flex">
-            <div class="logo">📡 QIP <span>Community</span></div>
+            <div class="logo">📡 GoToTalk <span>Community</span></div>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
             <nav>
                 <a href="index.html" data-i18n="nav-home">Главная</a>
                 <a href="download.html" data-i18n="nav-download">Скачать</a>
@@ -102,7 +109,7 @@
 
     <footer>
         <div class="container">
-            <p data-i18n="footer-text">QIP Community © 2026 — неофициальный фанатский проект.</p>
+            <p data-i18n="footer-text">GoToTalk Community © 2026 — неофициальный фанатский проект.</p>
             <div class="socials">
                 <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>
                 <a href="#">YouTube</a>
@@ -117,7 +124,7 @@
             const translations = {
                 ru: {
                     'nav-home': 'Главная', 'nav-download': 'Скачать', 'nav-about': 'О нас', 'nav-team': 'Команда', 'nav-guide': 'Инструкция', 'nav-news': 'Новости', 'nav-guestbook': 'Гостевая', 'nav-faq': 'FAQ', 'nav-blog': 'Блог', 'nav-links': 'Ссылки', 'nav-privacy': 'Конфиденциальность', 'nav-discord': 'Discord',
-                    'footer-text': 'QIP Community © 2026 — неофициальный фанатский проект.',
+                    'footer-text': 'GoToTalk Community © 2026 — неофициальный фанатский проект.',
                     'privacy-title': '🔒 Политика конфиденциальности',
                     'privacy-subtitle': 'Последнее обновление: 4 ноября 2026 года',
                     'privacy-1-title': '1. Общие положения',
@@ -149,7 +156,7 @@
                 },
                 en: {
                     'nav-home': 'Home', 'nav-download': 'Download', 'nav-about': 'About', 'nav-team': 'Team', 'nav-guide': 'Guide', 'nav-news': 'News', 'nav-guestbook': 'Guestbook', 'nav-faq': 'FAQ', 'nav-blog': 'Blog', 'nav-links': 'Links', 'nav-privacy': 'Privacy', 'nav-discord': 'Discord',
-                    'footer-text': 'QIP Community © 2026 — unofficial fan project.',
+                    'footer-text': 'GoToTalk Community © 2026 — unofficial fan project.',
                     'privacy-title': '🔒 Privacy Policy',
                     'privacy-subtitle': 'Last updated: November 4, 2026',
                     'privacy-1-title': '1. General Provisions',
@@ -240,5 +247,24 @@
     referrerPolicy="no-referrer-when-downgrade"></a></div></noscript> 
     <!-- End of Statcounter Code -->
 
+
+<script>
+(function() {
+    const toggle = document.getElementById('menu-toggle');
+    const nav = toggle && toggle.nextElementSibling;
+    if (toggle && nav) {
+        toggle.addEventListener('click', function() {
+            nav.classList.toggle('nav-open');
+            toggle.classList.toggle('active');
+        });
+        nav.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                nav.classList.remove('nav-open');
+                toggle.classList.remove('active');
+            });
+        });
+    }
+})();
+</script>
 </body>
 </html>

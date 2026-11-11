@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>О нас</title>
+    <title>GoToTalk — О нас</title>
     
     <meta name="description" content="Узнайте больше о проекте GoToTalk Community. Мы — неофициальное сообщество энтузиастов, которое сохраняет и оживляет легендарный QIP 2005." />
     <meta property="og:title" content="О нас | GoToTalk Community" />
@@ -11,8 +11,11 @@
 
     <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
     <link rel="preconnect" href="https://www.statcounter.com" crossorigin>
-    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="style.css"></noscript>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"></noscript>
+    <link rel="stylesheet" href="style.css" />
 
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
 </head>
@@ -20,7 +23,10 @@
 
     <header>
         <div class="container header-flex">
-            <div class="logo">📡 QIP <span>Community</span></div>
+            <div class="logo">📡 GoToTalk <span>Community</span></div>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
             <nav>
                 <a href="index.html" data-i18n="nav-home">Главная</a>
                 <a href="download.html" data-i18n="nav-download">Скачать</a>
@@ -53,7 +59,7 @@
 
     <footer>
         <div class="container">
-            <p data-i18n="footer-text">QIP Community © 2026 — неофициальный фанатский проект.</p>
+            <p data-i18n="footer-text">GoToTalk Community © 2026 — неофициальный фанатский проект.</p>
             <div class="socials">
                 <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>
                 <a href="#">YouTube</a>
@@ -72,7 +78,7 @@
                     'about-desc1': '<strong>QIP Community</strong> — это неофициальное сообщество, которое сохраняет и оживляет легендарный QIP 2005.',
                     'about-desc2': 'Мы создаём репаки, пишем инструкции и помогаем с настройкой всем желающим. Наша цель — вернуть старый интернет и дать людям возможность снова общаться так, как они привыкли.',
                     'about-desc3': 'Проект не имеет отношения к оригинальным разработчикам QIP. Мы делаем это для души, для истории и для ностальгии.',
-                    'footer-text': 'QIP Community © 2026 — неофициальный фанатский проект.'
+                    'footer-text': 'GoToTalk Community © 2026 — неофициальный фанатский проект.'
                 },
                 en: {
                     'nav-home': 'Home', 'nav-download': 'Download', 'nav-about': 'About', 'nav-team': 'Team', 'nav-guide': 'Guide', 'nav-news': 'News', 'nav-guestbook': 'Guestbook', 'nav-faq': 'FAQ', 'nav-blog': 'Blog', 'nav-links': 'Links', 'nav-privacy': 'Privacy', 'nav-discord': 'Discord',
@@ -80,7 +86,7 @@
                     'about-desc1': '<strong>QIP Community</strong> is an unofficial community that preserves and revives the legendary QIP 2005.',
                     'about-desc2': 'We create repacks, write guides, and help everyone with setup. Our goal is to bring back the old internet and give people the opportunity to communicate the way they used to.',
                     'about-desc3': 'The project is not affiliated with the original QIP developers. We do this for the soul, for history, and for nostalgia.',
-                    'footer-text': 'QIP Community © 2026 — unofficial fan project.'
+                    'footer-text': 'GoToTalk Community © 2026 — unofficial fan project.'
                 }
             };
 
@@ -139,5 +145,24 @@
     href="https://statcounter.com/" target="_blank"><img class="statcounter"
     src="https://c.statcounter.com/13364769/0/dde2fe88/1/" alt="Web Analytics"
     referrerPolicy="no-referrer-when-downgrade"></a></div></noscript> 
+
+<script>
+(function() {
+    const toggle = document.getElementById('menu-toggle');
+    const nav = toggle && toggle.nextElementSibling;
+    if (toggle && nav) {
+        toggle.addEventListener('click', function() {
+            nav.classList.toggle('nav-open');
+            toggle.classList.toggle('active');
+        });
+        nav.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                nav.classList.remove('nav-open');
+                toggle.classList.remove('active');
+            });
+        });
+    }
+})();
+</script>
 </body>
 </html>

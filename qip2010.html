@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>QIP 2010</title>
+    <title>GoToTalk — QIP 2010</title>
     
     <meta name="description" content="Скачать QIP 2010 Repack. Настройка hosts, регистрация через Infium и добавление KICQ." />
     <meta property="og:title" content="QIP 2010 | GoToTalk Community" />
     <meta property="og:description" content="Инструкция по установке QIP 2010." />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"></noscript>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
 </head>
@@ -16,7 +20,10 @@
 
     <header>
         <div class="container header-flex">
-            <div class="logo">📡 QIP <span>Community</span></div>
+            <div class="logo">📡 GoToTalk <span>Community</span></div>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
             <nav>
                 <a href="index.html" data-i18n="nav-home">Главная</a>
                 <a href="download.html" data-i18n="nav-download">Скачать</a>
@@ -39,6 +46,7 @@
     <main>
         <section class="guide-page">
             <div class="container">
+                <div class="client-hero-header"><img src="icon-qip2010.png" alt="" class="hero-img"></div>
                 <h1 data-i18n="qip2010-title">🌀 QIP 2010</h1>
                 <p class="subtitle" data-i18n="qip2010-subtitle">Инструкция по установке и настройке</p>
 
@@ -248,5 +256,24 @@
     href="https://statcounter.com/" target="_blank"><img class="statcounter"
     src="https://c.statcounter.com/13364769/0/dde2fe88/1/" alt="Web Analytics"
     referrerPolicy="no-referrer-when-downgrade"></a></div></noscript> 
+
+<script>
+(function() {
+    const toggle = document.getElementById('menu-toggle');
+    const nav = toggle && toggle.nextElementSibling;
+    if (toggle && nav) {
+        toggle.addEventListener('click', function() {
+            nav.classList.toggle('nav-open');
+            toggle.classList.toggle('active');
+        });
+        nav.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                nav.classList.remove('nav-open');
+                toggle.classList.remove('active');
+            });
+        });
+    }
+})();
+</script>
 </body>
 </html>
