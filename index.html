@@ -257,95 +257,116 @@
     window.miku = spawnMiku;
 
     function spawnMiku() {
-        if (document.getElementById('miku-overlay')) return;
+        if (document.getElementById('miku-fullscreen')) return;
 
         if (!document.getElementById('miku-styles')) {
             const style = document.createElement('style');
             style.id = 'miku-styles';
             style.textContent = `
-                #miku-overlay { position: fixed; inset: 0; pointer-events: none; z-index: 99999; overflow: hidden; }
-                .miku-figure {
-                    position: absolute; bottom: -10vh; font-size: 64px;
-                    animation: miku-sway 2.2s ease-in-out infinite alternate;
-                    filter: drop-shadow(0 0 12px rgba(57,197,187,.9));
-                    will-change: transform;
-                }
-                @keyframes miku-sway {
-                    from { transform: translateX(0) rotate(-6deg); }
-                    to   { transform: translateX(14px) rotate(6deg); }
-                }
-                #miku-message {
-                    position: fixed; top: 50%; left: 50%;
-                    transform: translate(-50%, -50%) scale(.6);
-                    background: linear-gradient(135deg, #39c5bb, #2a9d94);
-                    color: #fff; padding: 28px 42px; border-radius: 18px;
-                    font-family: 'Segoe UI', Arial, sans-serif;
-                    font-size: 26px; font-weight: 700; text-align: center;
-                    box-shadow: 0 0 40px rgba(57,197,187,.85);
+                #miku-fullscreen {
+                    position: fixed;
+                    inset: 0;
+                    z-index: 999999;
+                    background-color: rgba(0, 0, 0, 0.75); /* Затемнение фона */
+                    backdrop-filter: blur(4px); /* Легкое размытие сайта на фоне */
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
                     opacity: 0;
-                    transition: all .5s cubic-bezier(.34,1.56,.64,1);
-                    pointer-events: auto; z-index: 100000;
-                    max-width: 90vw; border: 3px solid #fff;
+                    transition: opacity 0.5s ease-in-out;
+                    pointer-events: none;
                 }
-                #miku-message.show { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-                #miku-message small { display: block; margin-top: 10px; font-weight: 400; font-size: 15px; opacity: .9; }
-                #miku-message button {
-                    margin-top: 16px; background: #fff; color: #2a9d94;
-                    border: none; padding: 10px 24px; border-radius: 30px;
-                    font-weight: 700; font-size: 16px; cursor: pointer; transition: transform .2s;
+                #miku-fullscreen.show {
+                    opacity: 1;
+                    pointer-events: auto; /* Блокируем клики по сайту, пока танцует Мику */
                 }
-                #miku-message button:hover { transform: scale(1.08); }
-                .miku-note { position: absolute; font-size: 30px; animation: miku-float 4s linear forwards; opacity: 0; }
-                @keyframes miku-float {
-                    0%   { opacity: 0; transform: translateY(0) scale(.6); }
-                    15%  { opacity: 1; }
-                    100% { opacity: 0; transform: translateY(-90vh) scale(1.2); }
+                
+                /* Контейнер для гифки, чтобы она не растягивалась на весь экран, а была по центру */
+                .miku-dance-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    max-width: 90vw;
+                    max-height: 80vh;
+                }
+
+                /* Сама гифка */
+                #miku-gif {
+                    max-width: 100%;
+                    max-height: 80vh;
+                    object-fit: contain;
+                    border-radius: 16px;
+                    box-shadow: 0 0 40px rgba(57, 197, 187, 0.6); /* Свечение вокруг Мику */
+                    animation: miku-pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+                }
+
+                /* Текст под гифкой */
+                #miku-text {
+                    margin-top: 20px;
+                    background: linear-gradient(135deg, #39c5bb, #2a9d94);
+                    color: #fff;
+                    padding: 12px 28px;
+                    border-radius: 30px;
+                    font-family: 'Segoe UI', Arial, sans-serif;
+                    font-size: 22px;
+                    font-weight: bold;
+                    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+                    border: 3px solid #fff;
+                    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+                    pointer-events: none;
+                    white-space: nowrap;
+                    animation: miku-pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s backwards;
+                }
+
+                @keyframes miku-pop {
+                    0% { transform: scale(0.5); opacity: 0; }
+                    100% { transform: scale(1); opacity: 1; }
                 }
             `;
             document.head.appendChild(style);
         }
 
+        // === Создаём контейнер ===
         const overlay = document.createElement('div');
-        overlay.id = 'miku-overlay';
+        overlay.id = 'miku-fullscreen';
+
+        // === Контейнер для гифки ===
+        const gifContainer = document.createElement('div');
+        gifContainer.className = 'miku-dance-container';
+
+        // === Вставляем гифку ===
+        const img = document.createElement('img');
+        img.id = 'miku-gif';
+        img.src = 'miku-dance.gif'; 
+        img.alt = 'Miku Dancing';
+        
+        // Если гифки нет, покажем заглушку
+        img.onerror = function() {
+            img.style.display = 'none';
+            const fallback = document.createElement('h1');
+            fallback.textContent = '💃 Мику танцует! 💃';
+            fallback.style.color = '#fff';
+            fallback.style.fontSize = '3rem';
+            gifContainer.appendChild(fallback);
+        };
+
+        // === Текст ===
+        const textBox = document.createElement('div');
+        textBox.id = 'miku-text';
+        textBox.textContent = '💚 Мику Хацунэ: みくみくにしてあげる♪';
+
+        gifContainer.appendChild(img);
+        overlay.appendChild(gifContainer);
+        overlay.appendChild(textBox);
         document.body.appendChild(overlay);
 
-        const mikus = ['🎤', '🎶', '💚', '🎵'];
-        for (let i = 0; i < 6; i++) {
-            const m = document.createElement('div');
-            m.className = 'miku-figure';
-            m.textContent = mikus[i % mikus.length];
-            m.style.left = (5 + Math.random() * 85) + 'vw';
-            m.style.animationDelay = (Math.random() * 1.5) + 's';
-            m.style.fontSize = (40 + Math.random() * 50) + 'px';
-            overlay.appendChild(m);
-        }
+        // === Запускаем анимацию появления ===
+        requestAnimationFrame(() => {
+            overlay.classList.add('show');
+        });
 
-        const notes = ['♪', '♫', '🎵', '💚', '🎤'];
-        const noteInterval = setInterval(() => {
-            if (!document.getElementById('miku-overlay')) {
-                clearInterval(noteInterval);
-                return;
-            }
-            const n = document.createElement('div');
-            n.className = 'miku-note';
-            n.textContent = notes[Math.floor(Math.random() * notes.length)];
-            n.style.left = Math.random() * 100 + 'vw';
-            n.style.top = '85vh';
-            n.style.color = '#39c5bb';
-            overlay.appendChild(n);
-            setTimeout(() => n.remove(), 4200);
-        }, 220);
-
-        const msg = document.createElement('div');
-        msg.id = 'miku-message';
-        msg.innerHTML = `
-            💚 Мику Хацунэ приветствует тебя! 💚
-            <small>Ты нашёл пасхалку! みくみくにしてあげる♪</small>
-            <button id="miku-close">Закрыть</button>
-        `;
-        document.body.appendChild(msg);
-        requestAnimationFrame(() => msg.classList.add('show'));
-
+        // === Звук (Web Audio API) ===
         try {
             const AudioCtx = window.AudioContext || window.webkitAudioContext;
             if (AudioCtx) {
@@ -364,19 +385,19 @@
                     osc.stop(ctx.currentTime + i * 0.18 + 0.18);
                 });
             }
-        } catch (err) { /* автоплей может быть заблокирован */ }
+        } catch (err) { /* Игнорируем ошибки автоплея */ }
 
-        const close = () => {
-            msg.classList.remove('show');
-            setTimeout(() => {
-                msg.remove();
-                overlay.remove();
-                clearInterval(noteInterval);
-            }, 500);
-        };
-        document.getElementById('miku-close').addEventListener('click', close);
-        msg.addEventListener('click', (e) => { if (e.target === msg) close(); });
-        setTimeout(() => { if (document.getElementById('miku-overlay')) close(); }, 12000);
+        // === Автоматическое закрытие через 6 секунд ===
+        setTimeout(() => {
+            overlay.classList.remove('show');
+            setTimeout(() => overlay.remove(), 600);
+        }, 6000); 
+
+        // === Возможность закрыть кликом ===
+        overlay.addEventListener('click', () => {
+            overlay.classList.remove('show');
+            setTimeout(() => overlay.remove(), 600);
+        });
 
         console.log('%c💚 Мику Хацунэ: みくみくにしてあげる♪', 'color:#39c5bb;font-size:16px;font-weight:bold;');
     }
