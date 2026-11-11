@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Как мы оживили QIP в 2026 году</title>
+    <title>GoToTalk — Как мы оживили QIP в 2026 году</title>
     
     <meta name="description" content="История нашего проекта: как мы нашли старый клиент, настроили сервер и вернули QIP к жизни. Рассказ от первого лица." />
     <meta property="og:title" content="Как мы оживили QIP | GoToTalk Community" />
     <meta property="og:description" content="Рассказ о том, как мы вернули легендарный мессенджер." />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"></noscript>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
 </head>
@@ -16,7 +20,10 @@
 
     <header>
         <div class="container header-flex">
-            <div class="logo">📡 QIP <span>Community</span></div>
+            <div class="logo">📡 GoToTalk <span>Community</span></div>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
             <nav>
                 <a href="index.html" data-i18n="nav-home">Главная</a>
                 <a href="download.html" data-i18n="nav-download">Скачать</a>
@@ -60,7 +67,7 @@
 
     <footer>
         <div class="container">
-            <p data-i18n="footer-text">QIP Community © 2026 — неофициальный фанатский проект.</p>
+            <p data-i18n="footer-text">GoToTalk Community © 2026 — неофициальный фанатский проект.</p>
             <div class="socials">
                 <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>
                 <a href="#">YouTube</a>
@@ -87,7 +94,7 @@
                     'post3-p8': 'Сегодня в QIP Community уже несколько десятков человек. Мы общаемся, делимся ностальгией, помогаем друг другу с настройкой. Кто-то даже нашёл старых друзей через QIP.',
                     'post3-p9': 'QIP вернулся. Не как коммерческий продукт, а как живое сообщество людей, которые помнят и любят старый интернет. И это только начало.',
                     'blog-back': '← Назад к статьям',
-                    'footer-text': 'QIP Community © 2026 — неофициальный фанатский проект.'
+                    'footer-text': 'GoToTalk Community © 2026 — неофициальный фанатский проект.'
                 },
                 en: {
                     'nav-home': 'Home', 'nav-download': 'Download', 'nav-about': 'About', 'nav-team': 'Team', 'nav-guide': 'Guide', 'nav-news': 'News', 'nav-guestbook': 'Guestbook', 'nav-faq': 'FAQ', 'nav-blog': 'Blog', 'nav-links': 'Links', 'nav-privacy': 'Privacy', 'nav-discord': 'Discord',
@@ -103,7 +110,7 @@
                     'post3-p8': 'Today, QIP Community already has several dozen people. We communicate, share nostalgia, help each other with setup. Some even found old friends through QIP.',
                     'post3-p9': 'QIP has returned. Not as a commercial product, but as a living community of people who remember and love the old internet. And this is just the beginning.',
                     'blog-back': '← Back to articles',
-                    'footer-text': 'QIP Community © 2026 — unofficial fan project.'
+                    'footer-text': 'GoToTalk Community © 2026 — unofficial fan project.'
                 }
             };
 
@@ -162,5 +169,24 @@
     href="https://statcounter.com/" target="_blank"><img class="statcounter"
     src="https://c.statcounter.com/13364769/0/dde2fe88/1/" alt="Web Analytics"
     referrerPolicy="no-referrer-when-downgrade"></a></div></noscript> 
+
+<script>
+(function() {
+    const toggle = document.getElementById('menu-toggle');
+    const nav = toggle && toggle.nextElementSibling;
+    if (toggle && nav) {
+        toggle.addEventListener('click', function() {
+            nav.classList.toggle('nav-open');
+            toggle.classList.toggle('active');
+        });
+        nav.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                nav.classList.remove('nav-open');
+                toggle.classList.remove('active');
+            });
+        });
+    }
+})();
+</script>
 </body>
 </html>

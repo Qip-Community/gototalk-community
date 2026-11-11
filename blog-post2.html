@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ICQ, QIP и другие: как мы общались в 2000-х</title>
+    <title>GoToTalk — ICQ, QIP и другие: как мы общались в 2000-х</title>
     
     <meta name="description" content="Вспоминаем старые добрые времена: ICQ, QIP, Miranda, агенты, статусы, аватарки и ностальгия по тому интернету." />
     <meta property="og:title" content="Как мы общались в 2000-х | GoToTalk Community" />
     <meta property="og:description" content="Ностальгия по ICQ, QIP и старому интернету." />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"></noscript>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
 </head>
@@ -16,7 +20,10 @@
 
     <header>
         <div class="container header-flex">
-            <div class="logo">📡 QIP <span>Community</span></div>
+            <div class="logo">📡 GoToTalk <span>Community</span></div>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
             <nav>
                 <a href="index.html" data-i18n="nav-home">Главная</a>
                 <a href="download.html" data-i18n="nav-download">Скачать</a>
@@ -58,7 +65,7 @@
 
     <footer>
         <div class="container">
-            <p data-i18n="footer-text">QIP Community © 2026 — неофициальный фанатский проект.</p>
+            <p data-i18n="footer-text">GoToTalk Community © 2026 — неофициальный фанатский проект.</p>
             <div class="socials">
                 <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>
                 <a href="#">YouTube</a>
@@ -83,7 +90,7 @@
                     'post2-p6': 'Потом появились социальные сети, а потом — Telegram и WhatsApp. ICQ и QIP ушли в прошлое. Но люди, которые застали ту эпоху, помнят её тепло. Это было время, когда интернет был не для всех, а для избранных. И это было прекрасно.',
                     'post2-p7': 'Мы не хотим возвращать dial-up или медленный интернет. Но мы хотим сохранить ту атмосферу. Дружелюбие, искренность, любопытство. QIP Community — это попытка вернуть не программу, а ощущение. То самое, из 2000-х.',
                     'blog-back': '← Назад к статьям',
-                    'footer-text': 'QIP Community © 2026 — неофициальный фанатский проект.'
+                    'footer-text': 'GoToTalk Community © 2026 — неофициальный фанатский проект.'
                 },
                 en: {
                     'nav-home': 'Home', 'nav-download': 'Download', 'nav-about': 'About', 'nav-team': 'Team', 'nav-guide': 'Guide', 'nav-news': 'News', 'nav-guestbook': 'Guestbook', 'nav-faq': 'FAQ', 'nav-blog': 'Blog', 'nav-links': 'Links', 'nav-privacy': 'Privacy', 'nav-discord': 'Discord',
@@ -97,7 +104,7 @@
                     'post2-p6': 'Then social networks appeared, and then — Telegram and WhatsApp. ICQ and QIP became a thing of the past. But people who lived through that era remember it warmly. It was a time when the internet was not for everyone, but for the chosen few. And it was beautiful.',
                     'post2-p7': 'We don\'t want to bring back dial-up or slow internet. But we want to preserve that atmosphere. Friendliness, sincerity, curiosity. QIP Community is an attempt to bring back not a program, but a feeling. That very feeling from the 2000s.',
                     'blog-back': '← Back to articles',
-                    'footer-text': 'QIP Community © 2026 — unofficial fan project.'
+                    'footer-text': 'GoToTalk Community © 2026 — unofficial fan project.'
                 }
             };
 
@@ -156,5 +163,24 @@
     href="https://statcounter.com/" target="_blank"><img class="statcounter"
     src="https://c.statcounter.com/13364769/0/dde2fe88/1/" alt="Web Analytics"
     referrerPolicy="no-referrer-when-downgrade"></a></div></noscript> 
+
+<script>
+(function() {
+    const toggle = document.getElementById('menu-toggle');
+    const nav = toggle && toggle.nextElementSibling;
+    if (toggle && nav) {
+        toggle.addEventListener('click', function() {
+            nav.classList.toggle('nav-open');
+            toggle.classList.toggle('active');
+        });
+        nav.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                nav.classList.remove('nav-open');
+                toggle.classList.remove('active');
+            });
+        });
+    }
+})();
+</script>
 </body>
 </html>

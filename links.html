@@ -4,16 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GoToTalk — Полезные ссылки</title>
+    
+    <meta name="description" content="Все важные ссылки GoToTalk Community в одном месте: Discord, скачивание QIP, регистрация, блог и другие полезные ресурсы." />
+    <meta property="og:title" content="Полезные ссылки | GoToTalk Community" />
+    <meta property="og:description" content="Быстрый доступ ко всем ресурсам проекта." />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"></noscript>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
 </head>
 <body>
+
     <header>
         <div class="container header-flex">
             <div class="logo">📡 GoToTalk <span>Community</span></div>
-            <button class="menu-toggle" id="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
             <nav>
                 <a href="index.html" data-i18n="nav-home">Главная</a>
                 <a href="download.html" data-i18n="nav-download">Скачать</a>
@@ -32,76 +42,177 @@
             </nav>
         </div>
     </header>
+
     <main>
         <section class="links-page">
             <div class="container">
                 <h1 data-i18n="links-title">🔗 Полезные ссылки</h1>
                 <p class="subtitle" data-i18n="links-subtitle">Все важные ссылки в одном месте</p>
+
                 <div class="links-grid">
-                    <div class="links-card"><h2 data-i18n="links-community">💬 Наше сообщество</h2><ul><li><a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord сервер</a></li><li><a href="https://qip-community.github.io/qip-community/" target="_blank">Наш сайт</a></li><li><a href="https://openvk.org/gototalk" target="_blank">OpenVK группа</a></li></ul></div>
-                    <div class="links-card"><h2 data-i18n="links-download">📥 Скачать QIP</h2><ul><li><a href="https://drive.google.com/drive/folders/1Fa3FoDCoU0AV_41joxUZE582zhyx6oXX?usp=sharing" target="_blank">QIP 2005 — Windows</a></li><li><a href="https://drive.google.com/drive/folders/1A8bJIMyGd57pTgyFeyxoNuJntUTFApN8?usp=sharing" target="_blank">QIP 2012 — Windows</a></li><li><a href="download.html" target="_blank">Страница скачивания</a></li></ul></div>
-                    <div class="links-card"><h2 data-i18n="links-register">📝 Регистрация</h2><ul><li><a href="https://t.me/KICQbot" target="_blank">Telegram-бот @KICQbot</a></li><li><a href="http://plqip.pirogprod.ru/" target="_blank">PLQIP (QIP 2012)</a></li></ul></div>
-                    <div class="links-card"><h2 data-i18n="links-help">❓ Помощь</h2><ul><li><a href="faq.html" target="_blank">FAQ</a></li><li><a href="guide.html" target="_blank">Инструкция</a></li><li><a href="qip2012.html" target="_blank">Инструкция QIP 2012</a></li><li><a href="reviews.html" target="_blank">Гостевая книга</a></li></ul></div>
+
+                    <div class="links-card">
+                        <h2 data-i18n="links-community">💬 Наше сообщество</h2>
+                        <ul>
+                            <li><a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord сервер</a></li>
+                            <li><a href="https://qip-community.github.io/qip-community/" target="_blank">Наш сайт</a></li>
+                            <li><a href="https://openvk.org/gototalk" target="_blank">OpenVK группа</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="links-card">
+                        <h2 data-i18n="links-download">📥 Скачать QIP</h2>
+                        <ul>
+                            <li><a href="https://drive.google.com/drive/folders/1Fa3FoDCoU0AV_41joxUZE582zhyx6oXX?usp=sharing" target="_blank">QIP 2005 — Windows (Google Drive)</a></li>
+                            <li><a href="https://drive.google.com/drive/folders/1A8bJIMyGd57pTgyFeyxoNuJntUTFApN8?usp=sharing" target="_blank">QIP 2012 — Windows (Google Drive)</a></li>
+                            <li><a href="https://drive.google.com/drive/folders/1iElhlzQl6O-ELLQl2aRtBxhDeUiXoY7C?usp=sharing" target="_blank">QIP — Android .jar (Google Drive)</a></li>
+                            <li><a href="download.html" target="_blank">Страница скачивания на сайте</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="links-card">
+                        <h2 data-i18n="links-register">📝 Регистрация</h2>
+                        <ul>
+                            <li><a href="https://t.me/KICQbot" target="_blank">Telegram-бот @KICQbot</a></li>
+                            <li><a href="http://plqip.pirogprod.ru/" target="_blank">PLQIP (для QIP 2012)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="links-card">
+                        <h2 data-i18n="links-social">📱 Социальные сети</h2>
+                        <ul>
+                            <li><a href="#" target="_blank">YouTube</a></li>
+                            <li><a href="#" target="_blank">TikTok</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="links-card">
+                        <h2 data-i18n="links-help">❓ Помощь</h2>
+                        <ul>
+                            <li><a href="faq.html" target="_blank">Часто задаваемые вопросы (FAQ)</a></li>
+                            <li><a href="guide.html" target="_blank">Инструкция по установке</a></li>
+                            <li><a href="qip2012.html" target="_blank">Инструкция QIP 2012</a></li>
+                            <li><a href="reviews.html" target="_blank">Гостевая книга</a></li>
+                        </ul>
+                    </div>
+
                 </div>
             </div>
         </section>
     </main>
+
     <footer>
         <div class="container">
             <p data-i18n="footer-text">GoToTalk Community © 2026 — неофициальный фанатский проект.</p>
-            <div class="socials"><a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a><a href="#">YouTube</a><a href="#">TikTok</a></div>
+            <div class="socials">
+                <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>
+                <a href="#">YouTube</a>
+                <a href="#">TikTok</a>
+            </div>
+            <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "310462293df347eaaf0c101f050bdbcf"}'></script>
         </div>
     </footer>
+
     <script>
         (function() {
             const translations = {
-                ru: { 'nav-home': 'Главная', 'nav-download': 'Скачать', 'nav-about': 'О нас', 'nav-team': 'Команда', 'nav-guide': 'Инструкция', 'nav-news': 'Новости', 'nav-guestbook': 'Гостевая', 'nav-faq': 'FAQ', 'nav-blog': 'Блог', 'nav-links': 'Ссылки', 'nav-privacy': 'Конфиденциальность', 'nav-discord': 'Discord', 'links-title': '🔗 Полезные ссылки', 'links-subtitle': 'Все важные ссылки в одном месте', 'links-community': '💬 Наше сообщество', 'links-download': '📥 Скачать QIP', 'links-register': '📝 Регистрация', 'links-social': '📱 Социальные сети', 'links-help': '❓ Помощь', 'footer-text': 'GoToTalk Community © 2026 — неофициальный фанатский проект.' },
-                en: { 'nav-home': 'Home', 'nav-download': 'Download', 'nav-about': 'About', 'nav-team': 'Team', 'nav-guide': 'Guide', 'nav-news': 'News', 'nav-guestbook': 'Guestbook', 'nav-faq': 'FAQ', 'nav-blog': 'Blog', 'nav-links': 'Links', 'nav-privacy': 'Privacy', 'nav-discord': 'Discord', 'links-title': '🔗 Useful Links', 'links-subtitle': 'All important links in one place', 'links-community': '💬 Our Community', 'links-download': '📥 Download QIP', 'links-register': '📝 Registration', 'links-social': '📱 Social Networks', 'links-help': '❓ Help', 'footer-text': 'GoToTalk Community © 2026 — unofficial fan project.' }
+                ru: {
+                    'nav-home': 'Главная', 'nav-download': 'Скачать', 'nav-about': 'О нас', 'nav-team': 'Команда', 'nav-guide': 'Инструкция', 'nav-news': 'Новости', 'nav-guestbook': 'Гостевая', 'nav-faq': 'FAQ', 'nav-blog': 'Блог', 'nav-links': 'Ссылки', 'nav-privacy': 'Конфиденциальность', 'nav-discord': 'Discord',
+                    'links-title': '🔗 Полезные ссылки',
+                    'links-subtitle': 'Все важные ссылки в одном месте',
+                    'links-community': '💬 Наше сообщество',
+                    'links-download': '📥 Скачать QIP',
+                    'links-register': '📝 Регистрация',
+                    'links-social': '📱 Социальные сети',
+                    'links-help': '❓ Помощь',
+                    'footer-text': 'GoToTalk Community © 2026 — неофициальный фанатский проект.'
+                },
+                en: {
+                    'nav-home': 'Home', 'nav-download': 'Download', 'nav-about': 'About', 'nav-team': 'Team', 'nav-guide': 'Guide', 'nav-news': 'News', 'nav-guestbook': 'Guestbook', 'nav-faq': 'FAQ', 'nav-blog': 'Blog', 'nav-links': 'Links', 'nav-privacy': 'Privacy', 'nav-discord': 'Discord',
+                    'links-title': '🔗 Useful Links',
+                    'links-subtitle': 'All important links in one place',
+                    'links-community': '💬 Our Community',
+                    'links-download': '📥 Download QIP',
+                    'links-register': '📝 Registration',
+                    'links-social': '📱 Social Networks',
+                    'links-help': '❓ Help',
+                    'footer-text': 'GoToTalk Community © 2026 — unofficial fan project.'
+                }
             };
+
             let currentLang = localStorage.getItem('qip-lang') || 'ru';
+
             function setLanguage(lang) {
-                currentLang = lang; localStorage.setItem('qip-lang', lang);
+                currentLang = lang;
+                localStorage.setItem('qip-lang', lang);
                 document.querySelectorAll('[data-i18n]').forEach(el => {
                     const key = el.getAttribute('data-i18n');
-                    if (translations[lang] && translations[lang][key]) el.textContent = translations[lang][key];
+                    if (translations[lang] && translations[lang][key]) {
+                        el.textContent = translations[lang][key];
+                    }
                 });
                 document.documentElement.lang = lang;
             }
-            function toggleLang() { setLanguage(currentLang === 'ru' ? 'en' : 'ru'); }
+
+            function toggleLang() {
+                const nextLang = currentLang === 'ru' ? 'en' : 'ru';
+                setLanguage(nextLang);
+            }
+
             (function initTheme() {
                 const themeToggle = document.getElementById('theme-toggle');
                 if (!themeToggle) return;
                 const savedTheme = localStorage.getItem('qip-theme');
-                if (savedTheme === 'dark') { document.body.classList.add('dark-theme'); themeToggle.textContent = '☀️ Светлая'; }
+                if (savedTheme === 'dark') {
+                    document.body.classList.add('dark-theme');
+                    themeToggle.textContent = '☀️ Светлая';
+                }
                 themeToggle.addEventListener('click', function() {
                     const isDark = document.body.classList.toggle('dark-theme');
                     localStorage.setItem('qip-theme', isDark ? 'dark' : 'light');
                     themeToggle.textContent = isDark ? '☀️ Светлая' : '🌙 Тёмная';
                 });
             })();
+
             document.addEventListener('DOMContentLoaded', function() {
                 setLanguage(currentLang);
                 const langBtn = document.getElementById('lang-toggle');
-                if (langBtn) langBtn.addEventListener('click', toggleLang);
+                if (langBtn) {
+                    langBtn.addEventListener('click', toggleLang);
+                }
             });
         })();
     </script>
-    <script>
-    (function() {
-        const toggle = document.getElementById('menu-toggle');
-        const nav = toggle && toggle.nextElementSibling;
-        if (toggle && nav) {
-            toggle.addEventListener('click', function() {
-                nav.classList.toggle('nav-open'); toggle.classList.toggle('active');
-            });
-            nav.querySelectorAll('a').forEach(function(link) {
-                link.addEventListener('click', function() {
-                    nav.classList.remove('nav-open'); toggle.classList.remove('active');
-                });
-            });
-        }
-    })();
+
+    <script type="text/javascript">
+    var sc_project=13364769; 
+    var sc_invisible=1; 
+    var sc_security="dde2fe88"; 
     </script>
-    <script src="easter-egg.js"></script>
+    <script type="text/javascript"
+    src="https://www.statcounter.com/counter/counter.js" async></script>
+    <noscript><div class="statcounter"><a title="Web Analytics"
+    href="https://statcounter.com/" target="_blank"><img class="statcounter"
+    src="https://c.statcounter.com/13364769/0/dde2fe88/1/" alt="Web Analytics"
+    referrerPolicy="no-referrer-when-downgrade"></a></div></noscript> 
+
+<script>
+(function() {
+    const toggle = document.getElementById('menu-toggle');
+    const nav = toggle && toggle.nextElementSibling;
+    if (toggle && nav) {
+        toggle.addEventListener('click', function() {
+            nav.classList.toggle('nav-open');
+            toggle.classList.toggle('active');
+        });
+        nav.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                nav.classList.remove('nav-open');
+                toggle.classList.remove('active');
+            });
+        });
+    }
+})();
+</script>
 </body>
 </html>
