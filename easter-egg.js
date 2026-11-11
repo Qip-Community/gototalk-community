@@ -6,7 +6,6 @@
     let buffer = '';
     const SECRETS = ['monika', 'miku', 'hatsune'];
     const MAX_LEN = 7;
-    let backgroundAudio = null; // Для музыки, которая играет после закрытия
 
     // === Обработка ввода с клавиатуры ===
     document.addEventListener('keydown', function (e) {
@@ -23,32 +22,16 @@
         }
     });
 
-    // === API для консоли ===
     window.miku = spawnMiku;
     window.monika = spawnMiku;
 
-    // === Замена всех картинок на Мику ===
+    // === Замена всех картинок на Мику (без сохранения старых путей) ===
     function replaceAllImages() {
         const imgs = document.querySelectorAll('img:not(#miku-gif)');
         imgs.forEach(img => {
-            // Сохраняем оригинальный src, чтобы потом вернуть
-            if (!img.dataset.originalSrc) {
-                img.dataset.originalSrc = img.src;
-            }
-            img.src = 'miku-dance.gif'; // Подставляем Мику
+            img.src = 'miku-dance.gif'; // Подставляем Мику навсегда
             img.style.objectFit = 'contain';
             img.style.background = 'rgba(57, 197, 187, 0.2)'; // Легкий бирюзовый фон
-        });
-    }
-
-    // === Возврат оригинальных картинок ===
-    function restoreAllImages() {
-        const imgs = document.querySelectorAll('img[data-original-src]');
-        imgs.forEach(img => {
-            img.src = img.dataset.originalSrc;
-            img.style.objectFit = '';
-            img.style.background = '';
-            delete img.dataset.originalSrc;
         });
     }
 
@@ -56,7 +39,7 @@
     function spawnMiku() {
         if (document.getElementById('miku-fullscreen')) return;
 
-        // Меняем картинки на сайте
+        // Меняем все картинки на сайте
         replaceAllImages();
 
         if (!document.getElementById('miku-styles')) {
@@ -149,27 +132,6 @@
                     0% { transform: scale(0.5); opacity: 0; }
                     100% { transform: scale(1); opacity: 1; }
                 }
-                
-                /* Плавающая кнопка выключения музыки */
-                #miku-audio-stop {
-                    position: fixed;
-                    bottom: 20px;
-                    right: 20px;
-                    z-index: 1000000;
-                    background: rgba(57, 197, 187, 0.9);
-                    color: #fff;
-                    padding: 10px 20px;
-                    border-radius: 20px;
-                    font-weight: bold;
-                    cursor: pointer;
-                    border: 2px solid #fff;
-                    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-                    display: none; /* Скрыта по умолчанию */
-                    font-family: 'Segoe UI', Arial, sans-serif;
-                }
-                #miku-audio-stop:hover {
-                    background: #2a9d94;
-                }
             `;
             document.head.appendChild(style);
         }
@@ -216,17 +178,12 @@
         document.body.appendChild(overlay);
 
         // === АУДИО ===
-        // Если музыка уже играла (после закрытия), останавливаем её и начинаем заново
-        if (backgroundAudio) {
-            backgroundAudio.pause();
-            backgroundAudio = null;
-        }
-        
         const audio = new Audio('miku-song.mp3');
         audio.loop = true;
         audio.volume = 0.5;
-        overlay.dataset.audioId = 'miku-audio';
-        overlay.appendChild(audio);
+        
+        // Сохраняем ссылку на аудио в глобальную переменную, чтобы оно не удалялось
+        window.mikuAudio = audio;
         
         audio.play().catch(e => {
             console.log('Автоплей музыки заблокирован браузером.');
@@ -246,41 +203,12 @@
         console.log('%c💚 Мику Хацунэ: みくみくにしてあげる♪', 'color:#39c5bb;font-size:16px;font-weight:bold;');
     }
 
-    // === Функция закрытия окна (но музыка играет дальше) ===
+    // === Функция закрытия окна (музыка продолжает играть, картинки не возвращаются) ===
     function closeMiku() {
         const overlay = document.getElementById('miku-fullscreen');
         if (!overlay) return;
 
-        // Возвращаем картинки на место
-        restoreAllImages();
-
-        // Забираем аудио из окна и делаем его фоновым
-        const audio = overlay.querySelector('audio');
-        if (audio) {
-            backgroundAudio = audio;
-            
-            // Создаем кнопку для остановки фоновой музыки
-            let stopBtn = document.getElementById('miku-audio-stop');
-            if (!stopBtn) {
-                stopBtn = document.createElement('div');
-                stopBtn.id = 'miku-audio-stop';
-                stopBtn.innerHTML = '⏸ Выключить музыку';
-                stopBtn.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    if (backgroundAudio) {
-                        backgroundAudio.pause();
-                        backgroundAudio = null;
-                    }
-                    stopBtn.style.display = 'none';
-                });
-                document.body.appendChild(stopBtn);
-            }
-            
-            // Показываем кнопку и уменьшаем громкость для фона
-            stopBtn.style.display = 'block';
-            audio.volume = 0.3; // Делаем потише
-        }
-
+        // Просто убираем окно. Картинки остаются заменёнными. Аудио играет дальше.
         overlay.classList.remove('show');
         setTimeout(() => overlay.remove(), 500);
     }
