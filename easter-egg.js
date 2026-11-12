@@ -169,3 +169,170 @@
         console.log('Окно закрыто, но Мику осталась на сайте, а музыка играет. F5 чтобы вернуть всё назад.');
     }
 })();
+
+(function tetoEasterEgg() {
+    'use strict';
+
+    let buffer = '';
+    const SECRETS = ['teto', 'kasane'];
+    const MAX_LEN = 10;
+
+    document.addEventListener('keydown', function (e) {
+        const tag = document.activeElement && document.activeElement.tagName;
+        if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+        if (e.key.length !== 1) return;
+
+        buffer += e.key.toLowerCase();
+        buffer = buffer.slice(-MAX_LEN);
+
+        if (SECRETS.some(s => buffer.endsWith(s))) {
+            buffer = '';
+            spawnTeto();
+        }
+    });
+
+    window.teto = spawnTeto;
+    window.kasane = spawnTeto;
+
+    function replaceEverything() {
+        const imgs = document.querySelectorAll('img:not(#teto-gif)');
+        imgs.forEach(img => {
+            img.src = 'teto_dance.gif'; 
+            img.style.objectFit = 'contain';
+            img.style.background = 'rgba(255, 0, 0, 0.2)';
+            if (img.classList.contains('launcher-img') || img.classList.contains('hero-img')) {
+                img.style.width = '80px'; 
+                img.style.height = '80px';
+            }
+        });
+
+        const logo = document.querySelector('.logo');
+        if (logo) {
+            logo.innerHTML = '📡 KASANE <span>TETO</span>';
+        }
+
+        document.title = "❤️ KASANE TETO ❤️";
+    }
+
+    function spawnTeto() {
+        if (document.getElementById('teto-fullscreen')) return;
+
+        replaceEverything();
+
+        if (!document.getElementById('teto-styles')) {
+            const style = document.createElement('style');
+            style.id = 'teto-styles';
+            style.textContent = `
+                #teto-fullscreen {
+                    position: fixed; inset: 0; z-index: 999999;
+                    background-color: rgba(0, 0, 0, 0.85); backdrop-filter: blur(8px);
+                    display: flex; flex-direction: column; justify-content: center; align-items: center;
+                    opacity: 0; transition: opacity 0.5s ease-in-out; pointer-events: none;
+                }
+                #teto-fullscreen.show { opacity: 1; pointer-events: auto; }
+                .teto-dance-container {
+                    display: flex; justify-content: center; align-items: center;
+                    max-width: 90vw; max-height: 80vh; cursor: pointer; position: relative;
+                }
+                #teto_gif {
+                    max-width: 100%; max-height: 80vh; object-fit: contain;
+                    border-radius: 16px; box-shadow: 0 0 60px rgba(255, 0, 0, 0.8);
+                    animation: teto-pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+                    transition: transform 0.2s;
+                }
+                .teto-close-btn {
+                    position: absolute; top: -15px; right: -15px;
+                    background: #ff4757; color: white; border: 3px solid #fff;
+                    border-radius: 50%; width: 40px; height: 40px;
+                    font-size: 20px; font-weight: bold; cursor: pointer;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+                    display: flex; justify-content: center; align-items: center;
+                    transition: transform 0.2s, background 0.2s; z-index: 10;
+                }
+                .teto-close-btn:hover { transform: scale(1.1); background: #ff6b81; }
+                #teto-text {
+                    margin-top: 24px;
+                    background: linear-gradient(135deg, #e27077, #9d2a32);
+                    color: #fff; padding: 14px 32px; border-radius: 30px;
+                    font-family: 'Segoe UI', Arial, sans-serif; font-size: 24px;
+                    font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+                    border: 3px solid #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+                    pointer-events: none; white-space: nowrap;
+                    animation: miku-pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s backwards;
+                }
+                @keyframes miku-pop {
+                    0% { transform: scale(0.5); opacity: 0; }
+                    100% { transform: scale(1); opacity: 1; }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+
+        const overlay = document.createElement('div');
+        overlay.id = 'teto-fullscreen';
+
+        const gifContainer = document.createElement('div');
+        gifContainer.className = 'teto-dance-container';
+
+        const closeBtn = document.createElement('div');
+        closeBtn.className = 'teto-close-btn';
+        closeBtn.innerHTML = '✕';
+        closeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeTeto();
+        });
+
+        const img = document.createElement('img');
+        img.id = 'teto_gif';
+        img.src = 'teto_dance.gif';
+        img.alt = 'Teto Dancing';
+
+        img.onerror = function() {
+            img.style.display = 'none';
+            const fallback = document.createElement('h1');
+            fallback.textContent = '💃 Kasane Teto танцует! 💃';
+            fallback.style.color = '#fff';
+            fallback.style.fontSize = '4rem';
+            fallback.style.textShadow = '0 0 20px #e27077';
+            gifContainer.appendChild(fallback);
+        }
+
+        const textBox = document.createElement('div');
+        textBox.id = 'teto-text';
+        textBox.textContent = '❤️ Касане Тето: 重音テト🥖';
+
+        gifContainer.appendChild(img);
+        gifContainer.appendChild(closeBtn);
+        overlay.appendChild(gifContainer);
+        overlay.appendChild(textBox);
+        document.body.appendChild(overlay);
+
+        const audio = new Audio('teto_song.mp3');
+        audio.loop = true;
+        audio.volume = 0.5;
+        window.tetoAudio = audio;
+
+        audio.play().catch(e => {
+            console.error('Error playing audio:', e);
+        });
+
+        requestAnimationFrame(() => {
+            overlay.classList.add('show');
+        });
+
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) closeTeto();
+        });
+
+
+    console.log('%c❤️ Касане Тето: 重音テト🥖', 'color:#e27077;font-size:16px;font-weight:bold;');
+    }
+
+    function closeTeto() {
+        const overlay = document.getElementById('teto-fullscreen');
+        if (!overlay) return;
+        overlay.classList.remove('show');
+        setTimeout(() => overlay.remove(), 500);
+        console.log('Окно закрыто, но Тето осталась на сайте, а музыка играет. F5 чтобы вернуть всё назад.');
+    }
+})
