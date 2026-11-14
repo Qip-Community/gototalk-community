@@ -3,12 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GoToTalk — MSN Messenger 6.2</title>
-    
-    <meta name="description" content="Инструкция по установке и настройке MSN Messenger 6.2. Регистрация на Escargot и вход в аккаунт." />
-    <meta property="og:title" content="MSN Messenger 6.2 | GoToTalk Community" />
-    <meta property="og:description" content="Вернитесь в эпоху Windows Live Messenger." />
-
+    <title>GoToTalk — MSN Messenger (CrossTalk)</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -17,27 +12,17 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
 </head>
 <body>
-
     <header>
         <div class="container header-flex">
             <div class="logo">📡 GoToTalk <span>Community</span></div>
-            <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
             <nav>
-                <a href="index.html" data-i18n="nav-home">Главная</a>
-                <a href="download.html" data-i18n="nav-download">Скачать</a>
-                <a href="about.html" data-i18n="nav-about">О нас</a>
-                <a href="team.html" data-i18n="nav-team">Команда</a>
-                <a href="guide.html" data-i18n="nav-guide">Инструкция</a>
-                <a href="news.html" data-i18n="nav-news">Новости</a>
-                <a href="reviews.html" data-i18n="nav-guestbook">Гостевая</a>
-                <a href="faq.html" data-i18n="nav-faq">FAQ</a>
-                <a href="blog.html" data-i18n="nav-blog">Блог</a>
-                <a href="links.html" data-i18n="nav-links">Ссылки</a>
-                <a href="privacy.html" data-i18n="nav-privacy">Конфиденциальность</a>
-                <a href="https://discord.gg/VSJpGajNmP" target="_blank" data-i18n="nav-discord">Discord</a>
-                <button id="lang-toggle" class="lang-toggle">RU / EN</button>
+                <a href="index.html">Главная</a>
+                <a href="download.html">Скачать</a>
+                <a href="about.html">О нас</a>
+                <a href="guide.html">Инструкция</a>
+                <a href="msn.html" class="active">MSN</a>
+                <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>
                 <button id="theme-toggle" class="theme-toggle">🌙 Тема</button>
             </nav>
         </div>
@@ -47,166 +32,82 @@
         <section class="guide-page">
             <div class="container">
                 <div class="client-hero-header"><img src="icon-msn.png" alt="" class="hero-img"></div>
-                <h1 data-i18n="msn-title">🦋 MSN Messenger 6.2</h1>
-                <p class="subtitle" data-i18n="msn-subtitle">Инструкция по установке и настройке</p>
+                <h1>🦋 MSN Messenger 6.2</h1>
+                <p class="subtitle">Инструкция для работы через сервер <strong>CrossTalk</strong></p>
 
                 <div class="platform-card">
-                    <h2 data-i18n="msn-step1-title">📝 Шаг 1: Регистрация</h2>
-                    <p data-i18n="msn-step1-desc">Зарегистрируйтесь на сайте Escargot с типом аккаунта <strong>«Screenname»</strong> (не UIN!).</p>
-                    <a href="https://account.escargot.chat/register/" target="_blank" class="btn">Перейти на Escargot →</a>
-                </div>
-
-                <div class="platform-card">
-                    <h2 data-i18n="msn-step2-title">📥 Шаг 2: Скачивание MSN</h2>
-                    <p data-i18n="msn-step2-desc">Скачайте MSN 6.2 на русском языке по ссылке ниже.</p>
-                    <a href="https://drive.google.com/drive/folders/1tkOsJdTkLJQLEhnm-ATEOfky2h92SCMx?usp=sharing" target="_blank" class="btn">Скачать MSN 6.2 →</a>
+                    <h2>📝 Шаг 1: Регистрация</h2>
+                    <p>Зарегистрируйтесь на сайте CrossTalk с типом аккаунта <strong>«Screenname»</strong> (не UIN!).</p>
+                    <a href="https://crosstalk.im/register" target="_blank" class="btn">Перейти на CrossTalk →</a>
                 </div>
 
                 <div class="platform-card">
-                    <h2 data-i18n="msn-step3-title">🔧 Шаг 3: Установка</h2>
-                    <p data-i18n="msn-step3-desc">Установите MSN из архива. После установки откройте файл <code>RUN_AFTER_INSTALL</code> и нажмите <strong>Patch All</strong>.</p>
+                    <h2>📥 Шаг 2: Скачивание MSN</h2>
+                    <p>Скачайте MSN 6.2 на русском языке напрямую с нашего сайта.</p>
+                    <a href="downloads/MSN_6.2_RU.msi" download class="btn">Скачать MSN 6.2 (.msi) →</a>
                 </div>
 
                 <div class="platform-card">
-                    <h2 data-i18n="msn-step4-title">🔑 Шаг 4: Вход</h2>
-                    <p data-i18n="msn-step4-desc">Введите свои данные (Screenname и пароль), которые вы указали при регистрации на Escargot.</p>
+                    <h2>🔧 Шаг 3: Установка</h2>
+                    <p>Просто установите MSN как обычную программу. После установки можно сразу запускать.</p>
                 </div>
 
-                <div class="platform-card help-card">
-                    <h2 data-i18n="msn-help-title">❓ Нужна помощь?</h2>
-                    <p data-i18n="msn-help-desc">Если что-то пошло не так — пиши в наш Discord, поможем!</p>
-                    <a href="https://discord.gg/VSJpGajNmP" target="_blank" class="btn">Перейти в Discord →</a>
+                <div class="platform-card">
+                    <h2>🔑 Шаг 4: Вход</h2>
+                    <p>Введите свои данные (Screenname и пароль), которые вы указали при регистрации на CrossTalk.</p>
                 </div>
 
-                <a href="index.html" class="btn btn-secondary" data-i18n="msn-back">← Назад к выбору</a>
+                <div class="platform-card">
+                    <h2>📦 Другие версии MSN (Полигами)</h2>
+                    <p>Мы залили несколько версий клиента. Выберите ту, которая работает лучше на вашей системе:</p>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li style="margin-bottom: 10px;"><a href="downloads/MSN_6.2_RU.msi" download class="btn btn-secondary">Скачать MSN 6.2 (Классика, стабильная) →</a></li>
+                        <li style="margin-bottom: 10px;"><a href="downloads/MSN_7.5_RU.exe" download class="btn btn-secondary">Скачать MSN 7.5 (Больше функций) →</a></li>
+                    </ul>
+                </div>
+
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="msn-escargot.html" class="btn btn-secondary">Переключиться на сервер Escargot →</a>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p data-i18n="footer-text">GoToTalk Community © 2026 — неофициальный фанатский проект.</p>
+            <p>GoToTalk Community © 2026 — неофициальный фанатский проект.</p>
             <div class="socials">
                 <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>
-                <a href="#">YouTube</a>
-                <a href="#">TikTok</a>
             </div>
-            <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "310462293df347eaaf0c101f050bdbcf"}'></script>
         </div>
     </footer>
 
     <script>
-        (function() {
-            const translations = {
-                ru: {
-                    'nav-home': 'Главная', 'nav-download': 'Скачать', 'nav-about': 'О нас', 'nav-team': 'Команда', 'nav-guide': 'Инструкция', 'nav-news': 'Новости', 'nav-guestbook': 'Гостевая', 'nav-faq': 'FAQ', 'nav-blog': 'Блог', 'nav-links': 'Ссылки', 'nav-privacy': 'Конфиденциальность', 'nav-discord': 'Discord',
-                    'msn-title': '🦋 MSN Messenger 6.2',
-                    'msn-subtitle': 'Инструкция по установке и настройке',
-                    'msn-step1-title': '📝 Шаг 1: Регистрация',
-                    'msn-step1-desc': 'Зарегистрируйтесь на сайте Escargot с типом аккаунта «Screenname» (не UIN!).',
-                    'msn-step2-title': '📥 Шаг 2: Скачивание MSN',
-                    'msn-step2-desc': 'Скачайте MSN 6.2 на русском языке по ссылке ниже.',
-                    'msn-step3-title': '🔧 Шаг 3: Установка',
-                    'msn-step3-desc': 'Установите MSN из архива. После установки откройте файл RUN_AFTER_INSTALL и нажмите Patch All.',
-                    'msn-step4-title': '🔑 Шаг 4: Вход',
-                    'msn-step4-desc': 'Введите свои данные (Screenname и пароль), которые вы указали при регистрации на Escargot.',
-                    'msn-help-title': '❓ Нужна помощь?',
-                    'msn-help-desc': 'Если что-то пошло не так — пиши в наш Discord, поможем!',
-                    'msn-back': '← Назад к выбору',
-                    'footer-text': 'GoToTalk Community © 2026 — неофициальный фанатский проект.'
-                },
-                en: {
-                    'nav-home': 'Home', 'nav-download': 'Download', 'nav-about': 'About', 'nav-team': 'Team', 'nav-guide': 'Guide', 'nav-news': 'News', 'nav-guestbook': 'Guestbook', 'nav-faq': 'FAQ', 'nav-blog': 'Blog', 'nav-links': 'Links', 'nav-privacy': 'Privacy', 'nav-discord': 'Discord',
-                    'msn-title': '🦋 MSN Messenger 6.2',
-                    'msn-subtitle': 'Installation and setup guide',
-                    'msn-step1-title': '📝 Step 1: Registration',
-                    'msn-step1-desc': 'Register on Escargot with account type "Screenname" (not UIN!).',
-                    'msn-step2-title': '📥 Step 2: Download MSN',
-                    'msn-step2-desc': 'Download MSN 6.2 in Russian from the link below.',
-                    'msn-step3-title': '🔧 Step 3: Installation',
-                    'msn-step3-desc': 'Install MSN from the archive. After installation, open RUN_AFTER_INSTALL and click Patch All.',
-                    'msn-step4-title': '🔑 Step 4: Login',
-                    'msn-step4-desc': 'Enter your credentials (Screenname and password) from Escargot.',
-                    'msn-help-title': '❓ Need help?',
-                    'msn-help-desc': 'If something went wrong — write in our Discord, we\'ll help!',
-                    'msn-back': '← Back to selection',
-                    'footer-text': 'GoToTalk Community © 2026 — unofficial fan project.'
-                }
-            };
-
-            let currentLang = localStorage.getItem('qip-lang') || 'ru';
-
-            function setLanguage(lang) {
-                currentLang = lang;
-                localStorage.setItem('qip-lang', lang);
-                document.querySelectorAll('[data-i18n]').forEach(el => {
-                    const key = el.getAttribute('data-i18n');
-                    if (translations[lang] && translations[lang][key]) {
-                        el.textContent = translations[lang][key];
-                    }
-                });
-                document.documentElement.lang = lang;
+        (function initTheme() {
+            const themeToggle = document.getElementById('theme-toggle');
+            if (!themeToggle) return;
+            const savedTheme = localStorage.getItem('qip-theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-theme');
+                themeToggle.textContent = '☀️ Светлая';
             }
-
-            function toggleLang() {
-                const nextLang = currentLang === 'ru' ? 'en' : 'ru';
-                setLanguage(nextLang);
-            }
-
-            (function initTheme() {
-                const themeToggle = document.getElementById('theme-toggle');
-                if (!themeToggle) return;
-                const savedTheme = localStorage.getItem('qip-theme');
-                if (savedTheme === 'dark') {
-                    document.body.classList.add('dark-theme');
-                    themeToggle.textContent = '☀️ Светлая';
-                }
-                themeToggle.addEventListener('click', function() {
-                    const isDark = document.body.classList.toggle('dark-theme');
-                    localStorage.setItem('qip-theme', isDark ? 'dark' : 'light');
-                    themeToggle.textContent = isDark ? '☀️ Светлая' : '🌙 Тёмная';
-                });
-            })();
-
-            document.addEventListener('DOMContentLoaded', function() {
-                setLanguage(currentLang);
-                const langBtn = document.getElementById('lang-toggle');
-                if (langBtn) {
-                    langBtn.addEventListener('click', toggleLang);
-                }
+            themeToggle.addEventListener('click', function() {
+                const isDark = document.body.classList.toggle('dark-theme');
+                localStorage.setItem('qip-theme', isDark ? 'dark' : 'light');
+                themeToggle.textContent = isDark ? '☀️ Светлая' : '🌙 Тёмная';
             });
         })();
-    </script>
 
-    <script type="text/javascript">
-    var sc_project=13364769; 
-    var sc_invisible=1; 
-    var sc_security="dde2fe88"; 
+        (function() {
+            const toggle = document.getElementById('menu-toggle');
+            const nav = toggle && toggle.nextElementSibling;
+            if (toggle && nav) {
+                toggle.addEventListener('click', function() {
+                    nav.classList.toggle('nav-open');
+                    toggle.classList.toggle('active');
+                });
+            }
+        })();
     </script>
-    <script type="text/javascript"
-    src="https://www.statcounter.com/counter/counter.js" async></script>
-    <noscript><div class="statcounter"><a title="Web Analytics"
-    href="https://statcounter.com/" target="_blank"><img class="statcounter"
-    src="https://c.statcounter.com/13364769/0/dde2fe88/1/" alt="Web Analytics"
-    referrerPolicy="no-referrer-when-downgrade"></a></div></noscript> 
-
-<script>
-(function() {
-    const toggle = document.getElementById('menu-toggle');
-    const nav = toggle && toggle.nextElementSibling;
-    if (toggle && nav) {
-        toggle.addEventListener('click', function() {
-            nav.classList.toggle('nav-open');
-            toggle.classList.toggle('active');
-        });
-        nav.querySelectorAll('a').forEach(function(link) {
-            link.addEventListener('click', function() {
-                nav.classList.remove('nav-open');
-                toggle.classList.remove('active');
-            });
-        });
-    }
-})();
-</script>
 </body>
 </html>

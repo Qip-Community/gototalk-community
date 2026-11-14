@@ -90,11 +90,22 @@
                         <h2>QIP Grey Pack</h2>
                         <p data-i18n="launcher-grey">QIP Infium Grey Pack</p>
                     </a>
+                    
+                    <!-- ОБНОВЛЕННЫЙ БЛОК MSN -->
                     <a href="msn.html" class="launcher-card">
-                        <img src="icon-msn.png" alt="MSN" class="launcher-img" width="75" height="75" loading="lazy">
-                        <h2>MSN</h2>
-                        <p data-i18n="launcher-msn">Windows Live Messenger</p>
+                        <img src="icon-msn.png" alt="MSN (CrossTalk)" class="launcher-img" width="75" height="75" loading="lazy">
+                        <h2>MSN (CrossTalk)</h2>
+                        <p>Windows Live Messenger</p>
+                        <span style="display:block; margin-top:8px; font-size:12px; color:#4caf50; font-weight:bold;">● Сервер активен</span>
                     </a>
+                    <a href="msn-escargot.html" class="launcher-card">
+                        <img src="icon-msn.png" alt="MSN (Escargot)" class="launcher-img" width="75" height="75" loading="lazy">
+                        <h2>MSN (Escargot)</h2>
+                        <p>Windows Live Messenger</p>
+                        <span style="display:block; margin-top:8px; font-size:12px; color:#f44336; font-weight:bold;">● Сервер недоступен</span>
+                    </a>
+                    <!-- КОНЕЦ БЛОКА MSN -->
+
                     <a href="aol.html" class="launcher-card">
                         <img src="icon-aol.png" alt="AOL" class="launcher-img" width="75" height="75" loading="lazy">
                         <h2>AOL</h2>
@@ -179,7 +190,7 @@
                 if (!themeToggle) return;
                 const savedTheme = localStorage.getItem('qip-theme');
                 if (savedTheme === 'dark') {
-                    document.body.classList.add('dark-theme');
+                    document.documentElement.classList.add('dark-theme');
                     themeToggle.textContent = '☀️ Светлая';
                 }
                 themeToggle.addEventListener('click', function() {

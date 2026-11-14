@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoToTalk — MSN Messenger (Escargot)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"></noscript>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+</head>
+<body>
+    <header>
+        <div class="container header-flex">
+            <div class="logo">📡 GoToTalk <span>Community</span></div>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="download.html">Скачать</a>
+                <a href="about.html">О нас</a>
+                <a href="guide.html">Инструкция</a>
+                <a href="msn-escargot.html" class="active">MSN (Escargot)</a>
+                <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>
+                <button id="theme-toggle" class="theme-toggle">🌙 Тема</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="guide-page">
+            <div class="container">
+                <div class="client-hero-header"><img src="icon-msn.png" alt="" class="hero-img"></div>
+                <h1>🦋 MSN Messenger 6.2</h1>
+                <p class="subtitle">Инструкция для работы через сервер <strong>Escargot</strong></p>
+
+                <!-- ПРЕДУПРЕЖДЕНИЕ О ТОМ, ЧТО САЙТ ЛЕЖИТ -->
+                <div class="platform-card" style="border-left: 4px solid #ff9800; background-color: #fff3e0; color: #000;">
+                    <h2>⚠️ Внимание: Сервер Escargot временно недоступен</h2>
+                    <p>На данный момент сайт Escargot может не работать. Если вы хотите играть прямо сейчас, используйте <strong>CrossTalk</strong>.</p>
+                    <a href="msn.html" class="btn">Перейти на CrossTalk →</a>
+                </div>
+
+                <div class="platform-card">
+                    <h2>📝 Шаг 1: Регистрация</h2>
+                    <p>Зарегистрируйтесь на сайте Escargot с типом аккаунта <strong>«Screenname»</strong> (не UIN!).</p>
+                    <a href="https://account.escargot.chat/register/" target="_blank" class="btn">Перейти на Escargot →</a>
+                </div>
+
+                <div class="platform-card">
+                    <h2>📥 Шаг 2: Скачивание MSN</h2>
+                    <p>Скачайте MSN 6.2 на русском языке напрямую с нашего сайта.</p>
+                    <a href="downloads/MSN_6.2_RU.msi" download class="btn">Скачать MSN 6.2 (.msi) →</a>
+                </div>
+
+                <div class="platform-card">
+                    <h2>🔧 Шаг 3: Установка</h2>
+                    <p>Просто установите MSN как обычную программу. После установки можно сразу запускать.</p>
+                </div>
+
+                <div class="platform-card">
+                    <h2>🔑 Шаг 4: Вход</h2>
+                    <p>Введите свои данные (Screenname и пароль), которые вы указали при регистрации на Escargot.</p>
+                </div>
+
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="msn.html" class="btn btn-secondary">Переключиться на сервер CrossTalk →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>GoToTalk Community © 2026 — неофициальный фанатский проект.</p>
+            <div class="socials">
+                <a href="https://discord.gg/VSJpGajNmP" target="_blank">Discord</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function initTheme() {
+            const themeToggle = document.getElementById('theme-toggle');
+            if (!themeToggle) return;
+            const savedTheme = localStorage.getItem('qip-theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-theme');
+                themeToggle.textContent = '☀️ Светлая';
+            }
+            themeToggle.addEventListener('click', function() {
+                const isDark = document.body.classList.toggle('dark-theme');
+                localStorage.setItem('qip-theme', isDark ? 'dark' : 'light');
+                themeToggle.textContent = isDark ? '☀️ Светлая' : '🌙 Тёмная';
+            });
+        })();
+
+        (function() {
+            const toggle = document.getElementById('menu-toggle');
+            const nav = toggle && toggle.nextElementSibling;
+            if (toggle && nav) {
+                toggle.addEventListener('click', function() {
+                    nav.classList.toggle('nav-open');
+                    toggle.classList.toggle('active');
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
